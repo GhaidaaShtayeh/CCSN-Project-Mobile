@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "oW6swQ6Zy16XyLnDoIwrY7xi9TW4g2vufY2ZIpYAW8+SXnXZqz3x/1+Ma03y/x/qKNE/fn8cddYazWGN4WXYmw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile\\CCSN\\CCSN\\CCSN\\CCSN.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
