@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:CCSN="clr-namespace:CCSN.Views"
+            x:Class="CCSN.Views.TabBar"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="#1EA6D6"
+            android:TabbedPage.BarItemColor="#44FFFFFF"
+            android:TabbedPage.BarSelectedItemColor="White">
+  <!--Pages can be added as references or inline-->
+    <CCSN:HomePage Title ="Home"  BackgroundColor="White" IconImageSource="https://freepikpsd.com/file/2019/10/black-home-icon-png-3-Transparent-Images.png"></CCSN:HomePage>
+    <CCSN:PatientsListPage Title ="Patients" BackgroundColor="White"  IconImageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Noun_Project_people_icon_3376085.svg/1024px-Noun_Project_people_icon_3376085.svg.png"></CCSN:PatientsListPage>
+    <CCSN:ScheduleAppintmentPage Title ="Appointment" BackgroundColor="White"  IconImageSource="https://cdn2.iconfinder.com/data/icons/calendar-35/50/5-512.png"></CCSN:ScheduleAppintmentPage>
+
+</TabbedPage>

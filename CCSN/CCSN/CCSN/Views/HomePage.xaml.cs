@@ -15,6 +15,7 @@ namespace CCSN.Views
         public HomePage()
         {
             InitializeComponent();
+            TabBar HomePage = new Views.TabBar();
         }
     }
 }
