@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CCSN.Models
 {
-    internal class Appoitment
+    public class Appoitment
     {
     }
 }

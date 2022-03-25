@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CCSN.Services
 {
-    internal class AppintmentService
+    public class AppintmentService
     {
     }
 }

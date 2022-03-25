@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CCSN.Services
 {
-    internal class PatientService
+    public class PatientService
     {
     }
 }
