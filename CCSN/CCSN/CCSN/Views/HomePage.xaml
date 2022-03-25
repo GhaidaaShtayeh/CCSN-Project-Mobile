@@ -2,11 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CCSN.Views.HomePage">
-    <ContentPage.Content>
+
+    <NavigationPage.TitleView >
+        <StackLayout Orientation="Horizontal" >
+            <Label Text="CCSN" 
+                   FontSize="Large" 
+                   FontAttributes="Bold"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="Start"/>
+
+            <ImageButton Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
+                 HorizontalOptions="EndAndExpand"
+                   VerticalOptions="CenterAndExpand" 
+                   WidthRequest="30"
+                         BackgroundColor="#00ffffff"/>
+
+            <ImageButton Source="https://static.thenounproject.com/png/3134331-200.png"
+                   WidthRequest="30"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="End"
+                    BackgroundColor="#00ffffff"
+                 
+                 />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    
         <StackLayout>
             <Label Text="Welcome Home!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
-    </ContentPage.Content>
+    
 </ContentPage>

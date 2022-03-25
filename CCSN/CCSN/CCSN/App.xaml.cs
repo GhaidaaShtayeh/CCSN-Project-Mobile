@@ -9,9 +9,10 @@ namespace CCSN
         public App()
         {
             InitializeComponent();
-
-           // MainPage = new MainPage();
-            MainPage = new Views.HomePage();
+       
+          //  MainPage = new MainPage();
+            MainPage = new NavigationPage(new Views.HomePage());
+            // MainPage = new Views.HomePage();
         }
 
         protected override void OnStart()
