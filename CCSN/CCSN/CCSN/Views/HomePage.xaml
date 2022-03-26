@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CCSN.Views.HomePage"
+             Title ="Home"
+             xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
+
+    <NavigationPage.TitleView >
+        <StackLayout Orientation="Horizontal" >
+            <Label Text="CCSN" 
+                   FontSize="Large" 
+                   FontAttributes="Bold"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="Start"/>
+
+            <ImageButton Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
+                 HorizontalOptions="EndAndExpand"
+                   VerticalOptions="CenterAndExpand" 
+                   WidthRequest="30"
+                         BackgroundColor="#00ffffff"/>
+
+            <ImageButton Source="https://static.thenounproject.com/png/3134331-200.png"
+                   WidthRequest="30"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="End"
+                    BackgroundColor="#00ffffff"
+                 
+                 />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <StackLayout>
+        <Label Text="Today Appointments : "
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand"
+                Padding="25"
+                TextColor="#1EA6D6"
+                FontAttributes="Bold"
+                FontSize="15"/>
+
+        <ListView x:Name="SpecalistListView"
+                  ItemsSource="{Binding specs}"
+                  HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding Name}" FontSize="Medium"/>
+                                <Label Text="{Binding Email}" FontSize="Medium"/>
+                                <Label Text="{Binding ID}" FontSize="Medium"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+
+    <ContentPage.BindingContext>
+        <viewmodels:HomePageModelView/>
+    </ContentPage.BindingContext>
+</ContentPage>

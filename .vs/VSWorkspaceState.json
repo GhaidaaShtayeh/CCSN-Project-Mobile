@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\CCSN",
+    "\\CCSN\\CCSN",
+    "\\CCSN\\CCSN\\CCSN",
+    "\\CCSN\\CCSN\\CCSN\\Models",
+    "\\CCSN\\CCSN\\CCSN\\obj",
+    "\\CCSN\\CCSN\\CCSN\\Services",
+    "\\CCSN\\CCSN\\CCSN\\ViewModels",
+    "\\CCSN\\CCSN\\CCSN\\Views"
+  ],
+  "SelectedNode": "\\CCSN\\CCSN\\CCSN\\App.xaml.cs",
+  "PreviewInSolutionExplorer": false
+}
