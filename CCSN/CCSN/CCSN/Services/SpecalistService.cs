@@ -14,7 +14,7 @@ namespace CCSN.Services
         FirebaseClient firebaseClient = new FirebaseClient("https://ccsn-fed2d-default-rtdb.firebaseio.com/");
         public async Task<bool> Save(Specalist specalist)
         {
-            var data = await firebaseClient.Child(nameof(Specalist)).PostAsync(JsonConvert.SerializeObject(specalist));
+            var data = await firebaseClient.Child("Specalists").PostAsync(JsonConvert.SerializeObject(specalist));
             if (string.IsNullOrEmpty(data.Key))
             {
                 return true;
@@ -25,25 +25,20 @@ namespace CCSN.Services
         public async Task<List<Specalist>> GetAll()
         {
             return (await firebaseClient
-             .Child("Specalist") 
+             .Child("Specalists") 
              .OnceAsync<Specalist>()).Select(item => new Specalist
              {
                  Email = item.Object.Email,
                  Name = item.Object.Name,
-                 ID = item.Object.ID
+                 ID = item.Object.ID,
+                 Patients = item.Object.Patients.ToList()
              }).ToList();
 
-           /* return (await firebaseClient.Child(nameof(Specalist)).OnceAsync<Specalist>()).Select(item => new Specalist
-            {
-                Email = item.Object.Email,
-                Name = item.Object.Name,
-                ID = item.Object.ID
-            }).ToList();*/
         }
 
         public async Task<bool> Update(Specalist specalist)
         {
-            await firebaseClient.Child(nameof(Specalist) + "/" + specalist.ID).PatchAsync(JsonConvert.SerializeObject(specalist));
+            await firebaseClient.Child("Specalists" + "/" + specalist.ID).PatchAsync(JsonConvert.SerializeObject(specalist));
             return true;
         }
     }

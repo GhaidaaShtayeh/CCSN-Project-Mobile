@@ -16,7 +16,6 @@
                                 <Label Text="{Binding Email}" FontSize="Medium"/>
                                 <Label Text="{Binding ID}" FontSize="Medium"/>
                             </StackLayout>
-                            <Button></Button>
                         </StackLayout>
                         
                     </ViewCell>
