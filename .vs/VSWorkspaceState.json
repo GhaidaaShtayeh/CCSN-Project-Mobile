@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CCSN",
+    "\\CCSN\\CCSN",
+    "\\CCSN\\CCSN\\CCSN",
+    "\\CCSN\\CCSN\\CCSN\\Services"
   ],
+  "SelectedNode": "\\CCSN\\CCSN\\CCSN\\Services\\PatientService.cs",
   "PreviewInSolutionExplorer": false
 }
