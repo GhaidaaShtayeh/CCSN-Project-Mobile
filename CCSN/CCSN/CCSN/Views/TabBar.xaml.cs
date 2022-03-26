@@ -15,6 +15,7 @@ namespace CCSN.Views
         public TabBar()
         {
             InitializeComponent();
+            NavigationPage.SetHasBackButton(this, false);
         }
     }
 }
