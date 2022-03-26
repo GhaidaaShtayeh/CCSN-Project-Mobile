@@ -15,6 +15,9 @@ namespace CCSN.Views
         public HomePage()
         {
             InitializeComponent();
+         
+
+         
         }
     }
 }
