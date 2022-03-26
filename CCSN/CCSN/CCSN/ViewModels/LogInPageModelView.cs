@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CCSN.ViewModels
 {
-    internal class LogInPageModelView
+    internal class LogInPageModelView : BindableObject
     {
     }
 }

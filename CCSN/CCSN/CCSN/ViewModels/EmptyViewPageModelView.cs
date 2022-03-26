@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace CCSN.ViewModels
 {
-    public class EmptyViewPageModelView
+    public class EmptyViewPageModelView : BindableObject
     {
         public string AppointmentNumber { get; set; }
         public string AppointmentPatientName { get; set; }

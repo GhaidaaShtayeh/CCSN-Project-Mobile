@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CCSN.Views.HomePage"
-             Title ="Home">
+             Title ="Home"
+             xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
 
     <NavigationPage.TitleView >
         <StackLayout Orientation="Horizontal" >
@@ -27,11 +28,38 @@
                  />
         </StackLayout>
     </NavigationPage.TitleView>
-    
-        <StackLayout>
-            <Label Text="Welcome Home!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    
+
+    <StackLayout>
+        <Label Text="Today Appointments : "
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand"
+                Padding="25"
+                TextColor="#1EA6D6"
+                FontAttributes="Bold"
+                FontSize="15"/>
+
+        <ListView x:Name="SpecalistListView"
+                  ItemsSource="{Binding specs}"
+                  HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding Name}" FontSize="Medium"/>
+                                <Label Text="{Binding Email}" FontSize="Medium"/>
+                                <Label Text="{Binding ID}" FontSize="Medium"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+
+    <ContentPage.BindingContext>
+        <viewmodels:HomePageModelView/>
+    </ContentPage.BindingContext>
 </ContentPage>

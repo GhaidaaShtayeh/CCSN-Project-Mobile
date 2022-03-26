@@ -1,11 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "cKXLxVV3zOXAv/d4i8FEQZqzt0R7V3aKq6IY7Sb1lZVedwP5aTlOP9QdUwcPebFt551+x967lM3C6rBJWN1r0Q==",
+  "dgSpecHash": "HGCOgCKWkgPIhy4xWe86KjZ8JDuy8pkuFnRSiCsJoHUBs0ca8/BI3NINENu+lWZJumIq+aQd38zgnzO3xEppmg==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\DELL\\.nuget\\packages\\firebasestorage.net\\1.0.3\\firebasestorage.net.1.0.3.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",

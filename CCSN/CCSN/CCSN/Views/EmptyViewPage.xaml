@@ -10,7 +10,7 @@
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
-    <ContentPage.BindingContext>
-        <v
+   <ContentPage.BindingContext>
+        <viewmodels:EmptyViewPageModelView/>
     </ContentPage.BindingContext>
 </ContentPage>
