@@ -5,7 +5,8 @@ using Xamarin.Forms;
 
 namespace CCSN.ViewModels
 {
-    internal class LogInPageModelView : BindableObject
+    public class LogInPageModelView : BindableObject
     {
+
     }
 }

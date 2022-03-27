@@ -39,19 +39,18 @@
                 FontSize="15"/>
 
         <ListView x:Name="SpecalistListView"
-                  ItemsSource="{Binding specs}"
+                  ItemsSource="{Binding Apo}"
                   HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="5">
                             <StackLayout HorizontalOptions="StartAndExpand">
-                                <Label Text="{Binding Name}" FontSize="Medium"/>
-                                <Label Text="{Binding Email}" FontSize="Medium"/>
-                                <Label Text="{Binding ID}" FontSize="Medium"/>
+                                <Label Text="{Binding AppointmentNumber}" FontSize="Medium"/>
+                                <Label Text="{Binding AppointmentPatientName}" FontSize="Medium"/>
+                                <Label Text="{Binding AppointmentDate}" FontSize="Medium"/>
                             </StackLayout>
                         </StackLayout>
-
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

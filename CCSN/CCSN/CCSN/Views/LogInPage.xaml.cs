@@ -18,7 +18,7 @@ namespace CCSN.Views
         }
         async void Handel_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new HomePage());
+            await Navigation.PushAsync(new TabBar());
         }
     }
 }

@@ -9,20 +9,20 @@ namespace CCSN.ViewModels
 {
     public class HomePageModelView : BindableObject
     {
-        public SpecalistService specalistService;
-        public List<Specalist> specs;
+        public AppintmentService AppointmentService;
+        public List<Appoitment> Apo;
         public HomePageModelView()
         {
-            specs = new List<Specalist>();
-            specalistService = new SpecalistService();
+            Apo = new List<Appoitment>();
+            AppointmentService = new AppintmentService();
             Button_ClickedAsync();
         }
 
 
         async private void Button_ClickedAsync()
         {
-            specs = await specalistService.GetAll();
-            specs.ForEach(spec => Console.WriteLine(spec.Name));
+            Apo = await AppointmentService.GetAll();
+            Apo.ForEach(Apo => Console.WriteLine(Apo.AppointmentPatientName));
         }
     }
 }
