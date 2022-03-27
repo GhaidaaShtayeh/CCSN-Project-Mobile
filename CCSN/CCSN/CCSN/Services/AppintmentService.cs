@@ -24,6 +24,8 @@ namespace CCSN.Services
 
         public async Task<List<Appoitment>> GetAll()
         {
+            var req = await firebaseClient.Child("Specalists/406707265/Patients/0/Appointments").OnceAsync<Appoitment>();
+
             return (await firebaseClient.Child("Specalists/406707265/Patients/0/Appointments").OnceAsync<Appoitment>()).Select(item => new Appoitment
             {
                 AppointmentNumber = item.Object.AppointmentNumber,

@@ -6,6 +6,7 @@ namespace CCSN.Models
 {
     public class Appoitment
     {
+
         public string AppointmentNumber { get; set; }
         public string AppointmentPatientName { get; set; }
         public string AppointmentDate { get; set; }
