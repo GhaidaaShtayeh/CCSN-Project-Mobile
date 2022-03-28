@@ -4,10 +4,46 @@
              x:Class="CCSN.Views.EmptyViewPage"
               xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+       
+        <StackLayout Margin="20" >
+            <StackLayout>
+                <Label Text="Hello Majd! "
+                   TextColor=" #1EA6D6"
+                   FontSize= "50"
+                   VerticalOptions= "Start"
+                   HorizontalOptions="Center"
+                   />
+                
+            </StackLayout>
+            <StackLayout Margin="11">
+                <Image Source="https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+
+            </StackLayout>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="You Don't Have Any Appointments Yet!"
+                   FontSize="18"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Margin="20"/>
+            <Label Text="Lets ADD New One !"
+                    FontAttributes="Bold"
+                   FontSize="Large"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"
+                   Margin="11"
+                />
+          
+                <Button Text="Go"
+                   BackgroundColor="#1EA6D6"
+                    TextColor="White"
+                    FontSize="Large"
+                    Margin="11"
+                    Clicked="NavigateButton_OnClicked"
+                   
+                    />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
    <ContentPage.BindingContext>

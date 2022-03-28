@@ -44,28 +44,21 @@
         </ Frame >
 
         <Frame >
-
             <Label Text = "Ahmad ali      9:00AM"  WidthRequest = "200"
                    HeightRequest = "20"  FontSize = "Medium" Margin = "10" ></ Label >
-
         </ Frame >
-
 
         <Label Text = "Tomorrow Appointment" TextColor = "#2196f3"   WidthRequest = "200"
                    HeightRequest = "30" FontSize = "Large" Margin = "13" FontAttributes = "Bold" />
-
         <Frame >
 
             <Label Text = "Ahmad ali      9:00AM"  WidthRequest = "200"
                    HeightRequest = "20"  FontSize = "Medium" Margin = "10" ></ Label >
 
         </ Frame >
-
         <Frame >
-
             <Label Text = "Ahmad ali      9:00AM"  WidthRequest = "200"
                    HeightRequest = "20"  FontSize = "Medium" Margin = "10" ></ Label >
-
         </ Frame >
 
         <Frame >
