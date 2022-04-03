@@ -5,10 +5,18 @@
              Title="CCSN"
              xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
     <ContentPage.Content>
-        <StackLayout>
-
-            <Button Text="LogIn" BackgroundColor="#1EA6D6" WidthRequest="100" FontSize="Medium" Clicked="Handel_Clicked"   VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"></Button>
+        <StackLayout >
+            <Entry Placeholder="User ID"
+                   Text="{Binding ID}"></Entry>
+            <Entry Placeholder="User Password"
+                   IsPassword="True" 
+                   Text="{Binding password}"></Entry>
+            <Button BackgroundColor="#1EA6D6" 
+                    WidthRequest="100"
+                    FontSize="Medium"
+                    TextColor="White"
+                    Text="Login"
+                    Command="{Binding LoginCommand}" ></Button>
         </StackLayout>
     </ContentPage.Content>
     <ContentPage.BindingContext>
