@@ -1,95 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CCSN.Views.HomePage"
-             Title ="Home"
-             xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
+<ContentPage
+    x:Class="CCSN.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:viewmodels="clr-namespace:CCSN.ViewModels"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    Title="Home">
+    <d:ContentPage.BindingContext>
+        <viewmodels:HomePageModelView />
+    </d:ContentPage.BindingContext>
 
-    <NavigationPage.TitleView >
-        <StackLayout Orientation="Horizontal" >
-            <Label Text="CCSN" 
-                   FontSize="Large" 
-                   FontAttributes="Bold"
-                   VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="Start"/>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Start"
+                Text="CCSN"
+                VerticalOptions="CenterAndExpand" />
 
-            <ImageButton Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
-                 HorizontalOptions="EndAndExpand"
-                   VerticalOptions="CenterAndExpand" 
-                   WidthRequest="30"
-                         BackgroundColor="#00ffffff"/>
+            <ImageButton
+                BackgroundColor="#00ffffff"
+                HorizontalOptions="EndAndExpand"
+                Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="30" />
 
-            <ImageButton Source="https://static.thenounproject.com/png/3134331-200.png"
-                   WidthRequest="30"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="End"
-                    BackgroundColor="#00ffffff"
-                 
-                 />
+            <ImageButton
+                BackgroundColor="#00ffffff"
+                HorizontalOptions="End"
+                Source="https://static.thenounproject.com/png/3134331-200.png"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="30" />
         </StackLayout>
     </NavigationPage.TitleView>
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
+    </ContentPage.Behaviors>
+    <StackLayout>
+        <Label Text = "Today Appointment" TextColor = "#2196f3"   WidthRequest = "200"
+                   HeightRequest="50"  FontSize = "Medium" Margin = "13" FontAttributes = "Bold" ></Label >
+        <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
 
-   <StackLayout>
-         <ListView x:Name="SpecalistListView"
-                  ItemsSource="{Binding Apo}"
-                  HasUnevenRows="True">
-             
-              <Label Text = "Today Appointment" TextColor = "#2196f3"   WidthRequest = "200"
-                   HeightRequest = "30" FontSize = "Large" Margin = "13" FontAttributes = "Bold" ></ Label >
+                        <Grid RowDefinitions="Auto,Auto,Auto">
+                            <Label Grid.Row="0" Text="{Binding AppointmentPatientName}"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate}" />
+                            
+                        </Grid>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
 
-        <Frame >
+        </ListView>
 
-            <Label Text = "Ahmad ali      9:00AM"  WidthRequest = "200"
-                   HeightRequest = "20"  FontSize = "Medium" Margin = "10" ></ Label >
+    </StackLayout>
 
-        </ Frame >
-
-        <Frame >
-
-            <Label Text = "Ahmad ali      9:00AM"  WidthRequest = "200"
-                   HeightRequest = "20"  FontSize = "Medium" Margin = "10" ></ Label >
-
-        </ Frame >
-
-        <Frame >
-
-            <Label Text = "Ahmad ali      9:00AM"  WidthRequest = "200"
-                   HeightRequest = "20"  FontSize = "Medium" Margin = "10" ></ Label >
-
-        </ Frame >
-
-
-        <Label Text = "Tomorrow Appointment" TextColor = "#2196f3"   WidthRequest = "200"
-                   HeightRequest = "30" FontSize = "Large" Margin = "13" FontAttributes = "Bold" />
-
-        <Frame >
-
-            <Label Text = "Ahmad ali      9:00AM"  WidthRequest = "200"
-                   HeightRequest = "20"  FontSize = "Medium" Margin = "10" ></ Label >
-
-        </ Frame >
-
-        <Frame >
-
-            <Label Text = "Ahmad ali      9:00AM"  WidthRequest = "200"
-                   HeightRequest = "20"  FontSize = "Medium" Margin = "10" ></ Label >
-
-        </ Frame >
-
-        <Frame >
-
-            <Label Text = "Ahmad ali      9:00AM"  WidthRequest = "200"
-                   HeightRequest = "20"
-                   FontSize = "Medium" Margin = "10" ></ Label >
-
-        </ Frame >
-
-
-        <Image Source = "https://aws1.discourse-cdn.com/business5/uploads/webflow1/original/3X/0/f/0f47cc7c2a7cfb443239076e36fde9abff32a2c2.png" WidthRequest = "200" HorizontalOptions = "Start" />
-
-
-
-    <ContentPage.BindingContext>
-        <viewmodels:HomePageModelView/>
-    </ContentPage.BindingContext>
 </ContentPage>

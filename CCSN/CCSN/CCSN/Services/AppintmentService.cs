@@ -1,9 +1,12 @@
 ﻿using CCSN.Models;
 using Firebase.Database;
+using Firebase.Database.Query;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,8 +14,8 @@ namespace CCSN.Services
 {
     public class AppintmentService
     {
-        FirebaseClient firebaseClient = new FirebaseClient("https://ccsn-fed2d-default-rtdb.firebaseio.com/");
-        public async Task<bool> Save(Appoitment appointment)
+        static FirebaseClient firebaseClient = new FirebaseClient("https://ccsn-fed2d-default-rtdb.firebaseio.com/");
+        public static async Task<bool> Save(Appoitment appointment)
         {
             var data = await firebaseClient.Child(nameof(Appoitment)).PostAsync(JsonConvert.SerializeObject(appointment));
             if (string.IsNullOrEmpty(data.Key))
@@ -21,30 +24,23 @@ namespace CCSN.Services
             }
             return false;
         }
-
-        public async Task<List<Appoitment>> GetAll()
+        public static async Task<IEnumerable<Appoitment>> GetUserAppointments()
         {
-            var req = await firebaseClient.Child("Specalists/406707265/Patients/0/Appointments").OnceAsync<Appoitment>();
+            var url = (await firebaseClient
+                     .Child($"Specalists/406707265/Patients/0/Appointments").BuildUrlAsync());
 
-            return (await firebaseClient.Child("Specalists/406707265/Patients/0/Appointments").OnceAsync<Appoitment>()).Select(item => new Appoitment
-            {
-                AppointmentNumber = item.Object.AppointmentNumber,
-                AppointmentPatientName = item.Object.AppointmentPatientName,
-                AppointmentDate = item.Object.AppointmentDate,
-                AppointmentTime = item.Object.AppointmentTime,
-                FollowUpDate = item.Object.FollowUpDate,
-                FollowUpTools = item.Object.FollowUpTools,
-                FollowUpGoals = item.Object.FollowUpGoals,
-                FollowUpAddNote = item.Object.FollowUpAddNote,
-            }).ToList();
+            var result = await Helper.Get<List<Appoitment>>(url);
+            return result;
         }
 
-        public async Task<bool> Update(Appoitment appointment)
+        public static async Task EditAppointment(string UserID, Appoitment appoitment)
         {
-            await firebaseClient.Child(nameof(Appoitment) + "/" + appointment.AppointmentNumber).PatchAsync(JsonConvert.SerializeObject(appointment));
-            return true;
+            await firebaseClient
+          .Child($"Specalists/{UserID}/Patients/0/Appointments")
+          .PatchAsync(appoitment);
         }
-        public async Task<bool> Delete(string id)
+
+        public static async Task<bool> Delete(string id)
         {
             await firebaseClient.Child(nameof(Appoitment) + "/" + id).DeleteAsync();
             return true;

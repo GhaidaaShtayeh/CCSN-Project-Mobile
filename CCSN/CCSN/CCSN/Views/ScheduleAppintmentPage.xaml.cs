@@ -15,6 +15,16 @@ namespace CCSN.Views
         public ScheduleAppintmentPage()
         {
             InitializeComponent();
+
+            TimePicker timePicker = new TimePicker
+            {
+                Time = new TimeSpan(4, 15, 26)
+            };
+        }
+        public void CalendarView_DateSelectionChanged(object sender, EventArgs arg)
+        {
+            DisplayAlert("Date Available", calendar.SelectedDates.ToString(), "OK");
+
         }
     }
 }
