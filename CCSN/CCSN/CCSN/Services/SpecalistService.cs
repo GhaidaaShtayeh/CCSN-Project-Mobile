@@ -14,6 +14,7 @@ namespace CCSN.Services
         FirebaseClient firebaseClient = new FirebaseClient("https://ccsn-fed2d-default-rtdb.firebaseio.com/");
         public async Task<bool> Save(Specalist specalist)
         {
+
             var data = await firebaseClient.Child("Specalists").PostAsync(JsonConvert.SerializeObject(specalist));
             if (string.IsNullOrEmpty(data.Key))
             {
@@ -40,6 +41,14 @@ namespace CCSN.Services
         {
             await firebaseClient.Child("Specalists" + "/" + specalist.ID).PatchAsync(JsonConvert.SerializeObject(specalist));
             return true;
+        }
+
+        public async Task<bool> LoginUser(string userID, string userpassword)
+        {
+            var user = (await firebaseClient.Child("Specalists")
+                .OnceAsync<Specalist>()).Where(u => u.Object.ID == userID)
+                .Where(u => u.Object.password == userpassword).FirstOrDefault();
+            return (user != null);
         }
     }
 }

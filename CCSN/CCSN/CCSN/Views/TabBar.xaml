@@ -4,7 +4,7 @@
             x:Class="CCSN.Views.TabBar"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
-            BarBackgroundColor="#1EA6D6"
+            BarBackgroundColor="#2196f3"
             android:TabbedPage.BarItemColor="#44FFFFFF"
 android:TabbedPage.BarSelectedItemColor="White">
   <!--Pages can be added as references or inline-->

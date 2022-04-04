@@ -27,7 +27,7 @@ namespace CCSN.Views
 
             var navigationPageAppointment = new NavigationPage(new AppointmentPage());
             navigationPageAppointment.IconImageSource = "https://cdn2.iconfinder.com/data/icons/calendar-35/50/5-512.png";
-            navigationPageAppointment.Title = "Patients";
+            navigationPageAppointment.Title = "Appointment";
 
             Children.Add(navigationPageHome);
             Children.Add(navigationPagePatients);
