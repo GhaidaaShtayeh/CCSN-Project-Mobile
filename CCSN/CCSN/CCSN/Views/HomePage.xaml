@@ -18,6 +18,7 @@
                 FontSize="Large"
                 HorizontalOptions="Start"
                 Text="CCSN"
+                TextColor="White"
                 VerticalOptions="CenterAndExpand" />
 
             <ImageButton
@@ -37,27 +38,46 @@
     </NavigationPage.TitleView>
     <ContentPage.Behaviors>
         <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
+        <xct:EventToCommandBehavior Command="{Binding Appearing2}" EventName="Appearing" />
     </ContentPage.Behaviors>
     <StackLayout>
         <Label Text = "Today Appointment" TextColor = "#2196f3"   WidthRequest = "200"
-                   HeightRequest="50"  FontSize = "Medium" Margin = "13" FontAttributes = "Bold" ></Label >
-        <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments}">
+                   HeightRequest="50"  FontSize = "Small" Margin = "13" FontAttributes = "Bold" ></Label >
+        <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments}" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
 
                         <Grid RowDefinitions="Auto,Auto,Auto">
                             <Label Grid.Row="0" Text="{Binding AppointmentPatientName}"/>
-                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate}" />
-                            
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate}" />
+
                         </Grid>
-                        
+
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-
         </ListView>
+        <Label Text = "Tommorrow Appointment" TextColor = "#2196f3"   WidthRequest = "200"
+                   HeightRequest="50"  FontSize = "Small" Margin = "13" FontAttributes = "Bold" >
+        </Label >
+        <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments2}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
 
+                        <Grid RowDefinitions="Auto,Auto,Auto">
+                            <Label Grid.Row="0" Text="{Binding AppointmentPatientName}"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate}" />
+
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
+    
+    
 
 </ContentPage>

@@ -30,7 +30,16 @@ namespace CCSN.Services
                      .Child($"Specalists/406707265/Patients/0/Appointments").BuildUrlAsync());
 
             var result = await Helper.Get<List<Appoitment>>(url);
-            return result;
+            return result.Where(o => o.AppointmentDate.Date == DateTime.Now.Date); ;
+        }
+
+        public static async Task<IEnumerable<Appoitment>> GetUserTAppointments()
+        {
+            var url = (await firebaseClient
+                     .Child($"Specalists/406707265/Patients/0/Appointments").BuildUrlAsync());
+
+            var result = await Helper.Get<List<Appoitment>>(url);
+            return result.Where(o => o.AppointmentDate.Date == DateTime.Today.AddDays(1).Date); ;
         }
 
         public static async Task EditAppointment(string UserID, Appoitment appoitment)
