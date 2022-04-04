@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zYSpRSBxdqGa05bimjT98p9aVj3S60FszUF+zg6TE6/Pcf2KU+V/TTls+U1nZldmwaJHBpsK9QRic4R6vMoBIg==",
+  "dgSpecHash": "jfFtS+BB03rTpC2ZD/LD4rcNiwpnQO2OcGTMcXmgGMhhfQhixqpEGKb0teKw0pn++Pv86m1dh1mQJMfzOvUmLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\mobile\\CCSN_project\\CCSN-Project-Mobile\\CCSN\\CCSN\\CCSN.iOS\\CCSN.iOS.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile\\CCSN\\CCSN\\CCSN.iOS\\CCSN.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\firebasedatabase.net\\4.0.7\\firebasedatabase.net.4.0.7.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\litedb\\4.1.4\\litedb.4.1.4.nupkg.sha512",
