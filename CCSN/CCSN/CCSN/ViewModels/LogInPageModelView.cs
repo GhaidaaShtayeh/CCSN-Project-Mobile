@@ -66,7 +66,7 @@ namespace CCSN.ViewModels
                 if (Result)
                 {
                     Preferences.Set("ID", ID);
-                    await Application.Current.MainPage.Navigation.PushModalAsync(new Views.HomePage());
+                    await Application.Current.MainPage.Navigation.PushModalAsync(new Views.TabBar());
                 }
                 else
                 {
