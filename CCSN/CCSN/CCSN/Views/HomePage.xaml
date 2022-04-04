@@ -41,7 +41,7 @@
         <xct:EventToCommandBehavior Command="{Binding Appearing2}" EventName="Appearing" />
     </ContentPage.Behaviors>
     <StackLayout>
-        <Label Text = "Today Appointment" TextColor = "#2196f3"   WidthRequest = "200"
+        <Label Text = "Today Appointments :" TextColor = "#2196f3"   WidthRequest = "200"
                    HeightRequest="50"  FontSize = "Small" Margin = "13" FontAttributes = "Bold" ></Label >
         <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments}" >
             <ListView.ItemTemplate>
@@ -49,16 +49,26 @@
                     <ViewCell>
 
                         <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Label Grid.Row="0" Text="{Binding AppointmentPatientName}"/>
-                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate}" />
-
+                            <Frame 
+                                OutlineColor="#5A5A59"
+                               Padding="25"
+                                  >
+                                <StackLayout Orientation="Horizontal">
+                                    <BoxView 
+                                        Color="#5A5A59"
+                                        WidthRequest="4"
+                                    Margin="5, 0, 10, 0" />
+                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" Font="Small"  TextColor="Gray" LineBreakMode="TailTruncation" Margin="20" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate}" Font="Small"  TextColor="Gray" LineBreakMode="TailTruncation" Margin="20"  />
+                            </StackLayout>
+                                </Frame>
                         </Grid>
 
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Label Text = "Tommorrow Appointment" TextColor = "#2196f3"   WidthRequest = "200"
+        <Label Text = "Tommorrow Appointments : " TextColor = "#2196f3"   WidthRequest = "200"
                    HeightRequest="50"  FontSize = "Small" Margin = "13" FontAttributes = "Bold" >
         </Label >
         <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments2}">
@@ -67,9 +77,18 @@
                     <ViewCell>
 
                         <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Label Grid.Row="0" Text="{Binding AppointmentPatientName}"/>
-                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate}" />
-
+                            <Frame 
+                                OutlineColor="#5A5A59"
+                               Padding="25">
+                                <StackLayout Orientation="Horizontal">
+                                    <BoxView 
+                                        Color="#5A5A59"
+                                        WidthRequest="4"
+                                    Margin="5, 0, 10, 0" />
+                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" Font="Small"  TextColor="Gray" LineBreakMode="TailTruncation" Margin="20" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate}" Font="Small"  TextColor="Gray" LineBreakMode="TailTruncation" Margin="20" />
+                           </StackLayout>
+                                </Frame>
                         </Grid>
 
                     </ViewCell>

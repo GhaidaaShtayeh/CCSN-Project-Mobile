@@ -25,10 +25,6 @@ C:\Users\DELL\Desktop\mobile\CCSN_project\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj
 C:\Users\DELL\Desktop\mobile\CCSN_project\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\ref\CCSN.dll
 C:\Users\DELL\Desktop\mobile\CCSN_project\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.pdb
 C:\Users\DELL\Desktop\mobile\CCSN_project\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.csproj.AssemblyReference.cache
-C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\CCSN.deps.json
-C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\CCSN.dll
-C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\ref\CCSN.dll
-C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\CCSN.pdb
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
@@ -47,8 +43,12 @@ C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.AssemblyInfoInputs.cache
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.AssemblyInfo.cs
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.csproj.CoreCompileInputs.cache
-C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.dll
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\ref\CCSN.dll
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.pdb
+C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\CCSN.deps.json
+C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\CCSN.dll
+C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\ref\CCSN.dll
+C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\CCSN.pdb
+C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.csproj.AssemblyReference.cache

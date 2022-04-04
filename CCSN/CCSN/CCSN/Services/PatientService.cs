@@ -12,7 +12,7 @@ namespace CCSN.Services
 {
     public class PatientService
     {
-        FirebaseClient firebaseClient = new FirebaseClient("https://ccsn-fed2d-default-rtdb.firebaseio.com/");
+        static FirebaseClient firebaseClient = new FirebaseClient("https://ccsn-fed2d-default-rtdb.firebaseio.com/");
         public async Task<bool> Save(Patient patient)
         {
             var data = await firebaseClient.Child(nameof(Patient)).PostAsync(JsonConvert.SerializeObject(patient));
@@ -23,21 +23,13 @@ namespace CCSN.Services
             return false;
         }
 
-        public async Task<List<Patient>> GetAll()
+        public static async Task<IEnumerable<Patient>> GetUserPatients()
         {
-            return (await firebaseClient.Child(nameof(Patient)).OnceAsync<Patient>()).Select(item => new Patient
-            {
-                ID = item.Object.ID,
-                PatientName = item.Object.PatientName,
-                PatientAddress = item.Object.PatientAddress,
-                PatientWeight = item.Object.PatientWeight,
-                PatientHeight = item.Object.PatientHeight,
-                PatientBirthday = item.Object.PatientBirthday,
-                PatientMobileNO = item.Object.PatientMobileNO,
-                PatientGenticesDiseses = item.Object.PatientGenticesDiseses,
+            var url = await firebaseClient
+                     .Child($"Specalists/406707265/Patients").BuildUrlAsync();
 
-
-            }).ToList();
+            var result = await Helper.Get<List<Patient>>(url);
+            return result ;
         }
 
         public async Task<bool> Update(Patient patient)
