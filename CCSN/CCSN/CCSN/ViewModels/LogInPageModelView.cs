@@ -65,7 +65,7 @@ namespace CCSN.ViewModels
                 Result = await userServ.LoginUser(ID, password);
                 if (Result)
                 {
-                    Preferences.Set("Username", ID);
+                    Preferences.Set("ID", ID);
                     await Application.Current.MainPage.Navigation.PushModalAsync(new Views.HomePage());
                 }
                 else
