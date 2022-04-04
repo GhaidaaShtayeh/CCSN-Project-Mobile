@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CCSN.Views.LogInPage"
+             xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="CCSN" FontSize="50" TextColor="#2196f3" FontAttributes="Bold"  HorizontalOptions="CenterAndExpand"></Label>
+            
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label></Label>
+            <Entry Placeholder="ID"
+                   Text="{Binding ID}"></Entry>
+            
+            <Entry Placeholder="Password"
+                   IsPassword="True" 
+                   Text="{Binding password}"></Entry>
+            
+            <Button BackgroundColor="#2196f3" 
+                    WidthRequest="300"
+
+                    CornerRadius="20"
+                    FontSize="Medium"
+                    TextColor="White"
+                    Text="Login"
+                    Command="{Binding LoginCommand}" ></Button>
+        </StackLayout>
+            </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.BindingContext>
+        <viewmodels:LogInPageModelView/>
+    </ContentPage.BindingContext>
+</ContentPage>
