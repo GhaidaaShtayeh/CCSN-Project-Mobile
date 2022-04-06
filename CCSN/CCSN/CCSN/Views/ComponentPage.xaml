@@ -1,20 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CCSN.Views.ComponentPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="label" 
+
+ 
+            <Style x:Key="StyleButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#2196f3" />
+                <Setter Property="WidthRequest" Value="300" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+    <!--
+        <Entry Placeholder="Password"
+                   IsPassword="True" 
+                   Text="{Binding password}"></Entry>
+        <Button BackgroundColor="#2196f3" 
+                    WidthRequest="300"
+                    CornerRadius="20"
+                    FontSize="Medium"
+                    TextColor="White"
+                    Text="Login"
+                    Command="{Binding LoginCommand}" ></Button>
+        <Label Text="label" 
                    WidthRequest="200" 
                    HeightRequest="40" 
                    FontSize="Medium" 
+                   BackgroundColor="AliceBlue"
                    ></Label>
 
-            <Button Text="Button" 
-                    BackgroundColor="#1EA6D6" 
-                    WidthRequest="100"
+            <Button BackgroundColor="#2196f3" 
+                    WidthRequest="300"
+                    CornerRadius="20"
                     FontSize="Medium"
-                    ></Button>
+                    TextColor="White"
+                    Text="Login" ></Button>
+            
             <Button  Text="female/male"
                      WidthRequest="10"
                      HeightRequest="50" 
@@ -22,6 +44,7 @@
                      FontSize="Medium"  
                      BorderRadius="30"
                      ></Button>
+            
             <Button Text="+" 
                     WidthRequest="60" 
                     HeightRequest="60"
@@ -31,5 +54,6 @@
                     BackgroundColor="#1EA6D6"  
                     FontSize="Large"/>
         </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+        -->
+ 
+</ResourceDictionary>

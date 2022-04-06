@@ -9,7 +9,7 @@
             <StackLayout>
                 <Label Text="Hello Majd! "
                    TextColor=" #1EA6D6"
-                   FontSize= "50"
+                   FontSize= "Large"
                    VerticalOptions= "Start"
                    HorizontalOptions="Center"
                    />
@@ -23,24 +23,21 @@
             </StackLayout>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                 <Label Text="You Don't Have Any Appointments Yet!"
-                   FontSize="18"
+                   FontSize="Medium"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                    Margin="20"/>
-            <Label Text="Lets ADD New One !"
+            <Label Text="Lets Add New One !"
                     FontAttributes="Bold"
                    FontSize="Large"
                    VerticalOptions="Center" 
                    HorizontalOptions="Center"
                    Margin="11"
                 />
-          
-                <Button Text="Go"
-                   BackgroundColor="#1EA6D6"
-                    TextColor="White"
-                    FontSize="Large"
-                    Margin="11"
-                     />
+                <Button
+            Style="{StaticResource ButtonStyle}"
+            Text="Go" />
+               
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
