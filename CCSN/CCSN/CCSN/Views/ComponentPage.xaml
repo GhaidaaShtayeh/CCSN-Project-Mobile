@@ -13,16 +13,7 @@
             </Style>
 
     <!--
-        <Entry Placeholder="Password"
-                   IsPassword="True" 
-                   Text="{Binding password}"></Entry>
-        <Button BackgroundColor="#2196f3" 
-                    WidthRequest="300"
-                    CornerRadius="20"
-                    FontSize="Medium"
-                    TextColor="White"
-                    Text="Login"
-                    Command="{Binding LoginCommand}" ></Button>
+
         <Label Text="label" 
                    WidthRequest="200" 
                    HeightRequest="40" 
@@ -30,12 +21,7 @@
                    BackgroundColor="AliceBlue"
                    ></Label>
 
-            <Button BackgroundColor="#2196f3" 
-                    WidthRequest="300"
-                    CornerRadius="20"
-                    FontSize="Medium"
-                    TextColor="White"
-                    Text="Login" ></Button>
+
             
             <Button  Text="female/male"
                      WidthRequest="10"
@@ -45,14 +31,7 @@
                      BorderRadius="30"
                      ></Button>
             
-            <Button Text="+" 
-                    WidthRequest="60" 
-                    HeightRequest="60"
-                    BorderRadius="30"
-                    HorizontalOptions="Center" 
-                    VerticalOptions="Center" 
-                    BackgroundColor="#1EA6D6"  
-                    FontSize="Large"/>
+
         </StackLayout>
         -->
  
