@@ -57,7 +57,29 @@ namespace CCSN.Services
           .Child($"Specalists/{UserID}/Patients/0/Appointments")
           .PatchAsync(appoitment);
         }
+        // add schedule Appointment 
+        public ObservableCollection<Appoitment> getScheduleAppointment()
+        {
+            var ScheduleData = firebaseClient
+             .Child("$Specalists / 406707265 / Patients / 0 / Appointments")
+             .AsObservable<Appoitment>()
+             .AsObservableCollection();
 
+            return ScheduleData;
+        }
+        public async Task addScheduleAppointment(string patientname, DateTime appointmentDate, TimeSpan appointmentTime)
+        {
+            Appoitment A = new Appoitment()
+            {
+                AppointmentPatientName = patientname,
+                AppointmentDate = appointmentDate,
+                AppointmentTime = appointmentTime
+
+            };
+            await firebaseClient
+                .Child($"Specalists/406707265/Patients/0/Appointments")
+                .PostAsync(A);
+        }
         public static async Task<bool> Delete(string id)
         {
             await firebaseClient.Child(nameof(Appoitment) + "/" + id).DeleteAsync();

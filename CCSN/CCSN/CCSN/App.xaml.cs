@@ -11,7 +11,7 @@ namespace CCSN
             InitializeComponent();
        
          //  MainPage = new NavigationPage(new Views.TabBar());
-          MainPage = new NavigationPage(new Views.LogInPage());
+          MainPage = new NavigationPage(new Views.ScheduleAppintmentPage());
             // MainPage = new Views.HomePage();
            
         }

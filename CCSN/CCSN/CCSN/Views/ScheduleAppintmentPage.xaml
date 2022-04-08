@@ -1,42 +1,78 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xc="clr-namespace:XCalendar;assembly=XCalendar"
-              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:sys="clr-namespace:System;assembly=System.Runtime" 
              x:Class="CCSN.Views.ScheduleAppintmentPage" BackgroundColor="AliceBlue"
-              xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
-    <ContentPage.Content>
-        <StackLayout Margin="10"  Padding="10">
-        <Picker Title="Patient Name">
-            <Picker.Items>
-                <x:String>Ahmad</x:String>
-                <x:String>Ali</x:String>
-                <x:String>Omar</x:String>
-                <x:String>Alma</x:String>
-                <x:String>Aya</x:String>
-                <x:String>Ammar</x:String>
-                <x:String>Noor</x:String>
-            </Picker.Items>
-        </Picker>
-        <Frame Padding="50" BorderColor="Black"/>
-            <xc:CalendarView 
-            x:Name="calendar"
-            DateSelectionChanged="CalendarView_DateSelectionChanged"
-            SelectionType="Single"
-                />
-            <StackLayout Orientation="Horizontal">
-                <Label  Padding="20,20,0,0" VerticalOptions="End"  >
-                    <Label.FormattedText >
-                        <FormattedString >
-                            <Span Text="Time : " FontSize="Large" FontAttributes="Bold" TextColor="#2196f3" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <TimePicker x:Name="arrivalTimePicker" Time="4:15:26" FontSize="Large" VerticalOptions="End">
+             >
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" VerticalOptions="Start">
+            <Picker  Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" 
+                     x:Name="AppointmentPatientName" Title="Patient Name" FontSize="Large"
+                     SelectedItem="{Binding AppointmentPatientName}">
+                <Picker.Items>
+                    <x:String>Ahmad</x:String>
+                    <x:String>Ali</x:String>
+                    <x:String>Omar</x:String>
+                    <x:String>Alma</x:String>
+                    <x:String>Aya</x:String>
+                    <x:String>Ammar</x:String>
+                    <x:String>Noor</x:String>
+                </Picker.Items>
+                <!-- ItemsSource="{Binding Appointment}"
+                     ItemDisplayBinding="{Binding AppointmentPatientName}">-->
+            </Picker>
+            <StackLayout Orientation="Horizontal" >
+                <Label HorizontalOptions="Start" FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" Text="Date :"/>
+                <DatePicker x:Name ="AppointmentDate" VerticalOptions="CenterAndExpand" Date="{Binding AppointmentDate , Mode=TwoWay}" FontSize="Large" >
+                    <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
+                    <DatePicker.MinimumDate>
+                        <sys:DateTime x:FactoryMethod="Parse">
+                            <x:Arguments>
+                                <x:String>Jan 1 2000</x:String>
+                            </x:Arguments>
+                        </sys:DateTime>
+                    </DatePicker.MinimumDate>
+                    <DatePicker.MaximumDate>
+                        <sys:DateTime x:FactoryMethod="Parse">
+                            <x:Arguments>
+                                <x:String>Dec 31 2050</x:String>
+                            </x:Arguments>
+                        </sys:DateTime>
+                    </DatePicker.MaximumDate>
+                </DatePicker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label HorizontalOptions="Start" FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" Text="Time :"/>
+                <TimePicker x:Name="AppointmentTime"  HorizontalOptions="Start" Time="{Binding AppointmentTime ,Mode=TwoWay}" 
+                            FontSize="Large" VerticalOptions="End" >
+                    <TimePicker.Format>hh:mm tt</TimePicker.Format>
                 </TimePicker>
             </StackLayout>
+            <Button x:Name ="AddAppointment" Text="Add Appointment" BackgroundColor="#2196f3"
+                    WidthRequest="200"
+             Clicked="AddAppointment_Clicked"
+               Command="{Binding AddScheduleCommand}"/>
         </StackLayout>
-    </ContentPage.Content>
-    <ContentPage.BindingContext>
-        <viewmodels:ScheduleAppointmentPageModelView/>
-    </ContentPage.BindingContext>
+        <!-- <ListView Grid.Row="1" x:Name="lstAppointment"
+                  ItemsSource="{Binding  Schedules}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding AppointmentPatientName}"/>
+                            <Label Text="{Binding AppointmentDate}"/>
+                            <Label Text="{Binding AppointmentTime}"/>
+                        </StackLayout>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+    </Grid>
+
 </ContentPage>

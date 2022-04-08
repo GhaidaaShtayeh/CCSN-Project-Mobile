@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using CCSN.Services;
+using CCSN.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,19 +13,17 @@ namespace CCSN.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ScheduleAppintmentPage : ContentPage
     {
+        AppintmentService scheduleAppointmentServices = new AppintmentService();
         public ScheduleAppintmentPage()
         {
             InitializeComponent();
 
-            TimePicker timePicker = new TimePicker
-            {
-                Time = new TimeSpan(4, 15, 26)
-            };
+            BindingContext = new ScheduleAppointmentPageModelView();
         }
-        public void CalendarView_DateSelectionChanged(object sender, EventArgs arg)
+        public void AddAppointment_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Date Available", calendar.SelectedDates.ToString(), "OK");
-
+            DisplayAlert("Success..!", "Appointment added successfully", "Ok");
         }
+        
     }
 }

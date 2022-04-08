@@ -1,28 +1,59 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CCSN.Models;
+using CCSN.Services;
+using MvvmHelpers;
 using Xamarin.Forms;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace CCSN.ViewModels
 {
     internal class ScheduleAppointmentPageModelView : BindableObject
     {
-     /*   public ScheduleAppointmentPageModelView()
+        TimeSpan appointmentTime = DateTime.Now.TimeOfDay; //time picker 
+        public TimeSpan AppointmentTime
         {
-            InitializeComponent();
-
-            TimePicker timePicker = new TimePicker
+            get { return appointmentTime; }
+            set
             {
-                Time = new TimeSpan(4, 15, 26)
-            };
+                if (appointmentTime != value)
+                {
+                    appointmentTime = value;
+                    OnPropertyChanged("AppointmentTime");
+                }
+            }
         }
-        public void CalendarView_DateSelectionChanged(object sender, EventArgs arg)
+
+        public DateTime AppointmentDate { get; set; }//date picker 
+        public string AppointmentPatientName { get; set; } //picker 
+
+        private AppintmentService services;
+        public Command AddScheduleCommand { get; }
+        private ObservableCollection<Appoitment> _Schedule = new ObservableCollection<Appoitment>();
+        public ObservableCollection<Appoitment> Schedules
         {
-            DisplayAlert("Date Available", calendar.SelectedDates.ToString(), "OK");
+            get { return _Schedule; }
+            set
+            {
+                _Schedule = value;
+                OnPropertyChanged();
+            }
 
         }
-     */
+        public ScheduleAppointmentPageModelView()
+        {
+            services = new AppintmentService();
+            Schedules = services.getScheduleAppointment();
+            AddScheduleCommand = new Command(async () => await addScheduleAppointmentAsync(AppointmentPatientName, AppointmentDate.Date, AppointmentTime));
+
+        }
+        public async Task addScheduleAppointmentAsync(string AppointmentPatientName, DateTime AppointmentDate, TimeSpan AppointmentTime)
+        {
+            await services.addScheduleAppointment(AppointmentPatientName, AppointmentDate, AppointmentTime);
+
+        }
+
     }
+    
 }
+

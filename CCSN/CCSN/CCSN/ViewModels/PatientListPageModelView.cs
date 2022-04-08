@@ -17,13 +17,12 @@ namespace CCSN.ViewModels
 
         public ObservableCollection<Patient> Patients { get => _Patient; set => SetProperty(ref _Patient, value, nameof(Patients)); }
 
-        
-
+                
         private ICommand _Appearing;
 
         public ICommand Appearing { get => _Appearing; set => SetProperty(ref _Appearing, value, nameof(Appearing)); }
 
-
+    
         public PatientListPageModelView()
         {
 
