@@ -2,12 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CCSN.Views.PatientProfileDetailsPage"
-              xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
+              xmlns:viewmodels="clr-namespace:CCSN.ViewModels" >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="PatientNameEntry" Text="Name" FontSize="Small" Placeholder="Name" PlaceholderColor="Gray"  Margin="10"/>
+
+            <Entry x:Name="PatientGenderEntry" Text="Gender" FontSize="Small" Placeholder="Gender" PlaceholderColor="Gray" Margin="10" />
+
+            <Entry x:Name="MobileEntry" Text="Mobile" FontSize="Small" Placeholder="Mobile" PlaceholderColor="Gray" Margin="10" Keyboard="Text" />
+
+            <Entry x:Name="PatientAddressEntry" Text="Addres" FontSize="Small" Placeholder="Address" PlaceholderColor="Gray"  Margin="10" Keyboard="Text"/>
+
+            <Entry x:Name="PatientBirthdayEntry" Text="BD" FontSize="Small" Placeholder="BD" PlaceholderColor="Gray" Margin="10" Keyboard="Text" />
+
+            <Entry x:Name="PatientHeightEntry" Text="Height" FontSize="Small" Placeholder="Height" PlaceholderColor="Gray"  Margin="10" Keyboard="Text"/>
+
+            <Entry x:Name="PatientWeightEntry" Text="Weight" FontSize="Small" Placeholder="Weight" PlaceholderColor="Gray" Margin="10" Keyboard="Text" />
+
+            <Entry x:Name="PatientGenticesDisesesEntry" Text="Gen" FontSize="Small" Placeholder="Gentics" PlaceholderColor="Gray"  Margin="10" Keyboard="Text"/>
+
+            <Label x:Name="save" HorizontalOptions="Center" >Save</Label>
         </StackLayout>
     </ContentPage.Content>
         <ContentPage.BindingContext>

@@ -11,12 +11,32 @@ namespace CCSN.Models
         public string PatientName { get; set; }
         public string PatientGender { get; set; }
         public string PatientAddress { get; set; }
-        public int PatientWeight { get; set; }
-        public int PatientHeight { get; set; }
+        public string PatientWeight { get; set; }
+        public string PatientHeight { get; set; }
         public string PatientMobileNO { get; set; }
         public string PatientBirthday { get; set; }
         public string PatientGenticesDiseses { get; set; }
 
         public List<Appoitment> Appointments { get; set; }
+
+
+        public Patient()
+        {
+
+        }
+
+        public Patient( Patient instans)
+        {
+            ID = instans.ID;
+            PatientName = instans.PatientName;
+            PatientGender = instans.PatientGender;
+            PatientAddress = instans.PatientAddress;
+            PatientWeight = instans.PatientWeight;
+            PatientHeight = instans.PatientHeight;
+            PatientMobileNO = instans.PatientMobileNO;
+            PatientGenticesDiseses = instans.PatientGenticesDiseses;
+            Appointments = instans.Appointments;
+
+        }
     }
 }

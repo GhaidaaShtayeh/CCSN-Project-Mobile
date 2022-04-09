@@ -40,66 +40,66 @@
         <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
         <xct:EventToCommandBehavior Command="{Binding Appearing2}" EventName="Appearing" />
     </ContentPage.Behaviors>
-    <StackLayout>
-        <Label Text = "Today Appointments :" TextColor = "#2196f3"   WidthRequest = "200"
-                   HeightRequest="50"  FontSize = "Small" Margin = "13" FontAttributes = "Bold" ></Label >
-        <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments}" RowHeight="5" >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
+            <StackLayout>
 
-                        <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Frame 
-                               OutlineColor="#5A5A59"
-                               Padding="25"
-                               Margin="0,10,0,0"
-                               CornerRadius="10"
-                               HasShadow="True"
-                               >
-                                <StackLayout Orientation="Horizontal">
-                                    <BoxView 
-                                        Color="Maroon"
-                                        WidthRequest="4"
-                                    Margin="5, 0, 10, 0" />
-                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" Font="Small"  TextColor="Black" LineBreakMode="TailTruncation" Margin="20" />
-                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate}" Font="Small"  TextColor="Black" LineBreakMode="TailTruncation" Margin="20"  />
-                            </StackLayout>
-                                </Frame>
-                        </Grid>
 
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <Label Text = "Tommorrow Appointments : " TextColor = "#2196f3"   WidthRequest = "200"
+
+                <Label Text = "Today Appointments :" TextColor = "#2196f3"   WidthRequest = "200"
+                   HeightRequest="50"  FontSize = "Small" Margin = "20" FontAttributes = "Bold" ></Label >
+                <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments}" RowHeight="5" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <Grid RowDefinitions="Auto,Auto,Auto">
+                                    <Frame 
+                                       CornerRadius="10"
+                                        Padding="3"
+                                        HeightRequest="40"
+                                        HasShadow="True"
+                                        Margin="30,0,20,0"
+                                        >
+                                        <StackLayout Orientation="Horizontal"  Margin="30,0,0,0" VerticalOptions="Center">
+                                            <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" HorizontalOptions="Start"  TextColor="Black" FontSize="Small"   />
+                                            <Label Grid.Row="0" Grid.Column="1" Text="       Time : " HorizontalOptions="Center"/>
+                                            <Label Grid.Row="0" Grid.Column="2" Text="{Binding AppointmentDate.TimeOfDay}" HorizontalOptions="End"  TextColor="Black" FontSize="Small"  />
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Label Text = "Tommorrow Appointments : " TextColor = "#2196f3"   WidthRequest = "200"
                    HeightRequest="50"  FontSize = "Small" Margin = "13" FontAttributes = "Bold" >
-        </Label >
-        <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments2}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
+                </Label >
+                <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments2}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
 
-                        <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Frame 
-                                OutlineColor="black"
-                               Padding="25">
-                                <StackLayout Orientation="Horizontal">
-                                    <BoxView 
-                                        Color="Maroon"
-                                        WidthRequest="4"
-                                    Margin="5, 0, 10, 0" />
-                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" Font="Small"  TextColor="Black" LineBreakMode="TailTruncation" Margin="20" />
-                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate}" Font="Small"  TextColor="Black" LineBreakMode="TailTruncation" Margin="20" />
-                           </StackLayout>
-                                </Frame>
-                        </Grid>
+                                <Grid RowDefinitions="Auto,Auto,Auto">
+                                    <Frame 
+                                  CornerRadius="10"
+                                  Padding="3"
+                                  HasShadow="True"
+                                  HeightRequest="40"
+                                  Margin="30,0,20,0">
+                                        <StackLayout Orientation="Horizontal"  Margin="30,0,0,0"  VerticalOptions="Center">
+                                            <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" HorizontalOptions="Start"  TextColor="Black" FontSize="Small"   />
+                                            <Label Grid.Row="0" Grid.Column="1" Text="        Time : " HorizontalOptions="Center"/>
+                                            <Label Grid.Row="0" Grid.Column="2" Text="{Binding AppointmentDate.TimeOfDay}" HorizontalOptions="End"  TextColor="Black" FontSize="Small"  />
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
 
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
-    
-    
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Image Source = "https://aws1.discourse-cdn.com/business5/uploads/webflow1/original/3X/0/f/0f47cc7c2a7cfb443239076e36fde9abff32a2c2.png" HeightRequest="100" WidthRequest="100" HorizontalOptions = "Center" Margin="20,30,20,30" />
+
+            </StackLayout>
 
 </ContentPage>

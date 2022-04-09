@@ -46,6 +46,7 @@ namespace CCSN.ViewModels
         {
             Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAppointments());
 
+
         }
         async Task LoadData2()
         {

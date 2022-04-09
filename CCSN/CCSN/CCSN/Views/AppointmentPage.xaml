@@ -11,6 +11,17 @@
         <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
     </ContentPage.Behaviors>
     <StackLayout>
+        <Grid 
+                 HorizontalOptions="CenterAndExpand"
+                 >
+            <Image
+                   Source="https://thumbs.dreamstime.com/b/scheduling-your-appointment-today-monthly-calendar-pen-scheduling-your-appointment-today-monthly-calendar-143613840.jpg"                         
+                   Scale="1.0" 
+                   Aspect="Fill"
+                
+                   
+                />
+        </Grid>
         <ListView
             ItemsSource="{Binding Appoitments}"
             Grid.Row="2"
@@ -19,22 +30,32 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Frame 
-                               OutlineColor="#5A5A59"
-                               Padding="25"
-                               Margin="0,10,0,0"
-                               CornerRadius="10"
-                               HasShadow="True" >
-                                <StackLayout Orientation="Horizontal">
-                                    <BoxView 
-                                        Color="Maroon"
-                                        WidthRequest="4"
-                                    Margin="5, 0, 10, 0" />
-                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" Font="Small"  TextColor="Black" LineBreakMode="TailTruncation" Margin="20"/>
-                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate}" Font="Small"  TextColor="Black" LineBreakMode="TailTruncation" Margin="20" />
+                            <Grid RowDefinitions="Auto,Auto,Auto">
+                                <Frame 
+                                        CornerRadius="10"
+                                        Padding="3"
+                                        HeightRequest="40"
+                                        WidthRequest="1000"
+                                        HasShadow="True"
+                                        Margin="15,0,30,0"
+                                        HorizontalOptions="Center"
+                                        >
+                                <StackLayout Orientation="Horizontal"  Margin="30,0,20,0" VerticalOptions="Center">
+                                        
+                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}"  VerticalOptions="Center" HorizontalOptions="Start"  TextColor="Black" FontSize="Small"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate.Date}" Font="Small"   HorizontalOptions="End"  TextColor="Black" FontSize="Small" />
+                                    <ImageButton  Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Saint_Andrew%27s_cross_black.svg/1200px-Saint_Andrew%27s_cross_black.svg.png"
+                                                  VerticalOptions="Center"
+                                                  HorizontalOptions="End"
+                                                  Grid.Row="0"
+                                                  Grid.Column="2"
+                                                 Margin="70,0,0,0"
+                                                 WidthRequest="10"
+                                                  BackgroundColor="White"></ImageButton>
+
                                 </StackLayout>
                             </Frame>
+
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
