@@ -7,7 +7,6 @@ using CCSN.Models;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 using System.Linq;
-using Firebase.Database.Query;
 
 namespace CCSN.Services
 {
@@ -33,19 +32,11 @@ namespace CCSN.Services
             return result ;
         }
 
-        /*public async Task<bool> Update(Patient patient)
+        public async Task<bool> Update(Patient patient)
         {
             await firebaseClient.Child(nameof(Patient) + "/" + patient.ID).PatchAsync(JsonConvert.SerializeObject(patient));
             return true;
-        }*/
-
-        public async Task EditPatient(Patient cat,string ID)
-        {
-            await firebaseClient
-          .Child($"Specalists/406707265/Patients/{ID}")
-          .PatchAsync(JsonConvert.SerializeObject(cat));
         }
-
         public async Task<bool> Delete(string id)
         {
             await firebaseClient.Child(nameof(Patient) + "/" + id).DeleteAsync();

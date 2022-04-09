@@ -14,6 +14,7 @@ namespace CCSN.ViewModels
 {
     public class AppointmentPageModelView : BaseViewModel
     {
+        private AppintmentService _AppointmentService;
         private ObservableCollection<Appoitment> _Appoitments = new ObservableCollection<Appoitment>();
         private Appoitment _SelectedAppoitment;
 

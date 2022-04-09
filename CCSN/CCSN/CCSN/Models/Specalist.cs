@@ -11,8 +11,8 @@ namespace CCSN.Models
             public string Name { get; set; }
             public string ID { get; set; }
             public string Email { get; set; }
-            public string password { get; set; }
-            public List<Patient> Patients { get; set; }
+           public string password { get; set; }
+        public List<Patient> Patients { get; set; }
         
     }
 }
