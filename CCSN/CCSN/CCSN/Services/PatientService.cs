@@ -37,6 +37,14 @@ namespace CCSN.Services
             await firebaseClient.Child(nameof(Patient) + "/" + patient.ID).PatchAsync(JsonConvert.SerializeObject(patient));
             return true;
         }
+
+        public async Task EditPatient(Patient patient, string ID)
+        {
+            await firebaseClient
+          .Child($"Specalists/406707265/Patients/{ID}")
+          .PatchAsync(JsonConvert.SerializeObject(patient));
+        }
+
         public async Task<bool> Delete(string id)
         {
             await firebaseClient.Child(nameof(Patient) + "/" + id).DeleteAsync();
