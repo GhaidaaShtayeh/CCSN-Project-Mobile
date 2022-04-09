@@ -1754,26 +1754,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Msi\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile2\\CCSN\\CCSN\\CCSN.iOS\\CCSN.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Msi\\Documents\\new cloning\\Add new\\CCSN\\CCSN\\CCSN.iOS\\CCSN.iOS.csproj",
       "projectName": "CCSN.iOS",
-      "projectPath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile2\\CCSN\\CCSN\\CCSN.iOS\\CCSN.iOS.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile2\\CCSN\\CCSN\\CCSN.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Msi\\Documents\\new cloning\\Add new\\CCSN\\CCSN\\CCSN.iOS\\CCSN.iOS.csproj",
+      "packagesPath": "C:\\Users\\Msi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Msi\\Documents\\new cloning\\Add new\\CCSN\\CCSN\\CCSN.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Msi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
@@ -1785,8 +1785,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile2\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {
-              "projectPath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile2\\CCSN\\CCSN\\CCSN\\CCSN.csproj"
+            "C:\\Users\\Msi\\Documents\\new cloning\\Add new\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {
+              "projectPath": "C:\\Users\\Msi\\Documents\\new cloning\\Add new\\CCSN\\CCSN\\CCSN\\CCSN.csproj"
             }
           }
         }
