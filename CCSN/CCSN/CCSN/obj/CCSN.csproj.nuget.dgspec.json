@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {}
+    "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile2\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {
+    "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile2\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile\\CCSN\\CCSN\\CCSN\\CCSN.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile2\\CCSN\\CCSN\\CCSN\\CCSN.csproj",
         "projectName": "CCSN",
-        "projectPath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile\\CCSN\\CCSN\\CCSN\\CCSN.csproj",
+        "projectPath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile2\\CCSN\\CCSN\\CCSN\\CCSN.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile\\CCSN\\CCSN\\CCSN\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile2\\CCSN\\CCSN\\CCSN\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

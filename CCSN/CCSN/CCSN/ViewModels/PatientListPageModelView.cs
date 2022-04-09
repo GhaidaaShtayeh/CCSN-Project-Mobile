@@ -1,5 +1,6 @@
 ﻿using CCSN.Models;
 using CCSN.Services;
+using CCSN.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,6 +21,7 @@ namespace CCSN.ViewModels
         
 
         private ICommand _Appearing;
+        private Patient _SelectedPatient;
 
         public ICommand Appearing { get => _Appearing; set => SetProperty(ref _Appearing, value, nameof(Appearing)); }
 
@@ -34,6 +36,16 @@ namespace CCSN.ViewModels
         {
             Patients = new ObservableCollection<Patient>((List<Patient>)await PatientService.GetUserPatients());
 
+        }
+
+        public Patient SelectedPatient
+        {
+            get => _SelectedPatient;
+            set
+            {
+                SetProperty(ref _SelectedPatient, value, nameof(SelectedPatient));
+                App.Current.MainPage.Navigation.PushAsync(new PatientProfileDetailsPage(value));
+            }
         }
     }
 }
