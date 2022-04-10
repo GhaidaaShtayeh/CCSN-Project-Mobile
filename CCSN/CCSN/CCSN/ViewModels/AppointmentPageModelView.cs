@@ -34,5 +34,7 @@ namespace CCSN.ViewModels
             Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAllAppointments());
 
         }
+
+        
     }
 }

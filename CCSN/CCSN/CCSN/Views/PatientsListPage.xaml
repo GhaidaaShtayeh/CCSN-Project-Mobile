@@ -39,7 +39,7 @@
                                         HasShadow="True"
                                         Margin="15,0,30,0"
                                         >
-                                <StackLayout Orientation="Horizontal"  Margin="10,0,20,0" VerticalOptions="Center">
+                                <StackLayout Orientation="Horizontal"  Margin="10,0,20,0" VerticalOptions="Center" HorizontalOptions="Center">
                                     <Image Source="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png" WidthRequest="70" HeightRequest="70"/>
                                     <BoxView 
                                     Color="Maroon"

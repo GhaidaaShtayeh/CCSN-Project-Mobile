@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CCSN.Views.EditFollowPage">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout>
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                </Grid>
+                <StackLayout Orientation="Horizontal"  Grid.Row="0" >
+                    <Label HorizontalOptions="Start" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" Text=" - Follow Up Date :" ></Label>
+                    <Frame
+                 CornerRadius="10"
+	             Padding="5"
+                  Margin="4"          
+	             HasShadow="True"
+	             OutlineColor="#2196f3">
+                        <DatePicker Format="MM/dd/yyyy" x:Name="DatePcker" >
+                        </DatePicker>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="1">
+                    <Label  HorizontalOptions="Start" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" Text=" - Tools :" ></Label>
+                    <Frame
+                CornerRadius="10"
+	                Padding="5"
+                    Margin="5"
+	            HasShadow="True"
+	            OutlineColor="#2196f3">
+                        <Editor x:Name="Tools"  BackgroundColor="Transparent" HeightRequest="100" TextColor="Black"  />
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="2">
+                    <Label  HorizontalOptions="Start" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" Text=" - Goals :" ></Label>
+                    <Frame
+                 CornerRadius="10"
+                 Padding="5"
+                 Margin="5"
+	             HasShadow="True"
+	            OutlineColor="#2196f3">
+                        <Editor x:Name="Goals" BackgroundColor="Transparent" HeightRequest="100" TextColor="Black" />
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="3">
+                    <Label  HorizontalOptions="Start" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" Text=" - Add Notes :" ></Label>
+                    <Frame
+                 CornerRadius="10"
+                 Padding="5"
+                 Margin="5"
+                 HasShadow="True"
+                 OutlineColor="#2196f3">
+                        <Editor  x:Name="Notes" BackgroundColor="Transparent" HeightRequest="100" TextColor="Black" />
+                    </Frame>
+                </StackLayout>
+                <Label x:Name="save" HorizontalOptions="Center" >Save</Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

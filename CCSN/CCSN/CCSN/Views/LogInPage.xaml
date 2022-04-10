@@ -18,7 +18,6 @@
             
             <Button BackgroundColor="#2196f3" 
                     WidthRequest="300"
-
                     CornerRadius="20"
                     FontSize="Medium"
                     TextColor="White"
