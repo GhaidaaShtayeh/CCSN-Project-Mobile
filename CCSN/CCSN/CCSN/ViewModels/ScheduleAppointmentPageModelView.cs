@@ -26,7 +26,7 @@ namespace CCSN.ViewModels
                 }
             }
 
-            public DateTime AppointmentDate { get; set; }//date picker 
+            public DateTime AppointmentDate { get; set; }//Calender 
             public string AppointmentPatientName { get; set; } //picker 
 
             private AppintmentService _Services;
@@ -40,8 +40,33 @@ namespace CCSN.ViewModels
                     _Schedule = value;
                     OnPropertyChanged();
                 }
-
+          }
+          
+          // calender 
+        private ObservableCollection<XamForms.Controls.SpecialDate> _calender;
+        public ObservableCollection<XamForms.Controls.SpecialDate> Calender
+        {
+            get
+            {
+                return _calender;
             }
+            set
+            {
+                _calender = value;
+                OnPropertyChanged(nameof(Calender));
+            }
+        }
+
+        public Command DateChosen
+        {
+            get
+            {
+                return new Command((obj) =>
+                {
+                    System.Diagnostics.Debug.WriteLine(obj as DateTime?);
+                });
+            }
+        }
             public ScheduleAppointmentPageModelView()
             {
             _Services = new AppintmentService();
@@ -54,6 +79,12 @@ namespace CCSN.ViewModels
                 await _Services.addScheduleAppointment(AppointmentPatientName, AppointmentDate, AppointmentTime);
 
             }
+            // view appointment 
+            public void AllAppointment()
+        {
+            services = new AppintmentService();
+            Schedules = services.getScheduleAppointment();
+        }
 
         }
     }
