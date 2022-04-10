@@ -51,10 +51,10 @@ namespace CCSN.Services
             return result.Where(o => o.AppointmentDate.Date == DateTime.Today.AddDays(1).Date);
         }
 
-        public static async Task EditAppointment(string UserID, Appoitment appoitment)
+        public static async Task EditAppointment(Appoitment appoitment)
         {
             await firebaseClient
-          .Child($"Specalists/{UserID}/Patients/0/Appointments")
+          .Child($"Specalists/406707265/Patients/0/Appointments")
           .PatchAsync(appoitment);
         }
 
