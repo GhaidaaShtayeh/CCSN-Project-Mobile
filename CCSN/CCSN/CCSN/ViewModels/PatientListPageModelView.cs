@@ -45,7 +45,7 @@ namespace CCSN.ViewModels
             {
                 if (value != null)
                 {
-                    App.Current.MainPage = new NavigationPage(new Views.PatientProfileDetailsPage(value));
+                    App.Current.MainPage = new NavigationPage(new Views.TopBarProfile(value));
                 }
                 _SelectedPatient = value;
                 OnPropertyChanged();

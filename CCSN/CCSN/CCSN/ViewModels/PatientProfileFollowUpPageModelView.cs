@@ -15,7 +15,7 @@ namespace CCSN.ViewModels
     {
         private AppintmentService _AppointmentService;
         private ObservableCollection<Appoitment> _Appoitments = new ObservableCollection<Appoitment>();
-        private Appoitment _SelectedAppoitment;
+        private Appoitment _SelectedFollow;
 
         public ObservableCollection<Appoitment> Appoitments { get => _Appoitments; set => SetProperty(ref _Appoitments, value, nameof(Appoitments)); }
 
@@ -34,6 +34,19 @@ namespace CCSN.ViewModels
         {
             Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAllAppointments());
 
+        }
+        public Appoitment SelectedFollow
+        {
+            get => _SelectedFollow;
+            set
+            {
+                if (value != null)
+                {
+                    App.Current.MainPage = new NavigationPage(new Views.EditFollowPage(value));
+                }
+                _SelectedFollow = value;
+                OnPropertyChanged();
+            }
         }
     }
 }

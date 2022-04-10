@@ -14,7 +14,8 @@
             <ListView
             HasUnevenRows="True"
             ItemsSource="{Binding Appoitments}"
-            SelectedItem="{Binding SelectedAppoitment, Mode=TwoWay}">
+            SelectedItem="{Binding SelectedFollow, Mode=TwoWay}"
+            SelectionMode="Single">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
