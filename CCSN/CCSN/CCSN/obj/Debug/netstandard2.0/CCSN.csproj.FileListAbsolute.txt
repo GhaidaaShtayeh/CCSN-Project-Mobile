@@ -79,3 +79,4 @@ C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\bin\Debug\netstandard
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\ref\CCSN.dll
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\CCSN.pdb
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.csproj.AssemblyReference.cache

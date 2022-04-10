@@ -43,8 +43,12 @@ namespace CCSN.ViewModels
             get => _SelectedPatient;
             set
             {
-                SetProperty(ref _SelectedPatient, value, nameof(SelectedPatient));
-                App.Current.MainPage.Navigation.PushAsync(new PatientProfileDetailsPage(value));
+                if (value != null)
+                {
+                    App.Current.MainPage = new NavigationPage(new Views.PatientProfileDetailsPage(value));
+                }
+                _SelectedPatient = value;
+                OnPropertyChanged();
             }
         }
     }
