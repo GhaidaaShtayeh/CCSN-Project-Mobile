@@ -2,15 +2,61 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CCSN.Views.PatientProfileFollowUpPage"
-              xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-        <ContentPage.BindingContext>
+              xmlns:viewmodels="clr-namespace:CCSN.ViewModels" xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    <ContentPage.BindingContext>
         <viewmodels:PatientProfileFollowUpPageModelView/>
     </ContentPage.BindingContext>
+    
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
+        </ContentPage.Behaviors>
+        <StackLayout>
+            <ListView
+            HasUnevenRows="True"
+            ItemsSource="{Binding Appoitments}"
+            SelectedItem="{Binding SelectedAppoitment, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                        <Grid RowDefinitions="Auto,Auto,Auto">
+                            <Frame 
+                                       CornerRadius="10"
+                                        Padding="3"
+                                        HeightRequest="40"
+                                        HasShadow="True"
+                                        Margin="30,15,20,0"
+                                        >
+                                <StackLayout Orientation="Horizontal"  Margin="15,0,15,0" VerticalOptions="Center">
+                                    <Label Grid.Row="0" Text="{Binding FollowUpDate}" HorizontalOptions="Start"  TextColor="Black" FontSize="Small"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="  ||  " HorizontalOptions="End" TextColor="Black" FontSize="Small" />
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding FollowUpAddNote}" HorizontalOptions="End" TextColor="Black" FontSize="Small" />
+                                    <ImageButton  Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Saint_Andrew%27s_cross_black.svg/1200px-Saint_Andrew%27s_cross_black.svg.png"
+                                                  VerticalOptions="Center"
+                                                  HorizontalOptions="End"
+                                                  Grid.Row="0"
+                                                  Grid.Column="2"
+                                                 Margin="70,0,0,0"
+                                                 WidthRequest="10"
+                                                  BackgroundColor="White"></ImageButton>
+                                </StackLayout>
+                                 </Frame>
+                            
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                
+            </ListView.ItemTemplate>
+
+            </ListView>
+        <Button BackgroundColor="#2196f3" 
+                CornerRadius="20"
+                FontSize="Small"
+                TextColor="White"
+                Text="Add New Follow Up"
+                Margin="15,15,15,15" 
+                Clicked="Button_Clicked_1"
+                ></Button>
+    </StackLayout>
+
 </ContentPage>
+        
