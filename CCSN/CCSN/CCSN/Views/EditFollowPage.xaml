@@ -16,48 +16,28 @@
                     </Grid.RowDefinitions>
                 </Grid>
                 <StackLayout Orientation="Horizontal"  Grid.Row="0" >
-                    <Label HorizontalOptions="Start" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" Text=" - Follow Up Date :" ></Label>
-                    <Frame
-                 CornerRadius="10"
-	             Padding="5"
-                  Margin="4"          
-	             HasShadow="True"
-	             OutlineColor="#2196f3">
+                    <Label Style="{StaticResource Followlabel}" Text=" - Follow Up Date :" ></Label>
+                    <Frame  Style="{StaticResource FollowFrameStyle}">
                         <DatePicker Format="MM/dd/yyyy" x:Name="DatePcker" >
                         </DatePicker>
                     </Frame>
                 </StackLayout>
                 <StackLayout Grid.Row="1">
-                    <Label  HorizontalOptions="Start" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" Text=" - Tools :" ></Label>
-                    <Frame
-                CornerRadius="10"
-	                Padding="5"
-                    Margin="5"
-	            HasShadow="True"
-	            OutlineColor="#2196f3">
-                        <Editor x:Name="Tools"  BackgroundColor="Transparent" HeightRequest="100" TextColor="Black"  />
+                    <Label  Style="{StaticResource Followlabel}" Text=" - Tools :" ></Label>
+                    <Frame  Style="{StaticResource FollowFrameStyle}">
+                        <Editor x:Name="Tools" Style="{StaticResource FollowEditor}"  />
                     </Frame>
                 </StackLayout>
                 <StackLayout Grid.Row="2">
-                    <Label  HorizontalOptions="Start" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" Text=" - Goals :" ></Label>
-                    <Frame
-                 CornerRadius="10"
-                 Padding="5"
-                 Margin="5"
-	             HasShadow="True"
-	            OutlineColor="#2196f3">
-                        <Editor x:Name="Goals" BackgroundColor="Transparent" HeightRequest="100" TextColor="Black" />
+                    <Label  Style="{StaticResource Followlabel}" Text=" - Goals :" ></Label>
+                    <Frame  Style="{StaticResource FollowFrameStyle}">
+                        <Editor x:Name="Goals" Style="{StaticResource FollowEditor}" />
                     </Frame>
                 </StackLayout>
                 <StackLayout Grid.Row="3">
-                    <Label  HorizontalOptions="Start" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" Text=" - Add Notes :" ></Label>
-                    <Frame
-                 CornerRadius="10"
-                 Padding="5"
-                 Margin="5"
-                 HasShadow="True"
-                 OutlineColor="#2196f3">
-                        <Editor  x:Name="Notes" BackgroundColor="Transparent" HeightRequest="100" TextColor="Black" />
+                    <Label  Style="{StaticResource Followlabel}" Text=" - Add Notes :" ></Label>
+                    <Frame  Style="{StaticResource FollowFrameStyle}">
+                        <Editor  x:Name="Notes" Style="{StaticResource FollowEditor}" />
                     </Frame>
                 </StackLayout>
                 <Label x:Name="save" HorizontalOptions="Center" >Save</Label>

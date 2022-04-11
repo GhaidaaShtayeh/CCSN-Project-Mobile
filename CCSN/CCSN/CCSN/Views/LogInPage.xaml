@@ -15,12 +15,8 @@
             <Entry Placeholder="Password"
                    IsPassword="True" 
                    Text="{Binding password}"></Entry>
-            
-            <Button BackgroundColor="#2196f3" 
-                    WidthRequest="300"
-                    CornerRadius="20"
-                    FontSize="Medium"
-                    TextColor="White"
+
+                <Button Style="{StaticResource AddButton}"
                     Text="Login"
                     Command="{Binding LoginCommand}" ></Button>
         </StackLayout>

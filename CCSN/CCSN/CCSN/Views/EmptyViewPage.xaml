@@ -36,10 +36,7 @@
                 />
           
                 <Button Text="Go"
-                   BackgroundColor="#1EA6D6"
-                    TextColor="White"
-                    FontSize="Large"
-                    Margin="11"
+                  Style="{StaticResource AddButton}"
                      />
             </StackLayout>
         </StackLayout>

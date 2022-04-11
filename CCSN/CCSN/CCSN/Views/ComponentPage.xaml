@@ -1,35 +1,114 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CCSN.Views.ComponentPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="label" 
-                   WidthRequest="200" 
-                   HeightRequest="40" 
-                   FontSize="Medium" 
-                   ></Label>
 
-            <Button Text="Button" 
-                    BackgroundColor="#1EA6D6" 
-                    WidthRequest="100"
-                    FontSize="Medium"
-                    ></Button>
-            <Button  Text="female/male"
-                     WidthRequest="10"
-                     HeightRequest="50" 
-                     BackgroundColor="#1EA6D6" 
-                     FontSize="Medium"  
-                     BorderRadius="30"
-                     ></Button>
-            <Button Text="+" 
-                    WidthRequest="60" 
-                    HeightRequest="60"
-                    BorderRadius="30"
-                    HorizontalOptions="Center" 
-                    VerticalOptions="Center" 
-                    BackgroundColor="#1EA6D6"  
-                    FontSize="Large"/>
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+
+    <Style x:Key="AddButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="#2196f3" />
+        <Setter Property="WidthRequest" Value="300" />
+        <Setter Property="CornerRadius" Value="20" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="TextColor" Value="White" />
+    </Style>
+   
+    <Style x:Key="BlusButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="#2196f3" />
+        <Setter Property="WidthRequest" Value="60" />
+        <Setter Property="HeightRequest" Value="60"/>
+        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="FontSize" Value="Large" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="HorizontalOptions" Value="End"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="BorderColor" Value="Black"/>
+        <Setter Property="Grid.Row" Value="0" />
+        <Setter Property="Grid.Column" Value="0" />
+        <Setter Property="Text" Value="+" />
+    </Style>
+
+    <Style x:Key="labelView" TargetType="Label">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="Small" />
+    </Style>
+
+
+    <Style x:Key="navBarStyle" TargetType="ImageButton">
+        <Setter Property="BackgroundColor" Value="#00ffffff" />
+        <Setter Property="HeightRequest" Value="30"/>
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+    </Style>
+    <Style x:Key="navlabel" TargetType="Label">
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontSize" Value="large" />
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="VerticalOptionsOptions" Value="CenterAndExpand"/>
+    </Style>
+
+    <Style x:Key="FrameStyle" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="HeightRequest" Value="40"/>
+        <Setter Property="HasShadow" Value="True"/>
+    </Style>
+
+    <Style x:Key="AppFrame" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="HeightRequest" Value="40"/>
+        <Setter Property="WidthRequest" Value="1000"/>
+        <Setter Property="HasShadow" Value="True"/>
+        <Setter Property="Margin" Value="15,0,30,0"/>
+        <Setter Property="orizontalOptions" Value="Center"/>
+    </Style>
+    
+    <Style x:Key="FollowFrameStyle" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="OutlineColor" Value="#2196f3"/>
+        <Setter Property="HasShadow" Value="True"/>
+        <Setter Property="Margin" Value="5"/>
+    </Style>
+
+    <Style x:Key="Followlabel" TargetType="Label">
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="VerticalOptionsOptions" Value="Center"/>
+    </Style>
+    <Style x:Key="FollowEditor" TargetType="Editor">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HeightRequest" Value="100"/>
+        <Setter Property="TextColor" Value="Black"/>
+    </Style>
+
+                  
+    <Style x:Key="AppLabelStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="WidthRequest" Value="200"/>
+        <Setter Property="HeightRequest" Value="50"/>
+        <Setter Property="TextColor" Value="#2196f3" />
+        <Setter Property="Margin" Value="20"/>
+    </Style>
+
+
+
+
+    <Style x:Key="DeleteButton" TargetType="ImageButton">
+        <Setter Property="Source" Value="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Saint_Andrew%27s_cross_black.svg/1200px-Saint_Andrew%27s_cross_black.svg.png" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="End"/>
+        <Setter Property="WidthRequest" Value="10"/>
+        <Setter Property="BackgroundColor" Value="White"/>
+        <Setter Property="Grid.Row" Value="0" />
+        <Setter Property="Grid.Column" Value="2" />
+        <Setter Property="Margin" Value="70,0,0,0"/>
+    </Style>
+    <Style x:Key="EntryStyle" TargetType="Entry">
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="PlaceholderColor" Value="Gray" />
+        <Setter Property="Margin" Value="10"/>
+    </Style>
+</ResourceDictionary>

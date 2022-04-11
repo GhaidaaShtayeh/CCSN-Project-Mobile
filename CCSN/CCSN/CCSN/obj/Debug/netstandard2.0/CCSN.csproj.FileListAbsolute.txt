@@ -82,3 +82,4 @@ C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.pdb
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.csproj.AssemblyReference.cache
 C:\Users\DELL\Documents\CCSN-Project-Mobile\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\TopBarProfile.xaml.g.cs
+C:\Users\DELL\Desktop\CCSN1\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.GeneratedMSBuildEditorConfig.editorconfig
