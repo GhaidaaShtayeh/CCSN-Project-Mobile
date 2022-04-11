@@ -25,8 +25,9 @@ namespace CCSN.ViewModels
                     }
                 }
             }
-
-            public DateTime AppointmentDate { get; set; }//Calender 
+        public ObservableCollection<Appoitment> AllAppointment { get; set; }
+            = new ObservableCollection<Appoitment>();
+        public DateTime AppointmentDate { get; set; }//Calender 
             public string AppointmentPatientName { get; set; } //picker 
 
             private AppintmentService _Services;
@@ -79,12 +80,8 @@ namespace CCSN.ViewModels
                 await _Services.addScheduleAppointment(AppointmentPatientName, AppointmentDate, AppointmentTime);
 
             }
-            // view appointment 
-            public void AllAppointment()
-        {
-            services = new AppintmentService();
-            Schedules = services.getScheduleAppointment();
-        }
+            
+            
 
         }
     }

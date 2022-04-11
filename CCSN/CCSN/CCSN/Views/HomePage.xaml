@@ -46,7 +46,8 @@
 
         <Label Text = "Today Appointments :" TextColor = "#2196f3"   WidthRequest = "200"
                    HeightRequest="50"  FontSize = "Small" Margin = "20" FontAttributes = "Bold" ></Label >
-        <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments}" RowHeight="5" >
+        <ListView 
+            HasUnevenRows="True" ItemsSource="{Binding Appoitments}" RowHeight="5" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

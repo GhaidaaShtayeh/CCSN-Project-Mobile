@@ -14,10 +14,12 @@ namespace CCSN.Views
     public partial class EditFollowPage : ContentPage
     {
         Appoitment Appoitment;
+        AppintmentService FollowUpService;
         public EditFollowPage(Appoitment appoitment)
         {
             InitializeComponent();
-
+            BindingContext = appoitment;
+            FollowUpService = new AppintmentService();
             Appoitment = appoitment;
             DatePcker.Date = Appoitment.AppointmentDate;
             Tools.Text = Appoitment.FollowUpTools;
@@ -25,7 +27,8 @@ namespace CCSN.Views
             Notes.Text = Appoitment.FollowUpAddNote;
 
             EditPatientClick();
-
+           
+           
         }
 
         public async void EditAppointment()
@@ -54,5 +57,13 @@ namespace CCSN.Views
                 })
             });
         }
+
+       /* public async void DeleteFollowUpApointment(object sender, EventArgs e)
+        {
+            await FollowUpService.DeleteFollowUpAppointment(Appoitment.FollowUpDate, Appoitment.FollowUpTools,
+                                                             Appoitment.FollowUpGoals, Appoitment.FollowUpAddNote);
+            await Navigation.PushAsync(new PatientProfileFollowUpPage());
+           
+        }*/
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using CCSN.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -22,5 +22,13 @@ namespace CCSN.Views
             await Navigation.PushAsync(new ScheduleAppintmentPage());
 
         }
+        /*  public async void ListAppointment_ItemTapped(object sender, ItemTappedEventArgs e)
+          {
+             var ScheduleAppointment = e.Item as Appoitment;
+              if (ScheduleAppointment == null) return;
+              await Navigation.PushAsync(new EditFollowPage(ScheduleAppointment));
+              ListScheduleAppointment.SelectedItem = null;
+
+          }*/
     }
 }

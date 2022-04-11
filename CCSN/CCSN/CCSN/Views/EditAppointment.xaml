@@ -25,6 +25,7 @@
             </Entry>
             <Entry x:Name="TypeEntry" Text="0" FontSize="24" Placeholder="Type" PlaceholderColor="Gray" Margin="10" Keyboard="Numeric" MaxLength="1" />
             <Label x:Name="save"  HorizontalOptions="Center" >Save</Label>
+         <!--   <Button Text="Delete" Clicked="DeleteScheduleApointment"></Button>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

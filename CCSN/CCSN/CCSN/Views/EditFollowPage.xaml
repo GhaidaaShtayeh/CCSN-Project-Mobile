@@ -60,6 +60,7 @@
                         <Editor  x:Name="Notes" BackgroundColor="Transparent" HeightRequest="100" TextColor="Black" />
                     </Frame>
                 </StackLayout>
+            <!-- <Button Text="Delete" Clicked="DeleteFollowUpApointment"></Button>-->
                 <Label x:Name="save" HorizontalOptions="Center" >Save</Label>
             </StackLayout>
         </ScrollView>

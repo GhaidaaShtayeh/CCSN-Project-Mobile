@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace CCSN.Services
 {
     public class AppintmentService
@@ -86,5 +87,50 @@ namespace CCSN.Services
                 .Child($"Specalists/406707265/Patients/0/Appointments")
                 .PostAsync(A);
         }
+        // delete schedule Appointment 
+        public async Task DeleteScheduleAppointment(string patientname, DateTime appointmentDate, TimeSpan appointmentTime)
+        {
+            var toDeleteScheduleAppointment = (await firebaseClient
+                .Child($"Specalists/406707265/Patients/0/Appointments")
+                .OnceAsync<Appoitment>()).FirstOrDefault(a => a.Object.AppointmentPatientName == patientname || a.Object.AppointmentDate == appointmentDate ||
+                a.Object.AppointmentTime == appointmentTime );
+            await firebaseClient.Child($"Specalists/406707265/Patients/0/Appointments").Child(toDeleteScheduleAppointment.Key).DeleteAsync();
+
+        }
+        //add follow up 
+        public ObservableCollection<Appoitment> getFollowUp()
+        {
+            var FollowUp = firebaseClient
+             .Child("$Specalists / 406707265 / Patients / 0 / Appointments")
+             .AsObservable<Appoitment>()
+             .AsObservableCollection();
+
+            return FollowUp;
+        }
+        public async Task addFollowUp(string followUpDate, string followUpTools, string followUpGoals, string followUpAddNote)
+        {
+            Appoitment A = new Appoitment()
+            {
+                FollowUpDate = followUpDate,
+                FollowUpTools = followUpTools,
+                FollowUpGoals = followUpGoals,
+                FollowUpAddNote = followUpAddNote
+
+            };
+            await firebaseClient
+                .Child($"Specalists/406707265/Patients/0/Appointments")
+                .PostAsync(A);
+        }
+        // delete follow up 
+        public async Task DeleteFollowUpAppointment(string followUpDate, string followUpTools, string followUpGoals, string followUpAddNote)
+        {
+            var toDeleteFollowUpAppointment = (await firebaseClient
+                .Child($"Specalists/406707265/Patients/0/Appointments")
+                .OnceAsync<Appoitment>()).FirstOrDefault(a => a.Object.FollowUpDate == followUpDate || a.Object.FollowUpTools == followUpTools ||
+                a.Object.FollowUpGoals == followUpGoals || a.Object.FollowUpAddNote == followUpAddNote);
+            await firebaseClient.Child($"Specalists/406707265/Patients/0/Appointments").Child(toDeleteFollowUpAppointment.Key).DeleteAsync();
+                
+        }
+
     }
 }

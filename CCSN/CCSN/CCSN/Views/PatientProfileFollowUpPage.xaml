@@ -11,7 +11,9 @@
         <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
         </ContentPage.Behaviors>
         <StackLayout>
-            <ListView
+        <!--ItemTapped="OnItemFollowUpSelected"-->
+        <ListView
+            x:Name="ListFollowUpAppointment"
             HasUnevenRows="True"
             ItemsSource="{Binding Appoitments}"
             SelectedItem="{Binding SelectedFollow, Mode=TwoWay}"

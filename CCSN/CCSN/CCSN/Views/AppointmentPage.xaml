@@ -22,7 +22,9 @@
                    
                 />
         </Grid>
-        <ListView
+        <!--ItemTapped="ListAppointment_ItemTapped"-->
+        <ListView 
+            x:Name="ListScheduleAppointment"              
             ItemsSource="{Binding Appoitments}"
             Grid.Row="2"
               HasUnevenRows="true"

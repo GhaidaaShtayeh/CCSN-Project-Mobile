@@ -8,9 +8,68 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+            </Grid>
+            <StackLayout Orientation="Horizontal"  Grid.Row="0" >
+                <Label HorizontalOptions="Start" FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" Text=" - Follow Up Date :" ></Label>
+                <Frame
+    CornerRadius="10"       
+	Padding="5"
+      Margin="4"          
+	HasShadow="True"
+	OutlineColor="#2196f3">
+                    <DatePicker Format="MM/dd/yyyy" Date="{Binding FollowUpDate , Mode=TwoWay}" >
+                    </DatePicker>
+                </Frame>
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <Label  HorizontalOptions="Start" FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" Text=" - Tools :" ></Label>
+                <Frame
+    CornerRadius="10"
+	Padding="5"
+    Margin="5"
+	HasShadow="True"
+	OutlineColor="#2196f3">
+                    <Editor Text="{Binding FollowUpTools , Mode=TwoWay}"  BackgroundColor="Transparent" HeightRequest="80" TextColor="Black"  />
+                </Frame>
+            </StackLayout>
+            <StackLayout Grid.Row="2">
+                <Label  HorizontalOptions="Start" FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" Text=" - Goals :" ></Label>
+                <Frame
+   CornerRadius="10"
+	Padding="5"
+   Margin="5"
+	HasShadow="True"
+	OutlineColor="#2196f3">
+                    <Editor Text="{Binding FollowUpGoals , Mode=TwoWay}" BackgroundColor="Transparent" HeightRequest="80" TextColor="Black" />
+                </Frame>
+            </StackLayout>
+            <StackLayout Grid.Row="3">
+                <Label  HorizontalOptions="Start" FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" Text=" - Add Notes :" ></Label>
+                <Frame
+    CornerRadius="10"
+	Padding="5"
+    Margin="5"
+	HasShadow="True"
+	OutlineColor="#2196f3">
+                    <Editor Text="{Binding FollowUpAddNote , Mode=TwoWay}" BackgroundColor="Transparent" HeightRequest="80" TextColor="Black" />
+                </Frame>
+            </StackLayout>
+            <Button BackgroundColor="#2196f3"
+                 Text="Save"
+                    WidthRequest="300"
+                    CornerRadius="20"
+                    FontSize="Medium"
+                    TextColor="White"
+                Clicked="SaveFollowUpBtn"
+                Command="{Binding AddFollowUpCommand}"
+                     ></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
