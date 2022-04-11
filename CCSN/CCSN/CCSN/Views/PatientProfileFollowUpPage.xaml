@@ -20,11 +20,7 @@
                     <DataTemplate>
                         <ViewCell>
                         <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Frame 
-                                       CornerRadius="10"
-                                        Padding="3"
-                                        HeightRequest="40"
-                                        HasShadow="True"
+                            <Frame  Style="{StaticResource FrameStyle}"
                                         Margin="30,15,20,0"
                                         >
                                 <StackLayout Orientation="Horizontal"  Margin="15,0,15,0" VerticalOptions="Center">

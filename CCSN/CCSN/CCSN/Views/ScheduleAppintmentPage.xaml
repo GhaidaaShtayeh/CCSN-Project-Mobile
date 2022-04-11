@@ -75,7 +75,9 @@
                       Clicked="AddAppointment_Clicked"
                Command="{Binding AddScheduleCommand}" ></Button>
     </Grid>
+       
     <ContentPage.BindingContext>
         <vm:ScheduleAppointmentPageModelView/>
     </ContentPage.BindingContext>
+       
 </ContentPage>

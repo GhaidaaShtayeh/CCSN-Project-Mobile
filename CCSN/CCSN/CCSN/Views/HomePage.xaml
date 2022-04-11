@@ -13,13 +13,8 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label
-                FontAttributes="Bold"
-                FontSize="Large"
-                HorizontalOptions="Start"
-                Text="CCSN"
-                TextColor="White"
-                VerticalOptions="CenterAndExpand" />
+            <Label Style="{StaticResource navlabel}" 
+                Text="CCSN" />
 
             <ImageButton
                 HorizontalOptions="EndAndExpand"
@@ -48,13 +43,7 @@
                     <ViewCell>
 
                         <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Frame 
-                                       CornerRadius="10"
-                                        Padding="3"
-                                        HeightRequest="40"
-                                        HasShadow="True"
-                                        Margin="30,0,20,0"
-                                        >
+                            <Frame Style="{StaticResource FrameStyle}" Margin="30,0,20,0">
                                 <StackLayout Orientation="Horizontal"  Margin="30,0,0,0" VerticalOptions="Center">
                                     <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" HorizontalOptions="Start"  TextColor="Black" FontSize="Small"   />
                                     <Label Grid.Row="0" Grid.Column="1" Text="       Time : " HorizontalOptions="Center"/>
@@ -76,12 +65,7 @@
                     <ViewCell>
 
                         <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Frame 
-                                  CornerRadius="10"
-                                  Padding="3"
-                                  HasShadow="True"
-                                  HeightRequest="40"
-                                  Margin="30,0,20,0">
+                            <Frame Style="{StaticResource FrameStyle}" Margin="30,0,20,0">
                                 <StackLayout Orientation="Horizontal"  Margin="30,0,0,0"  VerticalOptions="Center">
                                     <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" HorizontalOptions="Start" Style="{StaticResource label}"  />
                                     <Label Grid.Row="0" Grid.Column="1" Text="        Time : " HorizontalOptions="Center"/>

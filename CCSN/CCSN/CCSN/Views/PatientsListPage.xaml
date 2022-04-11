@@ -9,13 +9,8 @@
     </ContentPage.BindingContext>
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label
-                FontAttributes="Bold"
-                FontSize="Large"
-                HorizontalOptions="Start"
-                Text="Patients"
-                TextColor="White"
-                VerticalOptions="CenterAndExpand" />
+            <Label Style="{StaticResource navlabel}"
+                Text="Patients"/>
 
             <ImageButton
                 HorizontalOptions="EndAndExpand"
@@ -52,11 +47,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Frame 
-                                       CornerRadius="10"
-                                        Padding="3"
-                                        HeightRequest="40"
-                                        HasShadow="True"
+                            <Frame  Style="{StaticResource FrameStyle}"
                                         Margin="15,0,30,0"
                                         >
                                 <StackLayout Orientation="Horizontal"  Margin="10,0,20,0" VerticalOptions="Center" HorizontalOptions="Center">
@@ -82,7 +73,7 @@
             </ListView.ItemTemplate>
 
         </ListView>
-        <Button  HorizontalOptions="End"  Style="{StaticResource BlusButton}" Text="+" Grid.Row="0" Grid.Column="0" Clicked="Button_Clicked" />
+        <Button  HorizontalOptions="End"  Style="{StaticResource BlusButton}" Text="+" Grid.Row="0" Grid.Column="0" Clicked="Button_Clicked_1" />
 
     </StackLayout>
 

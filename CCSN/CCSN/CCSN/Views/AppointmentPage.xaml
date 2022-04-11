@@ -11,13 +11,8 @@
     </ContentPage.Behaviors>
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label
-                FontAttributes="Bold"
-                FontSize="Large"
-                HorizontalOptions="Start"
-                Text="Appointment"
-                TextColor="White"
-                VerticalOptions="CenterAndExpand" />
+            <Label   Style="{StaticResource navlabel}"
+                Text="Appointment"/>
 
             <ImageButton
                 HorizontalOptions="EndAndExpand"
@@ -51,15 +46,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Frame 
-                                        CornerRadius="10"
-                                        Padding="3"
-                                        HeightRequest="40"
-                                        WidthRequest="1000"
-                                        HasShadow="True"
-                                        Margin="15,0,30,0"
-                                        HorizontalOptions="Center"
-                                        >
+                            <Frame Style="{StaticResource AppFrame}" >
                                 <StackLayout Orientation="Horizontal"  Margin="30,0,20,0" VerticalOptions="Center">
 
                                     <Label Grid.Row="0" Text="{Binding AppointmentPatientName}"  VerticalOptions="Center" HorizontalOptions="Start"   Style="{StaticResource label}"/>

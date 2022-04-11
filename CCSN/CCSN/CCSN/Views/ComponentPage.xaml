@@ -36,10 +36,37 @@
         <Setter Property="BackgroundColor" Value="#00ffffff" />
         <Setter Property="HeightRequest" Value="30"/>
         <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-
-
+    </Style>
+    <Style x:Key="navlabel" TargetType="Label">
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontSize" Value="large" />
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="VerticalOptionsOptions" Value="CenterAndExpand"/>
 
     </Style>
+
+
+    <Style x:Key="HomeFrame" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="HeightRequest" Value="40"/>
+        <Setter Property="HasShadow" Value="True"/>
+        <Setter Property="Margin" Value="30,0,20,0"/>
+
+    </Style>
+
+    <Style x:Key="AppFrame" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="HeightRequest" Value="40"/>
+        <Setter Property="WidthRequest" Value="1000"/>
+        <Setter Property="HasShadow" Value="True"/>
+        <Setter Property="Margin" Value="15,0,30,0"/>
+        <Setter Property="orizontalOptions" Value="Center"/>
+
+    </Style>
+
 </ResourceDictionary>
     <!--
     

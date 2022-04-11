@@ -63,7 +63,7 @@ namespace CCSN.Services
         {
             if (await IsPatientExists(patientID) == false)
             {
-            await firebaseClient.Child("/Specalists/406707265/Patient")
+            await firebaseClient.Child("/Specalists/406707265/Patients")
               .PostAsync(new Patient()
               {
                   ID = patientID,
