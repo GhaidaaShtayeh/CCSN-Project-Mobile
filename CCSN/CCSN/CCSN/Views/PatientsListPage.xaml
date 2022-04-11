@@ -27,11 +27,8 @@
         <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
     </ContentPage.Behaviors>
     <StackLayout>
-        <Grid 
-                 HorizontalOptions="CenterAndExpand"
-                 >
-            <Image
-                   Source="https://bcckids.org/wp-content/uploads/2016/10/Photo_Main_Slider2.png"                         
+        <Grid HorizontalOptions="CenterAndExpand" >
+            <Image Source="https://bcckids.org/wp-content/uploads/2016/10/Photo_Main_Slider2.png"                         
                    Scale="1.0" 
                 Aspect="Fill"
                    
@@ -56,14 +53,8 @@
                                     Color="Maroon"
                                     WidthRequest="1"
                                     Margin="5, 0, 10, 0" />
-                                    <Label Grid.Row="0" Text="{Binding PatientName}"  VerticalOptions="Center" HorizontalOptions="Start"  TextColor="Black" FontSize="Small"/>
-                                    <ImageButton
-                                      BackgroundColor="#00ffffff"
-                                      HorizontalOptions="End"
-                                      Source="https://cdn2.vectorstock.com/i/thumb-large/27/16/phone-icon-call-icon-black-icon-on-a-gray-vector-26902716.jpg"
-                                      VerticalOptions="CenterAndExpand"
-                                      Margin="70,0,0,0"
-                                      WidthRequest="50" />
+                                    <Label Grid.Row="0" Text="{Binding PatientName}"  VerticalOptions="Center" HorizontalOptions="Start" Style="{StaticResource labelView}"/>
+                                    <ImageButton Style="{StaticResource DeleteButton}"/>
                                 </StackLayout>
 
                             </Frame>
@@ -73,7 +64,7 @@
             </ListView.ItemTemplate>
 
         </ListView>
-        <Button  HorizontalOptions="End"  Style="{StaticResource BlusButton}" Text="+" Grid.Row="0" Grid.Column="0" Clicked="Button_Clicked_1" />
+        <Button Style="{StaticResource BlusButton}" Clicked="Button_Clicked_1" />
 
     </StackLayout>
 

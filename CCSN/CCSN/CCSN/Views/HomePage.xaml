@@ -35,8 +35,7 @@
 
 
 
-        <Label Text = "Today Appointments :" TextColor = "#2196f3"   WidthRequest = "200"
-                   HeightRequest="50"  FontSize = "Small" Margin = "20" FontAttributes = "Bold" ></Label >
+        <Label Text = "Today Appointments :" Style="{StaticResource AppLabelStyle}" ></Label >
         <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments}" RowHeight="5" >
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -45,9 +44,9 @@
                         <Grid RowDefinitions="Auto,Auto,Auto">
                             <Frame Style="{StaticResource FrameStyle}" Margin="30,0,20,0">
                                 <StackLayout Orientation="Horizontal"  Margin="30,0,0,0" VerticalOptions="Center">
-                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" HorizontalOptions="Start"  TextColor="Black" FontSize="Small"   />
+                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" HorizontalOptions="Start"  Style="{StaticResource labelView}"  />
                                     <Label Grid.Row="0" Grid.Column="1" Text="       Time : " HorizontalOptions="Center"/>
-                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding AppointmentDate.TimeOfDay}" HorizontalOptions="End"  TextColor="Black" FontSize="Small"  />
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding AppointmentDate.TimeOfDay}" HorizontalOptions="End"  Style="{StaticResource labelView}" />
                                 </StackLayout>
                             </Frame>
                         </Grid>
@@ -56,8 +55,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Label Text = "Tommorrow Appointments : " TextColor = "#2196f3"   WidthRequest = "200"
-                   HeightRequest="50"  FontSize = "Small" Margin = "13" FontAttributes = "Bold" >
+        <Label Text = "Tommorrow Appointments :" Style="{StaticResource AppLabelStyle}" >
         </Label >
         <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments2}">
             <ListView.ItemTemplate>
@@ -67,9 +65,9 @@
                         <Grid RowDefinitions="Auto,Auto,Auto">
                             <Frame Style="{StaticResource FrameStyle}" Margin="30,0,20,0">
                                 <StackLayout Orientation="Horizontal"  Margin="30,0,0,0"  VerticalOptions="Center">
-                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" HorizontalOptions="Start" Style="{StaticResource label}"  />
+                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" HorizontalOptions="Start" Style="{StaticResource labelView}"  />
                                     <Label Grid.Row="0" Grid.Column="1" Text="        Time : " HorizontalOptions="Center"/>
-                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding AppointmentDate.TimeOfDay}" HorizontalOptions="End"  Style="{StaticResource label}"  />
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding AppointmentDate.TimeOfDay}" HorizontalOptions="End"  Style="{StaticResource labelView}"  />
                                 </StackLayout>
                             </Frame>
                         </Grid>

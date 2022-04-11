@@ -24,17 +24,10 @@
                                         Margin="30,15,20,0"
                                         >
                                 <StackLayout Orientation="Horizontal"  Margin="15,0,15,0" VerticalOptions="Center">
-                                    <Label Grid.Row="0" Text="{Binding FollowUpDate}" HorizontalOptions="Start"  Style="{StaticResource label}"/>
-                                    <Label Grid.Row="0" Grid.Column="2" Text="  ||  " HorizontalOptions="End" Style="{StaticResource label}" />
-                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding FollowUpAddNote}" HorizontalOptions="End" Style="{StaticResource label}"/>
-                                    <ImageButton  Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Saint_Andrew%27s_cross_black.svg/1200px-Saint_Andrew%27s_cross_black.svg.png"
-                                                  VerticalOptions="Center"
-                                                  HorizontalOptions="End"
-                                                  Grid.Row="0"
-                                                  Grid.Column="2"
-                                                 Margin="70,0,0,0"
-                                                 WidthRequest="10"
-                                                  BackgroundColor="White"></ImageButton>
+                                    <Label Grid.Row="0" Text="{Binding FollowUpDate}" HorizontalOptions="Start"  Style="{StaticResource labelView}"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="  ||  " HorizontalOptions="End" Style="{StaticResource labelView}" />
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding FollowUpAddNote}" HorizontalOptions="End" Style="{StaticResource labelView}"/>
+                                    <ImageButton Style="{StaticResource DeleteButton}"></ImageButton>
                                 </StackLayout>
                                  </Frame>
                             
