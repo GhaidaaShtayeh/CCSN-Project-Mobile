@@ -7,6 +7,7 @@ using CCSN.Models;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 using System.Linq;
+using Firebase.Database.Query;
 
 namespace CCSN.Services
 {
@@ -50,6 +51,38 @@ namespace CCSN.Services
             await firebaseClient.Child(nameof(Patient) + "/" + id).DeleteAsync();
             return true;
         }
+        public async Task<bool> IsPatientExists(string ID)
+        {
+            var Patient = (await firebaseClient.Child("/Specalists/406707265/Patients")
+
+                .OnceAsync<Patient>()).Where(u => u.Object.ID == ID).FirstOrDefault();
+            return (Patient != null);
+        }
+
+        public async Task<bool> AddPatients(string patientID, string patientAddress, string patientBirthday, string patientGender, string patientGenticsDiseses, string patientHeight, string patientMobileNo, string patientName, string patientWeight, List<Appoitment> appoitment)
+        {
+            if (await IsPatientExists(patientID) == false)
+            {
+            await firebaseClient.Child("/Specalists/406707265/Patient")
+              .PostAsync(new Patient()
+              {
+                  ID = patientID,
+                  PatientAddress = patientAddress,
+                  PatientBirthday = patientBirthday,
+                  PatientGender = patientGender,
+                  PatientGenticesDiseses = patientGenticsDiseses,
+                  PatientHeight = patientHeight,
+                  PatientMobileNO = patientMobileNo,
+                  PatientName = patientName,
+                  PatientWeight = patientWeight,
+                  Appointments = appoitment
+
+              });
+            return true;
+             }
+             else { return false; }
+        }
+
     }
 }
 

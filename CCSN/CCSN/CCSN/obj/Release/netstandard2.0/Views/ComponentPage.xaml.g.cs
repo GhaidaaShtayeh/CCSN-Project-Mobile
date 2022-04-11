@@ -14,7 +14,7 @@ namespace CCSN.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\ComponentPage.xaml")]
-    public partial class ComponentPage : global::Xamarin.Forms.ContentPage {
+    public partial class ComponentPage : global::Xamarin.Forms.ResourceDictionary {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {

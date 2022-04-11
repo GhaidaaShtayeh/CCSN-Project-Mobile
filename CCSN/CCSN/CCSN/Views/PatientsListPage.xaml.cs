@@ -16,5 +16,9 @@ namespace CCSN.Views
         {
             InitializeComponent();
         }
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+             await Application.Current.MainPage.Navigation.PushModalAsync(new Views.AddPatient());
+        }
     }
 }
