@@ -22,18 +22,14 @@
                 VerticalOptions="CenterAndExpand" />
 
             <ImageButton
-                BackgroundColor="#00ffffff"
                 HorizontalOptions="EndAndExpand"
                 Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
-                VerticalOptions="CenterAndExpand"
-                WidthRequest="30" />
+              Style="{StaticResource navBarStyle}"  />
 
             <ImageButton
-                BackgroundColor="#00ffffff"
                 HorizontalOptions="End"
                 Source="https://static.thenounproject.com/png/3134331-200.png"
-                VerticalOptions="CenterAndExpand"
-                WidthRequest="30" />
+               Style="{StaticResource navBarStyle}"  />
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Behaviors>
@@ -87,9 +83,9 @@
                                   HeightRequest="40"
                                   Margin="30,0,20,0">
                                 <StackLayout Orientation="Horizontal"  Margin="30,0,0,0"  VerticalOptions="Center">
-                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" HorizontalOptions="Start"  TextColor="Black" FontSize="Small"   />
+                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" HorizontalOptions="Start" Style="{StaticResource label}"  />
                                     <Label Grid.Row="0" Grid.Column="1" Text="        Time : " HorizontalOptions="Center"/>
-                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding AppointmentDate.TimeOfDay}" HorizontalOptions="End"  TextColor="Black" FontSize="Small"  />
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding AppointmentDate.TimeOfDay}" HorizontalOptions="End"  Style="{StaticResource label}"  />
                                 </StackLayout>
                             </Frame>
                         </Grid>

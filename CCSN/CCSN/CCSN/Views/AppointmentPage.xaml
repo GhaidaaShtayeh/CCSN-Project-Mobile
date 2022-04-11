@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CCSN.Views.AppointmentPage"
-             Title="Appointment"
              xmlns:viewmodels="clr-namespace:CCSN.ViewModels" xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
     <ContentPage.BindingContext>
         <viewmodels:AppointmentPageModelView/>
@@ -10,6 +9,27 @@
     <ContentPage.Behaviors>
         <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
     </ContentPage.Behaviors>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Start"
+                Text="Appointment"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+
+            <ImageButton
+                HorizontalOptions="EndAndExpand"
+                Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
+              Style="{StaticResource navBarStyle}"  />
+
+            <ImageButton
+                HorizontalOptions="End"
+                Source="https://static.thenounproject.com/png/3134331-200.png"
+               Style="{StaticResource navBarStyle}"  />
+        </StackLayout>
+    </NavigationPage.TitleView>
     <StackLayout>
         <Grid 
                  HorizontalOptions="CenterAndExpand"
@@ -42,8 +62,8 @@
                                         >
                                 <StackLayout Orientation="Horizontal"  Margin="30,0,20,0" VerticalOptions="Center">
 
-                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}"  VerticalOptions="Center" HorizontalOptions="Start"  TextColor="Black" FontSize="Small"/>
-                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate.Date}" Font="Small"   HorizontalOptions="End"  TextColor="Black" FontSize="Small" />
+                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}"  VerticalOptions="Center" HorizontalOptions="Start"   Style="{StaticResource label}"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate.Date}" Font="Small"   HorizontalOptions="End"  Style="{StaticResource label}" />
                                     <ImageButton  Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Saint_Andrew%27s_cross_black.svg/1200px-Saint_Andrew%27s_cross_black.svg.png"
                                                   VerticalOptions="Center"
                                                   HorizontalOptions="End"
@@ -62,6 +82,6 @@
             </ListView.ItemTemplate>
 
         </ListView>
-        <Button  HorizontalOptions="End" WidthRequest="60" Margin="10" HeightRequest="60" BackgroundColor="#2196f3" BorderColor="Black" BorderRadius="30" Text="+" TextColor="White" Grid.Row="0" Grid.Column="0" Clicked="Button_Clicked" />
+        <Button Style="{StaticResource BlusButton}" HorizontalOptions="End"   Text="+"  Grid.Row="0" Grid.Column="0" Clicked="Button_Clicked" />
     </StackLayout>
 </ContentPage>

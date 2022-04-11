@@ -4,7 +4,7 @@
              xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"
              xmlns:vm="clr-namespace:CCSN.ViewModels"
              x:Class="CCSN.Views.ScheduleAppintmentPage" BackgroundColor="AliceBlue"
-              xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+              xmlns:sys="clr-namespace:System;assembly=System.Runtime" xmlns:views="clr-namespace:CCSN.Views" x:DataType="views:TabBar">
     <ContentPage.Content>
         <Grid Margin="20" >
         <Grid.RowDefinitions>

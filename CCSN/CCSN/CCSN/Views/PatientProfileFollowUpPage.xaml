@@ -28,9 +28,9 @@
                                         Margin="30,15,20,0"
                                         >
                                 <StackLayout Orientation="Horizontal"  Margin="15,0,15,0" VerticalOptions="Center">
-                                    <Label Grid.Row="0" Text="{Binding FollowUpDate}" HorizontalOptions="Start"  TextColor="Black" FontSize="Small"/>
-                                    <Label Grid.Row="0" Grid.Column="2" Text="  ||  " HorizontalOptions="End" TextColor="Black" FontSize="Small" />
-                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding FollowUpAddNote}" HorizontalOptions="End" TextColor="Black" FontSize="Small" />
+                                    <Label Grid.Row="0" Text="{Binding FollowUpDate}" HorizontalOptions="Start"  Style="{StaticResource label}"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="  ||  " HorizontalOptions="End" Style="{StaticResource label}" />
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding FollowUpAddNote}" HorizontalOptions="End" Style="{StaticResource label}"/>
                                     <ImageButton  Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Saint_Andrew%27s_cross_black.svg/1200px-Saint_Andrew%27s_cross_black.svg.png"
                                                   VerticalOptions="Center"
                                                   HorizontalOptions="End"
@@ -49,12 +49,8 @@
             </ListView.ItemTemplate>
 
             </ListView>
-        <Button BackgroundColor="#2196f3" 
-                CornerRadius="20"
-                FontSize="Small"
-                TextColor="White"
+        <Button Style="{StaticResource AddButton}"
                 Text="Add New Follow Up"
-                Margin="15,15,15,15" 
                 Clicked="Button_Clicked_1"
                 ></Button>
     </StackLayout>

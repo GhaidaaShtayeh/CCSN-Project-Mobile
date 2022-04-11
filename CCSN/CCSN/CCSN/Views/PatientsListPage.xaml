@@ -2,12 +2,32 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CCSN.Views.PatientsListPage"
-             Title="Patients"
               xmlns:viewmodels="clr-namespace:CCSN.ViewModels" 
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
     <ContentPage.BindingContext>
         <viewmodels:PatientListPageModelView/>
     </ContentPage.BindingContext>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Start"
+                Text="Patients"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+
+            <ImageButton
+                HorizontalOptions="EndAndExpand"
+                Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
+              Style="{StaticResource navBarStyle}"  />
+
+            <ImageButton
+                HorizontalOptions="End"
+                Source="https://static.thenounproject.com/png/3134331-200.png"
+               Style="{StaticResource navBarStyle}"  />
+        </StackLayout>
+    </NavigationPage.TitleView>
     <ContentPage.Behaviors>
         <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
     </ContentPage.Behaviors>
@@ -62,7 +82,7 @@
             </ListView.ItemTemplate>
 
         </ListView>
-        <Button  HorizontalOptions="End" WidthRequest="60" Margin="10" HeightRequest="60" BackgroundColor="#2196f3" BorderColor="Black" BorderRadius="30" Text="+" TextColor="White" Grid.Row="0" Grid.Column="0" />
+        <Button  HorizontalOptions="End"  Style="{StaticResource BlusButton}" Text="+" Grid.Row="0" Grid.Column="0" />
 
     </StackLayout>
 
