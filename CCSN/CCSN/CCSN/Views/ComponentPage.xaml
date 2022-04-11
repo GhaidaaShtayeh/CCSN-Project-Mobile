@@ -92,10 +92,10 @@
         <Setter Property="TextColor" Value="#2196f3" />
         <Setter Property="Margin" Value="20"/>
     </Style>
-                                               
-                                               
-                                          
-                                        
+
+
+
+
     <Style x:Key="DeleteButton" TargetType="ImageButton">
         <Setter Property="Source" Value="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Saint_Andrew%27s_cross_black.svg/1200px-Saint_Andrew%27s_cross_black.svg.png" />
         <Setter Property="VerticalOptions" Value="Center" />
@@ -105,5 +105,10 @@
         <Setter Property="Grid.Row" Value="0" />
         <Setter Property="Grid.Column" Value="2" />
         <Setter Property="Margin" Value="70,0,0,0"/>
+    </Style>
+    <Style x:Key="EntryStyle" TargetType="Entry">
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="PlaceholderColor" Value="Gray" />
+        <Setter Property="Margin" Value="10"/>
     </Style>
 </ResourceDictionary>
