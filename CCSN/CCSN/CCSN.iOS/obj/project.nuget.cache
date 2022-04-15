@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uUH1AMkPtsAHKowmSdhbhVG3P41MhmYzCHal6egrPeWDhaCEFmi97v5R+X75RQmSlvRyKb6OBJaYcpLPGUbSBw==",
+  "dgSpecHash": "mlDlxqtWQ44ruqosE1GONuzRbh3Y5Ud4/730j0ZLO5+CWdAyL3hnaOkK0CzMMx2Ii0W3hAcn8Cf8awdBTvtckg==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\Desktop\\CCSN1\\CCSN\\CCSN\\CCSN.iOS\\CCSN.iOS.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,8 @@
     "C:\\Users\\DELL\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\xamarin.communitytoolkit\\1.3.0\\xamarin.communitytoolkit.1.3.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\DELL\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\xamforms.controls.calendar\\1.1.1\\xamforms.controls.calendar.1.1.1.nupkg.sha512"
   ],
   "logs": []
 }

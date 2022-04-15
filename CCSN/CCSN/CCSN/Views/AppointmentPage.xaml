@@ -49,8 +49,8 @@
                             <Frame Style="{StaticResource AppFrame}" >
                                 <StackLayout Orientation="Horizontal"  Margin="30,0,20,0" VerticalOptions="Center">
 
-                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}"  VerticalOptions="Center" HorizontalOptions="Start"   Style="{StaticResource label}"/>
-                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate.Date}" Font="Small"   HorizontalOptions="End"  Style="{StaticResource label}" />
+                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}"  VerticalOptions="Center" HorizontalOptions="Start"   Style="{StaticResource labelView}"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate.Date}" Font="Small"   HorizontalOptions="End"  Style="{StaticResource labelView}" />
                                     <ImageButton Style="{StaticResource DeleteButton}"></ImageButton>
 
                                 </StackLayout>

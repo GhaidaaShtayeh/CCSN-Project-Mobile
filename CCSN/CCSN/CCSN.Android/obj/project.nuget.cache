@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Y/QUuJJB4idMe+R1guWOtN+6347k2rrf9cPw3ZnhTGHxIBD8MfxLJKiaKsx5i3J9PetF0qca3vbShk2cuM400A==",
+  "dgSpecHash": "CNHxPh5p7pg0q7nE/JIO4mHuPB+b2n22PgZwbXjOxvhuJ8I+2WyzBqYfeb9NMOqpZ2unRr3mULO9/IdOKLt7iA==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\Desktop\\CCSN1\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj",
   "expectedPackageFiles": [
@@ -72,7 +72,8 @@
     "C:\\Users\\DELL\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
+    "C:\\Users\\DELL\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\xamforms.controls.calendar\\1.1.1\\xamforms.controls.calendar.1.1.1.nupkg.sha512"
   ],
   "logs": []
 }
