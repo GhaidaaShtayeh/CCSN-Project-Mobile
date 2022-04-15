@@ -2368,3 +2368,9 @@ com.google.android.material.animation.TransformationCallback;com.google.android.
 Google.Common.Util.Concurrent.IListenableFuture, Xamarin.Google.Guava.ListenableFuture;com.google.common.util.concurrent.ListenableFuture
 Google.Common.Util.Concurrent.IListenableFuture;com.google.common.util.concurrent.ListenableFuture
 com.google.common.util.concurrent.ListenableFuture;com.google.common.util.concurrent.ListenableFuture
+XamForms.Controls.Droid.CalendarButtonRenderer, XamForms.Controls.Calendar.Droid;crc64fd013b27b0f98839.CalendarButtonRenderer
+XamForms.Controls.Droid.CalendarButtonRenderer;crc64fd013b27b0f98839.CalendarButtonRenderer
+xamforms.controls.droid.CalendarButtonRenderer;crc64fd013b27b0f98839.CalendarButtonRenderer
+XamForms.Controls.Droid.TextDrawable, XamForms.Controls.Calendar.Droid;crc64fd013b27b0f98839.TextDrawable
+XamForms.Controls.Droid.TextDrawable;crc64fd013b27b0f98839.TextDrawable
+xamforms.controls.droid.TextDrawable;crc64fd013b27b0f98839.TextDrawable

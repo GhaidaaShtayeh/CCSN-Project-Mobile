@@ -86,5 +86,30 @@ namespace CCSN.Services
                 .Child($"Specalists/406707265/Patients/0/Appointments")
                 .PostAsync(A);
         }
+
+        //add follow up 
+        public ObservableCollection<Appoitment> getFollowUp()
+        {
+            var FollowUp = firebaseClient
+             .Child("$Specalists / 406707265 / Patients / 0 / Appointments")
+             .AsObservable<Appoitment>()
+             .AsObservableCollection();
+
+            return FollowUp;
+        }
+        public async Task addFollowUp(string followUpDate, string followUpTools, string followUpGoals, string followUpAddNote)
+        {
+            Appoitment A = new Appoitment()
+            {
+                FollowUpDate = followUpDate,
+                FollowUpTools = followUpTools,
+                FollowUpGoals = followUpGoals,
+                FollowUpAddNote = followUpAddNote
+
+            };
+            await firebaseClient
+                .Child($"Specalists/406707265/Patients/0/Appointments")
+                .PostAsync(A);
+        }
     }
 }
