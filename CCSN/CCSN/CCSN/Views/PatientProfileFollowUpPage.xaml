@@ -20,9 +20,7 @@
                     <DataTemplate>
                         <ViewCell>
                         <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Frame  Style="{StaticResource FrameStyle}"
-                                        Margin="30,15,20,0"
-                                        >
+                            <Frame  Style="{StaticResource FrameStyle}" Margin="30,15,20,0">
                                 <StackLayout Orientation="Horizontal"  Margin="15,0,15,0" VerticalOptions="Center">
                                     <Label Grid.Row="0" Text="{Binding FollowUpDate}" HorizontalOptions="Start"  Style="{StaticResource labelView}"/>
                                     <Label Grid.Row="0" Grid.Column="2" Text="  ||  " HorizontalOptions="End" Style="{StaticResource labelView}" />

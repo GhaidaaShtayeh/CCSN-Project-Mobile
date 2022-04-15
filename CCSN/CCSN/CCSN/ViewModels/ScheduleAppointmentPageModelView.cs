@@ -82,8 +82,8 @@ namespace CCSN.ViewModels
             // view appointment 
             public void AllAppointment()
         {
-            services = new AppintmentService();
-            Schedules = services.getScheduleAppointment();
+            _Services = new AppintmentService();
+            Schedules = _Services.getScheduleAppointment();
         }
 
         }

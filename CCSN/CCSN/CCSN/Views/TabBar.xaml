@@ -6,7 +6,10 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
             BarBackgroundColor="#2196f3"
             android:TabbedPage.BarItemColor="#44FFFFFF"
-android:TabbedPage.BarSelectedItemColor="White">
+android:TabbedPage.BarSelectedItemColor="White"
+            
+    
+            >
   <!--Pages can be added as references or inline-->
    
 </TabbedPage>

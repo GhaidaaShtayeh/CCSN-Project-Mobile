@@ -40,7 +40,7 @@
                         <Editor  x:Name="Notes" Style="{StaticResource FollowEditor}" />
                     </Frame>
                 </StackLayout>
-                <Label x:Name="save" HorizontalOptions="Center" >Save</Label>
+                <Label x:Name="save" HorizontalOptions="Center">Save</Label>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
