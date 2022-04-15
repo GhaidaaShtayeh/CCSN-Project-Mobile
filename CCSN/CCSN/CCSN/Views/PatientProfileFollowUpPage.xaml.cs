@@ -16,5 +16,11 @@ namespace CCSN.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+             Navigation.PushAsync(new AddNewFollowPage());
+
+        }
     }
 }

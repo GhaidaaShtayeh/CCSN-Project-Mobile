@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:CCSN.ViewModels"
+             x:Class="CCSN.Views.AddPatientPage">
+    <ContentPage.Content>
+        <StackLayout  HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Add Patient" FontSize="Large" TextColor="#2196f3" FontAttributes="Bold"  HorizontalOptions="CenterAndExpand"></Label>
+
+            <Entry Placeholder=" Patient ID"
+                   Text="{Binding ID}"></Entry>
+
+            <Entry Placeholder="Patient Address"
+                   Text="{Binding PatientAddress}"></Entry>
+            <Entry Placeholder="Patient Birthday"
+                   Text="{Binding PatientBirthday}"></Entry>
+
+            <Entry Placeholder="Patient Gender"
+                   Text="{Binding PatientGender}"></Entry>
+            <Entry Placeholder="Patient Gentics Diseses"
+                   Text="{Binding PatientGenticsDiseses}"></Entry>
+            <Entry Placeholder="Patient Height"
+                   Text="{Binding PatientHeight}"></Entry>
+
+            <Entry Placeholder="Patient Mobile Number"
+                   Text="{Binding PatientMobileNo}"></Entry>
+
+            <Entry Placeholder="Patient Name"
+                   Text="{Binding PatientName}"></Entry>
+            <Entry Placeholder="Patient Weight"
+                   Text="{Binding PatientWeight}"></Entry>
+
+            <Button Style="{StaticResource AddButton}"
+                    Text="Add Patient"
+                    Command="{Binding AddCommand }" ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+
+    <ContentPage.BindingContext>
+        <vm:AddPatientViewModel />
+    </ContentPage.BindingContext>
+</ContentPage>

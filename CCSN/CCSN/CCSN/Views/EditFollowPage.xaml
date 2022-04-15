@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CCSN.Views.EditFollowPage">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout>
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                </Grid>
+                <StackLayout Orientation="Horizontal"  Grid.Row="0" >
+                    <Label Style="{StaticResource Followlabel}" Text=" - Follow Up Date :" ></Label>
+                    <Frame  Style="{StaticResource FollowFrameStyle}">
+                        <DatePicker Format="MM/dd/yyyy" x:Name="DatePcker" >
+                        </DatePicker>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="1">
+                    <Label  Style="{StaticResource Followlabel}" Text=" - Tools :" ></Label>
+                    <Frame  Style="{StaticResource FollowFrameStyle}">
+                        <Editor x:Name="Tools" Style="{StaticResource FollowEditor}"  />
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="2">
+                    <Label  Style="{StaticResource Followlabel}" Text=" - Goals :" ></Label>
+                    <Frame  Style="{StaticResource FollowFrameStyle}">
+                        <Editor x:Name="Goals" Style="{StaticResource FollowEditor}" />
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="3">
+                    <Label  Style="{StaticResource Followlabel}" Text=" - Add Notes :" ></Label>
+                    <Frame  Style="{StaticResource FollowFrameStyle}">
+                        <Editor  x:Name="Notes" Style="{StaticResource FollowEditor}" />
+                    </Frame>
+                </StackLayout>
+                <Label x:Name="save" HorizontalOptions="Center" >Save</Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

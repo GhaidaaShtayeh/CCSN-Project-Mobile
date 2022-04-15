@@ -5,9 +5,23 @@
               xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="PatientNameEntry" Text="Name" Placeholder="Name" Style="{StaticResource EntryStyle}"/>
+
+            <Entry x:Name="PatientGenderEntry" Text="Gender" Placeholder="Gender" Style="{StaticResource EntryStyle}" />
+
+            <Entry x:Name="MobileEntry" Text="Mobile"  Placeholder="Mobile" Style="{StaticResource EntryStyle}" Keyboard="Text" />
+
+            <Entry x:Name="PatientAddressEntry" FontSize="Small" Placeholder="Address" Style="{StaticResource EntryStyle}" Keyboard="Text"/>
+
+            <Entry x:Name="PatientBirthdayEntry" Text="BD" Placeholder="BD" Style="{StaticResource EntryStyle}" Keyboard="Text" />
+
+            <Entry x:Name="PatientHeightEntry" Text="Height" Placeholder="Height" Style="{StaticResource EntryStyle}" Keyboard="Text"/>
+
+            <Entry x:Name="PatientWeightEntry" Text="Weight" Placeholder="Weight" Style="{StaticResource EntryStyle}" Keyboard="Text" />
+
+            <Entry x:Name="PatientGenticesDisesesEntry" Text="Gen" Placeholder="Gentics" Style="{StaticResource EntryStyle}" Keyboard="Text"/>
+
+            <Label x:Name="save" HorizontalOptions="Center" >Save</Label>
         </StackLayout>
     </ContentPage.Content>
         <ContentPage.BindingContext>

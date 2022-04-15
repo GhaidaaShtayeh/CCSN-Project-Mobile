@@ -8,7 +8,8 @@ namespace CCSN.Models
     {
 
         public string AppointmentPatientName { get; set; }
-        public DateTime AppointmentDate { get; set; }
+        public DateTime AppointmentDate { get; set; } //Calender 
+        public TimeSpan AppointmentTime { get; set; } //time picker
         public string FollowUpDate { get; set; }
         public string FollowUpTools { get; set; }
         public string FollowUpGoals { get; set; }

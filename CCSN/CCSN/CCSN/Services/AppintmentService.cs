@@ -51,10 +51,10 @@ namespace CCSN.Services
             return result.Where(o => o.AppointmentDate.Date == DateTime.Today.AddDays(1).Date);
         }
 
-        public static async Task EditAppointment(string UserID, Appoitment appoitment)
+        public static async Task EditAppointment(Appoitment appoitment)
         {
             await firebaseClient
-          .Child($"Specalists/{UserID}/Patients/0/Appointments")
+          .Child($"Specalists/406707265/Patients/0/Appointments")
           .PatchAsync(appoitment);
         }
 
@@ -62,6 +62,29 @@ namespace CCSN.Services
         {
             await firebaseClient.Child(nameof(Appoitment) + "/" + id).DeleteAsync();
             return true;
+        }
+        // add schedule Appointment 
+        public ObservableCollection<Appoitment> getScheduleAppointment()
+        {
+            var ScheduleData = firebaseClient
+             .Child("$Specalists / 406707265 / Patients / 0 / Appointments")
+             .AsObservable<Appoitment>()
+             .AsObservableCollection();
+
+            return ScheduleData;
+        }
+        public async Task addScheduleAppointment(string patientname, DateTime appointmentDate, TimeSpan appointmentTime)
+        {
+            Appoitment A = new Appoitment()
+            {
+                AppointmentPatientName = patientname,
+                AppointmentDate = appointmentDate,
+                AppointmentTime = appointmentTime
+
+            };
+            await firebaseClient
+                .Child($"Specalists/406707265/Patients/0/Appointments")
+                .PostAsync(A);
         }
     }
 }

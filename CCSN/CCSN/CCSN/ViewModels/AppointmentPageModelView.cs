@@ -14,20 +14,9 @@ namespace CCSN.ViewModels
 {
     public class AppointmentPageModelView : BaseViewModel
     {
-        private AppintmentService _AppointmentService;
         private ObservableCollection<Appoitment> _Appoitments = new ObservableCollection<Appoitment>();
-        private Appoitment _SelectedAppoitment;
 
         public ObservableCollection<Appoitment> Appoitments { get => _Appoitments; set => SetProperty(ref _Appoitments, value, nameof(Appoitments)); }
-        public Appoitment SelectedAppoitment
-        {
-            get => _SelectedAppoitment;
-            set
-            {
-                SetProperty(ref _SelectedAppoitment, value, nameof(SelectedAppoitment));
-                App.Current.MainPage.Navigation.PushAsync(new EditAppointment(value));
-            }
-        }
 
 
         private ICommand _Appearing;
@@ -45,5 +34,7 @@ namespace CCSN.ViewModels
             Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAllAppointments());
 
         }
+
+        
     }
 }
