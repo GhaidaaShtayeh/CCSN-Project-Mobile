@@ -14,7 +14,7 @@ namespace CCSN.ViewModels
 {
     public class AddPatientViewModel : BaseViewModel
     {
-
+        /*
         private string _ID;
         public string ID
         {
@@ -160,5 +160,8 @@ namespace CCSN.ViewModels
 
 
 
+    }
+}
+        */
     }
 }

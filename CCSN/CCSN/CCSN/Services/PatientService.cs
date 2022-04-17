@@ -31,6 +31,7 @@ namespace CCSN.Services
 
             var result = await Helper.Get<List<Patient>>(url);
             return result ;
+            
         }
 
         public async Task<bool> Update(Patient patient)
@@ -58,7 +59,7 @@ namespace CCSN.Services
                 .OnceAsync<Patient>()).Where(u => u.Object.ID == ID).FirstOrDefault();
             return (Patient != null);
         }
-
+        /*
         public async Task<bool> AddPatients(string patientID, string patientAddress, string patientBirthday, string patientGender, string patientGenticsDiseses, string patientHeight, string patientMobileNo, string patientName, string patientWeight, List<Appoitment> appoitment)
         {
             if (await IsPatientExists(patientID) == false)
@@ -81,8 +82,22 @@ namespace CCSN.Services
             return true;
              }
              else { return false; }
+        }*/
+        public async Task AddPatient( Patient patient)
+        {
+            var x = await firebaseClient
+                .Child($"Specalists/406707265/Patients")
+                .PostAsync(new Patient(patient));
+            /*
+            Patient patients = new Patient(x.Object);
+            patients.ID = x.Key;
+            await firebaseClient
+            .Child($"Specalists/406707265/Patients/{patients.ID}")
+            .PatchAsync(patients);*/
+        
+  
         }
-
     }
+
 }
 

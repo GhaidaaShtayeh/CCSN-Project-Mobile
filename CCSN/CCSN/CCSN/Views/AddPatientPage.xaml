@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout  HorizontalOptions="Center" VerticalOptions="Center">
             <Label Text="Add Patient" FontSize="Large" TextColor="#2196f3" FontAttributes="Bold"  HorizontalOptions="CenterAndExpand"></Label>
-
+<!--
             <Entry Placeholder=" Patient ID"
                    Text="{Binding ID}"></Entry>
 
@@ -31,11 +31,35 @@
 
             <Button Style="{StaticResource AddButton}"
                     Text="Add Patient"
-                    Command="{Binding AddCommand }" ></Button>
+                    Command="{Binding AddCommand }" ></Button>-->
+
+            <Entry Placeholder=" Patient ID"
+                   x:Name="ID"></Entry>
+            <Entry Placeholder="Patient Address"
+                   x:Name="PatientAddress"></Entry>
+            <Entry Placeholder="Patient Birthday"
+                   x:Name="PatientBirthday"></Entry>
+
+            <Entry Placeholder="Patient Gender"
+                   x:Name="PatientGender"></Entry>
+            <Entry Placeholder="Patient Gentics Diseses"
+                   x:Name="PatientGenticsDiseses"></Entry>
+            <Entry Placeholder="Patient Height"
+                   x:Name="PatientHeight"></Entry>
+
+            <Entry Placeholder="Patient Mobile Number"
+                   x:Name="PatientMobileNo"></Entry>
+
+            <Entry Placeholder="Patient Name"
+                  x:Name="PatientName"></Entry>
+            <Entry Placeholder="Patient Weight"
+                   x:Name="PatientWeight"></Entry>
+            <Label x:Name="save" HorizontalOptions="Center" >Save</Label>
+
         </StackLayout>
     </ContentPage.Content>
-
+<!--
     <ContentPage.BindingContext>
         <vm:AddPatientViewModel />
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
 </ContentPage>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using CCSN.Models;
 
@@ -20,7 +21,8 @@ namespace CCSN.Models
         public string PatientBirthday { get; set; }
         public string PatientGenticesDiseses { get; set; }
 
-        public List<Appoitment> Appointments { get; set; }
+       //  public List<Appoitment> Appointments { get; set; }
+        public ObservableCollection<Appoitment> Appointments;
 
 
         public Patient()

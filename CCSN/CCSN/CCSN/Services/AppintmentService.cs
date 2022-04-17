@@ -24,6 +24,7 @@ namespace CCSN.Services
             }
             return false;
         }
+
         public static async Task<IEnumerable<Appoitment>> GetUserAppointments()
         {
             var url = (await firebaseClient
