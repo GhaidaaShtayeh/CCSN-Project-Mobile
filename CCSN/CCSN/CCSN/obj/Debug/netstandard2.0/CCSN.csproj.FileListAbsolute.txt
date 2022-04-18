@@ -143,3 +143,34 @@ C:\Users\Msi\Documents\sprint-5-mobile\pateint details\CCSN\CCSN\CCSN\obj\Debug\
 C:\Users\Msi\Documents\sprint-5-mobile\pateint details\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\ref\CCSN.dll
 C:\Users\Msi\Documents\sprint-5-mobile\pateint details\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.pdb
 C:\Users\Msi\Documents\sprint-5-mobile\pateint details\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.csprojAssemblyReference.cache
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.csproj.AssemblyReference.cache
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\AddNewFollowPage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\AddPatientPage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\AppointmentPage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\ComponentPage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\EditAppointment.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\EditFollowPage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\EmptyViewPage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\LogInPage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\PatientProfileDetailsPage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\PatientProfileFollowUpPage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\PatientsListPage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\ScheduleAppintmentPage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\SpecalistProfilePage.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\TabBar.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\Views\TopBarProfile.xaml.g.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.AssemblyInfoInputs.cache
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.AssemblyInfo.cs
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.dll
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\ref\CCSN.dll
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\CCSN.pdb
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\CCSN.deps.json
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\CCSN.dll
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\ref\CCSN.dll
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\bin\Debug\netstandard2.0\CCSN.pdb
+C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN\obj\Debug\netstandard2.0\XamlC.stamp

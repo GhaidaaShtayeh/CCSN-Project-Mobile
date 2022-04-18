@@ -14,29 +14,14 @@ namespace CCSN.Services
     public class PatientService
     {
         static FirebaseClient firebaseClient = new FirebaseClient("https://ccsn-fed2d-default-rtdb.firebaseio.com/");
-        public async Task<bool> Save(Patient patient)
-        {
-            var data = await firebaseClient.Child(nameof(Patient)).PostAsync(JsonConvert.SerializeObject(patient));
-            if (string.IsNullOrEmpty(data.Key))
-            {
-                return true;
-            }
-            return false;
-        }
 
         public static async Task<IEnumerable<Patient>> GetUserPatients()
         {
             var url = await firebaseClient
                      .Child($"Specalists/406707265/Patients").BuildUrlAsync();
-
             var result = await Helper.Get<List<Patient>>(url);
-            return result ;
-        }
+            return result;
 
-        public async Task<bool> Update(Patient patient)
-        {
-            await firebaseClient.Child(nameof(Patient) + "/" + patient.ID).PatchAsync(JsonConvert.SerializeObject(patient));
-            return true;
         }
 
         public async Task EditPatient(Patient patient, string ID)
@@ -51,6 +36,14 @@ namespace CCSN.Services
             await firebaseClient.Child(nameof(Patient) + "/" + id).DeleteAsync();
             return true;
         }
+
+        public async Task DeletePatient(string ID)
+        {
+            await firebaseClient
+           .Child($"Specalists/406707265/Patients/{ID}")
+           .DeleteAsync();
+        }
+
         public async Task<bool> IsPatientExists(string ID)
         {
             var Patient = (await firebaseClient.Child("/Specalists/406707265/Patients")
@@ -63,24 +56,39 @@ namespace CCSN.Services
         {
             if (await IsPatientExists(patientID) == false)
             {
-            await firebaseClient.Child("/Specalists/406707265/Patients")
-              .PostAsync(new Patient()
-              {
-                  ID = patientID,
-                  PatientAddress = patientAddress,
-                  PatientBirthday = patientBirthday,
-                  PatientGender = patientGender,
-                  PatientGenticesDiseses = patientGenticsDiseses,
-                  PatientHeight = patientHeight,
-                  PatientMobileNO = patientMobileNo,
-                  PatientName = patientName,
-                  PatientWeight = patientWeight,
-                  Appointments = appoitment
+                await firebaseClient.Child("/Specalists/406707265/Patients")
+                  .PostAsync(new Patient()
+                  {
+                      ID = patientID,
+                      PatientAddress = patientAddress,
+                      PatientBirthday = patientBirthday,
+                      PatientGender = patientGender,
+                      PatientGenticesDiseses = patientGenticsDiseses,
+                      PatientHeight = patientHeight,
+                      PatientMobileNO = patientMobileNo,
+                      PatientName = patientName,
+                      PatientWeight = patientWeight,
+                      Appointments = appoitment
 
-              });
-            return true;
-             }
-             else { return false; }
+                  });
+                return true;
+            }
+            else { return false; }
+        }
+
+        public async Task AddPatient(Patient patient)
+        {
+            var x = await firebaseClient
+                .Child($"Specalists/406707265/Patients")
+                .PostAsync(new Patient(patient));
+
+            /* Patient patients = new Patient(x.Object);
+             patients.ID = x.Key;
+             await firebaseClient
+             .Child($"Specalists/406707265/Patients/{patients.ID}")
+             .PatchAsync(patients);*/
+
+
         }
 
     }
