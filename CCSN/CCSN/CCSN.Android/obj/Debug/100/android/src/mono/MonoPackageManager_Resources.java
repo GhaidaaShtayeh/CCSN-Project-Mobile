@@ -9,6 +9,8 @@ public class MonoPackageManager_Resources {
 		"LiteDB.dll",
 		"MvvmHelpers.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.Connectivity.Abstractions.dll",
+		"Plugin.Connectivity.dll",
 		"System.Reactive.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.Annotation.dll",
@@ -76,5 +78,4 @@ public class MonoPackageManager_Resources {
 	};
 	public static String[] Dependencies = new String[]{
 	};
-	public static String ApiPackageName = "Mono.Android.Platform.ApiLevel_29";
 }

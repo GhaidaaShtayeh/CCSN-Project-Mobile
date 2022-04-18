@@ -24,7 +24,7 @@
                                     <Label Grid.Row="0" Text="{Binding FollowUpDate}" HorizontalOptions="Start"  Style="{StaticResource labelView}"/>
                                     <Label Grid.Row="0" Grid.Column="2" Text="  ||  " HorizontalOptions="End" Style="{StaticResource labelView}" />
                                     <Label Grid.Row="0" Grid.Column="2" Text="{Binding FollowUpAddNote}" HorizontalOptions="End" Style="{StaticResource labelView}"/>
-                                    <ImageButton Style="{StaticResource DeleteButton}"></ImageButton>
+                                    <ImageButton Style="{StaticResource DeleteButton}" Clicked="ItemImageButton_Clicked" CommandParameter="{Binding .}"/>
                                 </StackLayout>
                                  </Frame>
                             

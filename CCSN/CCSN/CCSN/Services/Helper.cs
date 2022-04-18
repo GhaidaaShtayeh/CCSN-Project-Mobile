@@ -19,8 +19,16 @@ namespace CCSN.Services
 
             var response = await client.GetAsync(url);
             var json = await response.Content.ReadAsStringAsync();
-            
+
+            //if (response.StatusCode == HttpStatusCode.OK)
+            //{
             return JsonConvert.DeserializeObject<TEntity>(json);
+            // }
+            // else
+            // {
+            //await Application.Current.MainPage.Navigation.PushModalAsync(new Views.EmptyViewPage());
+
+            // }
         }
     }
 }

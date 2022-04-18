@@ -35,9 +35,9 @@ namespace CCSN.Views
             Appoitment.FollowUpTools = Tools.Text;
             Appoitment.FollowUpGoals = Goals.Text;
             Appoitment.FollowUpAddNote = Notes.Text;
-            
 
-            await AppintmentService.EditAppointment(Appoitment);
+
+            await AppintmentService.EditFollowup(Appoitment, Appoitment.PatientID, Appoitment.ID);
             await DisplayAlert("Edited", "The Patient Edited", "Ok");
             await Navigation.PushAsync(new PatientProfileFollowUpPage());
 
