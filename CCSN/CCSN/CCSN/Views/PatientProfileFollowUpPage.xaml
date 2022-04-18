@@ -6,7 +6,6 @@
     <ContentPage.BindingContext>
         <viewmodels:PatientProfileFollowUpPageModelView/>
     </ContentPage.BindingContext>
-    
     <ContentPage.Behaviors>
         <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
         </ContentPage.Behaviors>

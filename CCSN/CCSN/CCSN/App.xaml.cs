@@ -10,8 +10,8 @@ namespace CCSN
         {
             InitializeComponent();
        
-           MainPage = new NavigationPage(new Views.TabBar());
-        // MainPage = new NavigationPage(new Views.LogInPage());
+          // MainPage = new NavigationPage(new Views.TabBar());
+         MainPage = new NavigationPage(new Views.PatientsListPage());
             // MainPage = new Views.HomePage();
            
         }

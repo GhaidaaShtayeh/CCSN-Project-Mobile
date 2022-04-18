@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CCSN.Views.PatientsListPage"
+             x:Class="CCSN.Views.PatientsListPage" BackgroundColor="AliceBlue"
               xmlns:viewmodels="clr-namespace:CCSN.ViewModels" 
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
     <ContentPage.BindingContext>
@@ -30,7 +30,10 @@
         <Grid HorizontalOptions="CenterAndExpand" >
             <Image Source="https://bcckids.org/wp-content/uploads/2016/10/Photo_Main_Slider2.png"                         
                    Scale="1.0" 
-                Aspect="Fill"
+                Aspect="AspectFill"
+                HorizontalOptions="Center"
+                WidthRequest="1000"
+                HeightRequest="400"                Margin="15,5,15,5"
                    
                 />
         </Grid>
@@ -45,15 +48,15 @@
                     <ViewCell>
                         <Grid RowDefinitions="Auto,Auto,Auto">
                             <Frame  Style="{StaticResource FrameStyle}"
-                                        Margin="15,0,30,0"
+                                        Margin="15,0,15,0"
                                         >
-                                <StackLayout Orientation="Horizontal"  Margin="10,0,20,0" VerticalOptions="Center" HorizontalOptions="Center">
-                                    <Image Source="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png" WidthRequest="70" HeightRequest="70"/>
+                                <StackLayout Orientation="Horizontal"  Margin="10,0,20,0" VerticalOptions="Center">
+                                    <Image Source="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png" WidthRequest="70" HeightRequest="70" HorizontalOptions="Start"/>
                                     <BoxView 
                                     Color="Maroon"
                                     WidthRequest="1"
                                     Margin="5, 0, 10, 0" />
-                                    <Label Grid.Row="0" Text="{Binding PatientName}"  VerticalOptions="Center" HorizontalOptions="Start" Style="{StaticResource labelView}"/>
+                                    <Label Grid.Row="0" Text="{Binding PatientName}"  VerticalOptions="Center" Style="{StaticResource labelView}"/>
                                     <ImageButton Style="{StaticResource DeleteButton}"/>
                                 </StackLayout>
 

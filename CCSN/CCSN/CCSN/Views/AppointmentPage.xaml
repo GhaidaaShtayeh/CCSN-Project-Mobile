@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CCSN.Views.AppointmentPage"
+             x:Class="CCSN.Views.AppointmentPage" BackgroundColor="AliceBlue"
              xmlns:viewmodels="clr-namespace:CCSN.ViewModels" xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    
     <ContentPage.BindingContext>
         <viewmodels:AppointmentPageModelView/>
     </ContentPage.BindingContext>
@@ -11,7 +12,7 @@
     </ContentPage.Behaviors>
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label   Style="{StaticResource navlabel}"
+            <Label  Style="{StaticResource navlabel}"
                 Text="Appointment"/>
 
             <ImageButton
@@ -32,7 +33,12 @@
             <Image
                    Source="https://thumbs.dreamstime.com/b/scheduling-your-appointment-today-monthly-calendar-pen-scheduling-your-appointment-today-monthly-calendar-143613840.jpg"                         
                    Scale="1.0" 
-                   Aspect="Fill"
+                   Aspect="AspectFill"
+                HorizontalOptions="Center"
+                WidthRequest="1000"
+                HeightRequest="300"                Margin="15,0,15,0"
+               
+                
                 
                    
                 />
@@ -49,13 +55,12 @@
                             <Frame Style="{StaticResource AppFrame}" >
                                 <StackLayout Orientation="Horizontal"  Margin="30,0,20,0" VerticalOptions="Center">
 
-                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}"  VerticalOptions="Center" HorizontalOptions="Start"   Style="{StaticResource labelView}"/>
-                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding AppointmentDate.Date}" Font="Small"   HorizontalOptions="End"  Style="{StaticResource labelView}" />
+                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" VerticalOptions="Center" HorizontalOptions="StartAndExpand"   Style="{StaticResource labelView}"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding AppointmentDate.Date}" Font="Small" HorizontalOptions="CenterAndExpand"  Style="{StaticResource labelView}" />
                                     <ImageButton Style="{StaticResource DeleteButton}"></ImageButton>
 
                                 </StackLayout>
                             </Frame>
-
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
@@ -64,4 +69,5 @@
         </ListView>
         <Button Style="{StaticResource BlusButton}" Clicked="Button_Clicked" />
     </StackLayout>
+    
 </ContentPage>

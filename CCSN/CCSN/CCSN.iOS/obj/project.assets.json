@@ -1991,21 +1991,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\Msi\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\CCSN1\\CCSN\\CCSN\\CCSN.iOS\\CCSN.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN.iOS\\CCSN.iOS.csproj",
       "projectName": "CCSN.iOS",
-      "projectPath": "C:\\Users\\DELL\\Desktop\\CCSN1\\CCSN\\CCSN\\CCSN.iOS\\CCSN.iOS.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Desktop\\CCSN1\\CCSN\\CCSN\\CCSN.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN.iOS\\CCSN.iOS.csproj",
+      "packagesPath": "C:\\Users\\Msi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Msi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
@@ -2017,8 +2022,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\DELL\\Desktop\\CCSN1\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {
-              "projectPath": "C:\\Users\\DELL\\Desktop\\CCSN1\\CCSN\\CCSN\\CCSN\\CCSN.csproj"
+            "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {
+              "projectPath": "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN\\CCSN.csproj"
             }
           }
         }
