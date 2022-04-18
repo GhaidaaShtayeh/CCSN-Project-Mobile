@@ -1,4 +1,5 @@
 ﻿using CCSN.Services;
+using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +10,7 @@ using Xamarin.Forms;
 
 namespace CCSN.ViewModels
 {
-    public class LogInPageModelView :BaseViewModel
+    public class LogInPageModelView : BaseViewModel
     {
         private string _ID;
         public string ID
@@ -51,28 +52,40 @@ namespace CCSN.ViewModels
         public LogInPageModelView()
         {
             LoginCommand = new Command(async () => await LoginCommandAsync());
-          
+
         }
 
-  
+
 
         private async Task LoginCommandAsync()
         {
             try
             {
-
                 var userServ = new SpecalistService();
-                Result = await userServ.LoginUser(ID, password);
-                if (Result)
+                if (CrossConnectivity.Current.IsConnected)
                 {
-                    Preferences.Set("ID", ID);
-                    await Application.Current.MainPage.Navigation.PushModalAsync(new Views.TabBar());
+
+                    Result = await userServ.LoginUser(ID, password);
+
+                    if (Result)
+                    {
+                        Preferences.Set("ID", ID);
+                        await Application.Current.MainPage.Navigation.PushModalAsync(new Views.TabBar());
+                    }
+                    else
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Error", "Invalid user id or pass", "ok");
+
+                    }
+
+
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Invalid user id or pass", "ok");
+                    await Application.Current.MainPage.DisplayAlert("Message", "No Internet Connection ", "ok");
 
                 }
+
             }
             catch (Exception ex)
             {
@@ -80,5 +93,7 @@ namespace CCSN.ViewModels
             }
 
         }
+
+
     }
 }

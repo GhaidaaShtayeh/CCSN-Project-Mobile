@@ -36,7 +36,8 @@
                    Aspect="AspectFill"
                 HorizontalOptions="Center"
                 WidthRequest="1000"
-                HeightRequest="300"                Margin="15,0,15,0"
+                HeightRequest="300"
+                Margin="15,0,15,0"
                
                 
                 
@@ -57,7 +58,7 @@
 
                                     <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" VerticalOptions="Center" HorizontalOptions="StartAndExpand"   Style="{StaticResource labelView}"/>
                                     <Label Grid.Row="0" Grid.Column="2" Text="{Binding AppointmentDate.Date}" Font="Small" HorizontalOptions="CenterAndExpand"  Style="{StaticResource labelView}" />
-                                    <ImageButton Style="{StaticResource DeleteButton}"></ImageButton>
+                                    <ImageButton Style="{StaticResource DeleteButton}" Clicked="ItemImageButton_Clicked" CommandParameter="{Binding .}"/>
 
                                 </StackLayout>
                             </Frame>

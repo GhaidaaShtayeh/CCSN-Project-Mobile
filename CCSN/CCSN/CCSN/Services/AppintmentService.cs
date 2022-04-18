@@ -31,6 +31,7 @@ namespace CCSN.Services
 
             var result = await Helper.Get<List<Appoitment>>(url);
             return result.Where(o => o.AppointmentDate.Date == DateTime.Now.Date);
+
         }
 
         public static async Task<IEnumerable<Appoitment>> GetUserAllAppointments()
@@ -51,10 +52,17 @@ namespace CCSN.Services
             return result.Where(o => o.AppointmentDate.Date == DateTime.Today.AddDays(1).Date);
         }
 
-        public static async Task EditAppointment(Appoitment appoitment)
+        public static async Task EditAppointment(Appoitment appoitment, string ID)
         {
             await firebaseClient
-          .Child($"Specalists/406707265/Patients/0/Appointments")
+          .Child($"Specalists/406707265/Patients/{ID}/Appointments")
+          .PatchAsync(appoitment);
+        }
+
+        public static async Task EditFollowup(Appoitment appoitment, string PatientID, string FollowID)
+        {
+            await firebaseClient
+          .Child($"Specalists/406707265/Patients/{PatientID}/Appointments/{FollowID}")
           .PatchAsync(appoitment);
         }
 
@@ -110,6 +118,13 @@ namespace CCSN.Services
             await firebaseClient
                 .Child($"Specalists/406707265/Patients/0/Appointments")
                 .PostAsync(A);
+        }
+
+        public async Task DeleteAppointment(string PatientID, string AppointmentID)
+        {
+            await firebaseClient
+           .Child($"Specalists/406707265/Patients/{PatientID}/Appointments/{AppointmentID}")
+           .DeleteAsync();
         }
     }
 }

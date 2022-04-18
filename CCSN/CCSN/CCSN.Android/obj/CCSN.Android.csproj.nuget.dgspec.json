@@ -1,26 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj": {}
+    "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile11\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj": {
+    "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile11\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile11\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj",
         "projectName": "CCSN.Android",
-        "projectPath": "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj",
-        "packagesPath": "C:\\Users\\Msi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN.Android\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile11\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile11\\CCSN\\CCSN\\CCSN.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Msi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "monoandroid10.0"
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid10.0": {
             "projectReferences": {
-              "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {
-                "projectPath": "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN\\CCSN.csproj"
+              "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile11\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile11\\CCSN\\CCSN\\CCSN\\CCSN.csproj"
               }
             }
           }
@@ -58,22 +58,22 @@
         }
       }
     },
-    "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {
+    "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile11\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN\\CCSN.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile11\\CCSN\\CCSN\\CCSN\\CCSN.csproj",
         "projectName": "CCSN",
-        "projectPath": "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN\\CCSN.csproj",
-        "packagesPath": "C:\\Users\\Msi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Msi\\Documents\\sprint-5-mobile\\pateint details\\CCSN\\CCSN\\CCSN\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile11\\CCSN\\CCSN\\CCSN\\CCSN.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile11\\CCSN\\CCSN\\CCSN\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Msi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -120,6 +120,10 @@
               "target": "Package",
               "version": "[1.6.2, )"
             },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
             "XamForms.Controls.Calendar": {
               "target": "Package",
               "version": "[1.1.1, )"
@@ -143,7 +147,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

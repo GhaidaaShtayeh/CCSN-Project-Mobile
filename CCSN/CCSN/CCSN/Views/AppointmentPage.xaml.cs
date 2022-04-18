@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CCSN.Models;
+using CCSN.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +23,16 @@ namespace CCSN.Views
         {
             await Navigation.PushAsync(new ScheduleAppintmentPage());
 
+        }
+
+
+        private async void ItemImageButton_Clicked(object sender, EventArgs e)
+        {
+            var appoitment = (Appoitment)((ImageButton)sender).CommandParameter;
+            AppintmentService appintmentService = new AppintmentService();
+            await appintmentService.DeleteAppointment(appoitment.PatientID, appoitment.ID);
+            await DisplayAlert("Delted", "The Appointment Deleteed", "Ok");
+            await Navigation.PushAsync(new AppointmentPage());
         }
     }
 }

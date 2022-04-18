@@ -33,7 +33,8 @@
                 Aspect="AspectFill"
                 HorizontalOptions="Center"
                 WidthRequest="1000"
-                HeightRequest="400"                Margin="15,5,15,5"
+                HeightRequest="400"
+                Margin="15,5,15,5"
                    
                 />
         </Grid>
@@ -57,7 +58,7 @@
                                     WidthRequest="1"
                                     Margin="5, 0, 10, 0" />
                                     <Label Grid.Row="0" Text="{Binding PatientName}"  VerticalOptions="Center" Style="{StaticResource labelView}"/>
-                                    <ImageButton Style="{StaticResource DeleteButton}"/>
+                                    <ImageButton Style="{StaticResource DeleteButton}" Clicked="ItemImageButton_Clicked" CommandParameter="{Binding .}"/>
                                 </StackLayout>
 
                             </Frame>
