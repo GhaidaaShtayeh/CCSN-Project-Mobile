@@ -7,20 +7,11 @@
     <ContentPage.BindingContext>
         <viewmodels:PatientListPageModelView/>
     </ContentPage.BindingContext>
+    
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Style="{StaticResource navlabel}"
-                Text="Patients"/>
-
-            <ImageButton
-                HorizontalOptions="EndAndExpand"
-                Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
-              Style="{StaticResource navBarStyle}"  />
-
-            <ImageButton
-                HorizontalOptions="End"
-                Source="https://static.thenounproject.com/png/3134331-200.png"
-               Style="{StaticResource navBarStyle}"  />
+            <Label Style="{StaticResource navlabel}" 
+                Text="Patients List" />
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Behaviors>
@@ -30,9 +21,7 @@
         <Grid HorizontalOptions="CenterAndExpand" >
             <Image Source="https://bcckids.org/wp-content/uploads/2016/10/Photo_Main_Slider2.png"                         
                    Scale="1.0" 
-                Aspect="Fill"
-                   
-                />
+                Aspect="Fill"/>
         </Grid>
         <ListView
             HasUnevenRows="True"

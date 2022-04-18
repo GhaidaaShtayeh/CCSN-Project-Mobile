@@ -3,13 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CCSN.Views.PatientProfileFollowUpPage"
               xmlns:viewmodels="clr-namespace:CCSN.ViewModels" xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
-    <ContentPage.BindingContext>
-        <viewmodels:PatientProfileFollowUpPageModelView/>
-    </ContentPage.BindingContext>
-    
-    <ContentPage.Behaviors>
-        <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
-        </ContentPage.Behaviors>
+  
         <StackLayout>
             <ListView
             HasUnevenRows="True"
@@ -19,7 +13,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                        <Grid RowDefinitions="Auto,Auto,Auto">
+                        <Grid RowDefinitions="Auto,Auto,Auto" BackgroundColor="WhiteSmoke" Padding="0.6" Margin="20">
                             <Frame  Style="{StaticResource FrameStyle}" Margin="30,15,20,0">
                                 <StackLayout Orientation="Horizontal"  Margin="15,0,15,0" VerticalOptions="Center">
                                     <Label Grid.Row="0" Text="{Binding FollowUpDate}" HorizontalOptions="Start"  Style="{StaticResource labelView}"/>

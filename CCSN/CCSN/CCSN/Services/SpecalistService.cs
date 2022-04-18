@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 using CCSN.Models;
 using Firebase.Database;
 using Newtonsoft.Json;
+using Firebase.Database.Query;
+
+
 
 namespace CCSN.Services
 {
     public class SpecalistService
     {
-        FirebaseClient firebaseClient = new FirebaseClient("https://ccsn-fed2d-default-rtdb.firebaseio.com/");
+        static FirebaseClient firebaseClient = new FirebaseClient("https://ccsn-fed2d-default-rtdb.firebaseio.com/");
         public async Task<bool> Save(Specalist specalist)
         {
 
@@ -36,6 +39,14 @@ namespace CCSN.Services
              }).ToList();
 
         }
+        public static async Task<IEnumerable<Specalist>> GetSpecalists()
+        {
+            var url = await firebaseClient
+                     .Child($"Specalists").BuildUrlAsync();
+
+            var result = await Helper.Get<List<Specalist>>(url);
+            return result;
+        }
 
         public async Task<bool> Update(Specalist specalist)
         {
@@ -50,5 +61,6 @@ namespace CCSN.Services
                 .Where(u => u.Object.password == userpassword).FirstOrDefault();
             return (user != null);
         }
+       
     }
 }

@@ -19,12 +19,15 @@
             <ImageButton
                 HorizontalOptions="EndAndExpand"
                 Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
-              Style="{StaticResource navBarStyle}"  />
+              Style="{StaticResource navBarStyle}"
+                />
 
             <ImageButton
                 HorizontalOptions="End"
                 Source="https://static.thenounproject.com/png/3134331-200.png"
-               Style="{StaticResource navBarStyle}"  />
+                Style="{StaticResource navBarStyle}"
+                   Clicked="OnImageButtonClicked" 
+             />
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Behaviors>

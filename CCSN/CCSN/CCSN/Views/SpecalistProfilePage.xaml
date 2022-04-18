@@ -2,14 +2,64 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CCSN.Views.SpecalistProfilePage"
-             xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             xmlns:viewmodels="clr-namespace:CCSN.ViewModels" xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Style="{StaticResource navlabel}" 
+                Text="My Profile" TextColor="white" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    
+    
+    <ContentPage.Content >
+        
+        <StackLayout Margin="20" >
+           
+                <StackLayout Margin="11">
+                    <Image Source="https://static.thenounproject.com/png/3134331-200.png"
+                VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+                    <StackLayout>
+                        <Label Text="Dr Majed "
+                   TextColor=" #1EA6D6"
+                   FontSize= "50"
+                   VerticalOptions= "Start"
+                   HorizontalOptions="Center"
+                   />
+
+                    </StackLayout>
+
+
+                </StackLayout>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text=" ID :11924646"
+                    FontAttributes="Bold"
+                   FontSize="35"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Margin="20"/>
+                    <Label Text="Email: example@gmail.com"
+                    FontAttributes="Bold"
+                   FontSize="Large"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"
+                   Margin="11"
+                />
+                    <Label Text="Phone No.: +098764523"
+                    FontAttributes="Bold"
+                   FontSize="Large"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"
+                   Margin="11"
+                />
+
+                    <Button Text="Logout" Clicked="Button_Clicked" BackgroundColor="#2196f3" TextColor="white" />
+
+                </StackLayout>
+           
         </StackLayout>
     </ContentPage.Content>
+
     <ContentPage.BindingContext>
         <viewmodels:SpcalistProfilePageModelView/>
     </ContentPage.BindingContext>

@@ -15,9 +15,12 @@ namespace CCSN.Views
         public HomePage()
         {
             InitializeComponent();
-         
 
-         
+        }
+        private async void OnImageButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SpecalistProfilePage());
+
         }
     }
 }

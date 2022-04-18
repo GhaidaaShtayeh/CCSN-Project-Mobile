@@ -13,11 +13,11 @@ namespace CCSN.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PatientProfileDetailsPage : ContentPage
     {
+
         Patient Patient;
         public PatientProfileDetailsPage(Patient patient)
         {
             InitializeComponent();
-
             Patient = patient;
             PatientNameEntry.Text = patient.PatientName;
             MobileEntry.Text = patient.PatientMobileNO;

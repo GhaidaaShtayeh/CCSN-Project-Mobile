@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CCSN",
+    "\\CCSN\\CCSN",
+    "\\CCSN\\CCSN\\Services"
   ],
   "SelectedNode": "\\CCSN.sln",
   "PreviewInSolutionExplorer": false

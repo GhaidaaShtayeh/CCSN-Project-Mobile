@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CCSN.Views.PatientProfileDetailsPage"
               xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
+ 
     <ContentPage.Content>
-        <StackLayout>
+        
+        <StackLayout BackgroundColor="WhiteSmoke" Padding="0.6" Margin="20">
             <Entry x:Name="PatientNameEntry" Text="Name" Placeholder="Name" Style="{StaticResource EntryStyle}"/>
 
             <Entry x:Name="PatientGenderEntry" Text="Gender" Placeholder="Gender" Style="{StaticResource EntryStyle}" />
