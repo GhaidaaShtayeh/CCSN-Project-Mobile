@@ -1,41 +1,118 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:CCSN.ViewModels"
-             x:Class="CCSN.Views.AddPatientPage">
-    <ContentPage.Content>
-        <StackLayout  HorizontalOptions="Center" VerticalOptions="Center">
-            <Label Text="Add Patient" FontSize="Large" TextColor="#2196f3" FontAttributes="Bold"  HorizontalOptions="CenterAndExpand"></Label>
-
-            <Entry Placeholder=" Patient ID"
-                   Text="{Binding ID}"></Entry>
-
-            <Entry Placeholder="Patient Address"
-                   Text="{Binding PatientAddress}"></Entry>
-            <Entry Placeholder="Patient Birthday"
-                   Text="{Binding PatientBirthday}"></Entry>
-
-            <Entry Placeholder="Patient Gender"
-                   Text="{Binding PatientGender}"></Entry>
-            <Entry Placeholder="Patient Gentics Diseses"
-                   Text="{Binding PatientGenticsDiseses}"></Entry>
-            <Entry Placeholder="Patient Height"
-                   Text="{Binding PatientHeight}"></Entry>
-
-            <Entry Placeholder="Patient Mobile Number"
-                   Text="{Binding PatientMobileNo}"></Entry>
-
-            <Entry Placeholder="Patient Name"
-                   Text="{Binding PatientName}"></Entry>
-            <Entry Placeholder="Patient Weight"
-                   Text="{Binding PatientWeight}"></Entry>
-
-            <Button Style="{StaticResource AddButton}"
-                    Text="Add Patient"
-                    Command="{Binding AddCommand }" ></Button>
-        </StackLayout>
-    </ContentPage.Content>
-
+             x:Class="CCSN.Views.AddPatientPage" BackgroundColor="AliceBlue" xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
     <ContentPage.BindingContext>
         <vm:AddPatientViewModel />
     </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
+    </ContentPage.Behaviors>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label  Style="{StaticResource navlabel}"
+                Text="add new Patient"/>
+
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ScrollView>
+        <StackLayout>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                </Grid>
+                <StackLayout Orientation="Horizontal"  Grid.Row="0" >
+                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Patient ID :" ></Label>
+                    <Frame Style="{StaticResource FrameEntry}">
+                        
+                        <Entry  Text="{Binding ID}"></Entry>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"  Grid.Row="1" >
+                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Name :" ></Label>
+                    <Frame Style="{StaticResource FrameEntry}">
+                        <Entry Text="{Binding PatientName}" ></Entry>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"  Grid.Row="2" >
+                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Mobile Number :" ></Label>
+                    <Frame Style="{StaticResource FrameEntry}">
+                       
+                        <Entry Text="{Binding PatientMobileNo}"></Entry>
+
+                    </Frame>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal" Grid.Row="3" >
+                    <Label HorizontalOptions="Start"  FontSize="Large" VerticalOptions="Center" Text=" Height :" ></Label>
+                    <Frame  Style="{StaticResource FrameEntry}">
+
+                        <Entry Text="{Binding PatientHeight}"></Entry>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Grid.Row="4" >
+                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Weight :" ></Label>
+                    <Frame Style="{StaticResource FrameEntry}">
+                        <Entry Text="{Binding PatientWeight}"></Entry>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"  Grid.Row="5" >
+                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Gender :" ></Label>
+                    <Frame Style="{StaticResource FrameEntry}">
+                       
+                        <Picker SelectedItem="{Binding PatientGender}">
+                            <Picker.Items>
+                                <x:String>Male</x:String>
+                                <x:String>Female</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"  Grid.Row="6" >
+                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Address :" ></Label>
+                    <Frame Style="{StaticResource FrameEntry}">
+                        
+                        <Entry Text="{Binding PatientAddress}"></Entry>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"  Grid.Row="7" >
+                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Birthday :" ></Label>
+                    <Frame Style="{StaticResource FrameEntry}">
+                        <DatePicker Format="MM/dd/yyyy"  Date="{Binding PatientBirthday , Mode=TwoWay}" >
+                        </DatePicker>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"  Grid.Row="8" >
+                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Gentics Diseses :" ></Label>
+                    <Frame Style="{StaticResource FrameEntry}">
+                       
+                        <Entry Text="{Binding PatientGenticsDiseses}"></Entry>
+                    </Frame>
+                </StackLayout>
+
+                <Button Style="{StaticResource AddButton}"
+                    Text="Add Patient"
+                    Command="{Binding AddCommand }" ></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

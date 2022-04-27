@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CNHxPh5p7pg0q7nE/JIO4mHuPB+b2n22PgZwbXjOxvhuJ8I+2WyzBqYfeb9NMOqpZ2unRr3mULO9/IdOKLt7iA==",
+  "dgSpecHash": "xSqvc0Ar2v4Vsm2mS+t7cwSwdemGlVGmQ6rGXUPYrJTYxGY2PoLIk0og4rq4mHT2QnpFuWxnxaw9USElX6aD6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\CCSN1\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile12\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\firebasedatabase.net\\4.0.7\\firebasedatabase.net.4.0.7.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\litedb\\4.1.4\\litedb.4.1.4.nupkg.sha512",
@@ -15,6 +15,7 @@
     "C:\\Users\\DELL\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\xam.plugin.connectivity\\3.2.0\\xam.plugin.connectivity.3.2.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\xamarin.androidx.annotation.experimental\\1.1.0.1\\xamarin.androidx.annotation.experimental.1.1.0.1.nupkg.sha512",

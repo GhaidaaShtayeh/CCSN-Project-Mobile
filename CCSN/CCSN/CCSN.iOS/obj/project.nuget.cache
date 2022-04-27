@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mlDlxqtWQ44ruqosE1GONuzRbh3Y5Ud4/730j0ZLO5+CWdAyL3hnaOkK0CzMMx2Ii0W3hAcn8Cf8awdBTvtckg==",
+  "dgSpecHash": "fUJF5Dqps6n15V1VH6gNdu4/mIQRby9JnvNGcfRW8uDF8qRY/vacTOe4yiVQCIIL8aI3AW+zshRGi+BJdg3zjg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\CCSN1\\CCSN\\CCSN\\CCSN.iOS\\CCSN.iOS.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Documents\\CCSN-Project-Mobile12\\CCSN\\CCSN\\CCSN.iOS\\CCSN.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\firebasedatabase.net\\4.0.7\\firebasedatabase.net.4.0.7.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\litedb\\4.1.4\\litedb.4.1.4.nupkg.sha512",
@@ -15,6 +15,7 @@
     "C:\\Users\\DELL\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\xam.plugin.connectivity\\3.2.0\\xam.plugin.connectivity.3.2.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\xamarin.communitytoolkit\\1.3.0\\xamarin.communitytoolkit.1.3.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",

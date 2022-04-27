@@ -1,30 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CCSN.Views.PatientProfileDetailsPage"
+             x:Class="CCSN.Views.PatientProfileDetailsPage" BackgroundColor="AliceBlue"
               xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
-    <ContentPage.Content>
+
+    <ScrollView>
         <StackLayout>
-            <Entry x:Name="PatientNameEntry" Text="Name" Placeholder="Name" Style="{StaticResource EntryStyle}"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+            </Grid>
+            <StackLayout Orientation="Horizontal"  Grid.Row="0" >
+                <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Name :" ></Label>
+                <Entry x:Name="PatientNameEntry" Text="Name" Placeholder="Name" Style="{StaticResource EntryStyle}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  Grid.Row="1" >
+                <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Gender :" ></Label>
+                <Entry x:Name="PatientGenderEntry" Text="Gender" Placeholder="Gender" Style="{StaticResource EntryStyle}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  Grid.Row="2" >
+                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Mobile :" ></Label>
 
-            <Entry x:Name="PatientGenderEntry" Text="Gender" Placeholder="Gender" Style="{StaticResource EntryStyle}" />
-
-            <Entry x:Name="MobileEntry" Text="Mobile"  Placeholder="Mobile" Style="{StaticResource EntryStyle}" Keyboard="Text" />
-
-            <Entry x:Name="PatientAddressEntry" FontSize="Small" Placeholder="Address" Style="{StaticResource EntryStyle}" Keyboard="Text"/>
-
-            <Entry x:Name="PatientBirthdayEntry" Text="BD" Placeholder="BD" Style="{StaticResource EntryStyle}" Keyboard="Text" />
-
-            <Entry x:Name="PatientHeightEntry" Text="Height" Placeholder="Height" Style="{StaticResource EntryStyle}" Keyboard="Text"/>
-
-            <Entry x:Name="PatientWeightEntry" Text="Weight" Placeholder="Weight" Style="{StaticResource EntryStyle}" Keyboard="Text" />
-
-            <Entry x:Name="PatientGenticesDisesesEntry" Text="Gen" Placeholder="Gentics" Style="{StaticResource EntryStyle}" Keyboard="Text"/>
-
-            <Label x:Name="save" HorizontalOptions="Center" >Save</Label>
+                <Entry x:Name="MobileEntry" Text="Mobile"  Placeholder="Mobile" Style="{StaticResource EntryStyle}" Keyboard="Text" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  Grid.Row="3" >
+                        <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Address :" ></Label>
+                        <Entry x:Name="PatientAddressEntry" Placeholder="Address" Style="{StaticResource EntryStyle}" Keyboard="Text"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  Grid.Row="4" >
+                            <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" BirthDay :" ></Label>
+                            <Entry x:Name="PatientBirthdayEntry" Text="BD" Placeholder="BD" Style="{StaticResource EntryStyle}" Keyboard="Text" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  Grid.Row="5" >
+                                <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Height :" ></Label>
+                <Entry x:Name="PatientHeightEntry" Text="Height" Placeholder="Height" Style="{StaticResource EntryStyle}" Keyboard="Text"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  Grid.Row="6" >
+                                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Weight :" ></Label>
+                <Entry x:Name="PatientWeightEntry" Text="Weight" Placeholder="Weight" Style="{StaticResource EntryStyle}" Keyboard="Text" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  Grid.Row="7" >
+                                        <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Gentics :" ></Label>
+                                        <Entry x:Name="PatientGenticesDisesesEntry" Text="Gen" Placeholder="Gentics" Style="{StaticResource EntryStyle}" Keyboard="Text"/>
+            </StackLayout>
+            <Frame CornerRadius="45"
+                   WidthRequest="300"
+                   BackgroundColor="#2196f3" 
+                   Margin="0,5,0,5"
+                   Grid.Row="8" 
+                   HorizontalOptions="CenterAndExpand"
+                   HeightRequest="19" >
+                <Label x:Name="save" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                   FontSize="Medium" 
+                   TextColor="White" >SAVE</Label>
+            </Frame>
         </StackLayout>
-    </ContentPage.Content>
-        <ContentPage.BindingContext>
+    </ScrollView>
+    <ContentPage.BindingContext>
         <viewmodels:PatientProfileDetailsPageModelView/>
     </ContentPage.BindingContext>
 </ContentPage>
