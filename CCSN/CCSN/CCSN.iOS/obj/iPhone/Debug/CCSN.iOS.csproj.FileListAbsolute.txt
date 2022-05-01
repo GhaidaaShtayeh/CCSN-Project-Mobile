@@ -365,3 +365,16 @@ C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debu
 C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\CCSN.iOS.csproj.CopyComplete
 C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\CCSN.iOS.exe
 C:\Users\DELL\Documents\CCSN-Project-Mobile12\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\CCSN.iOS.pdb
+C:\Users\IAmour\OneDrive\Documents\fccsn\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\IAmour\OneDrive\Documents\fccsn\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\IAmour\OneDrive\Documents\fccsn\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\actool\_ProcessedImageAssetsPath.items
+C:\Users\IAmour\OneDrive\Documents\fccsn\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\IAmour\OneDrive\Documents\fccsn\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\ibtool\_ProcessedInterfaceDefinitionsPath.items
+C:\Users\IAmour\OneDrive\Documents\fccsn\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+C:\Users\IAmour\OneDrive\Documents\fccsn\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\IAmour\OneDrive\Documents\fccsn\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\coremlc\_ProcessedCoreMLModelsPath.items
+C:\Users\IAmour\OneDrive\Documents\fccsn\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\_ProcessedBundleResourcesPath.items
+C:\Users\IAmour\OneDrive\Documents\fccsn\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\_ProcessedContentPath.items
+C:\Users\IAmour\OneDrive\Documents\fccsn\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\optimized\
+C:\Users\IAmour\OneDrive\Documents\fccsn\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\CCSN.iOS.csproj.AssemblyReference.cache
+C:\Users\IAmour\OneDrive\Documents\fccsn\CCSN\CCSN\CCSN.iOS\obj\iPhone\Debug\CCSN.iOS.csproj.CoreCompileInputs.cache
