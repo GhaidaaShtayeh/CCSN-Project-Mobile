@@ -10,7 +10,7 @@ using Xamarin.Forms;
 
 namespace CCSN.ViewModels
 {
-    public class AddNewFollowModelView : BindableObject
+    public class AddNewFollowModelView : BaseViewModel
     {
         public string FollowUpDate { get; set; }
         public string FollowUpTools { get; set; }
@@ -33,14 +33,18 @@ namespace CCSN.ViewModels
         public AddNewFollowModelView()
         {
             _services = new AppintmentService();
-            FollowUp = _services.getFollowUp();
             AddFollowUpCommand = new Command(async () => await addFollowUpAsync(FollowUpDate, FollowUpTools, FollowUpGoals, FollowUpAddNote));
 
         }
         public async Task addFollowUpAsync(string FollowUpDate, string FollowUpTools, string FollowUpGoals, string FollowUpAddNote)
         {
-            await _services.addFollowUp(FollowUpDate, FollowUpTools, FollowUpGoals, FollowUpAddNote);
-
+            var confirm = await App.Current.MainPage.DisplayAlert("confirm", "Are you sure to add new follow ? ", "yes", "no");
+            if (confirm)
+            {
+                // await _services.addFollowUp(FollowUpDate, FollowUpTools, FollowUpGoals, FollowUpAddNote);
+                await App.Current.MainPage.DisplayAlert("Error", "Done", "Ok");
+                await App.Current.MainPage.Navigation.PopAsync();
+            }
         }
 
     }

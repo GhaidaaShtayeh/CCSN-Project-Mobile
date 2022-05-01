@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace CCSN.ViewModels
 {
@@ -13,9 +15,12 @@ namespace CCSN.ViewModels
 
         public bool IsLoading { get => _IsLoading; set => SetProperty(ref _IsLoading, value, nameof(IsLoading)); }
         public string Message { get => _Message; set => SetProperty(ref _Message, value, nameof(Message)); }
+
         //for login
         public void OnPropertyChanged([CallerMemberName] string name = null) =>
           PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+
+
 
         #region NotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
