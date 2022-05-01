@@ -4,6 +4,8 @@ using CCSN.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -15,26 +17,67 @@ namespace CCSN.ViewModels
     public class AppointmentPageModelView : BaseViewModel
     {
         private ObservableCollection<Appoitment> _Appoitments = new ObservableCollection<Appoitment>();
+        public INavigation Navigation { get; set; }
 
         public ObservableCollection<Appoitment> Appoitments { get => _Appoitments; set => SetProperty(ref _Appoitments, value, nameof(Appoitments)); }
 
 
         private ICommand _Appearing;
+        private ICommand _deleteAppointement;
+
 
         public ICommand Appearing { get => _Appearing; set => SetProperty(ref _Appearing, value, nameof(Appearing)); }
+        public ICommand DeleteAppointement { get => _deleteAppointement; set => SetProperty(ref _deleteAppointement, value, nameof(DeleteAppointement)); }
 
-        public AppointmentPageModelView()
+        public AppointmentPageModelView(INavigation navigation)
         {
 
             Appearing = new AsyncCommand(async () => await LoadData());
+            this.Navigation = navigation;
+            this.ScheduleBtnClicked = new Command(async () => await GotoScheduleAppointment());
+            DeleteAppointement = new Command<Appoitment>(async (o) => await DeleteAppointementPerforme(o));
         }
 
-        async Task LoadData()
+        private async Task LoadData()
         {
-            Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAllAppointments());
+            IsLoading = true;
+            Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAppointmentsByDate(null));
+            IsLoading = false;
+        }
+
+        public async Task GotoScheduleAppointment()
+        {
+            /////
+            await App.Current.MainPage.Navigation.PushAsync(new ScheduleAppintmentPage());
 
         }
 
-        
+        public ICommand ScheduleBtnClicked
+        {
+            protected set;
+            get;
+        }
+
+        private async Task DeleteAppointementPerforme(Appoitment appoitment)
+        {
+            var confirm = await App.Current.MainPage.DisplayAlert("confirm", "are you sure you want to delete", "yes", "no");
+            if (confirm)
+            {
+                AppintmentService appintmentService = new AppintmentService();
+                await appintmentService.DeleteFollowup(appoitment.PatientID, appoitment.ID);
+                Appoitments.Remove(appoitment);
+                await App.Current.MainPage.DisplayAlert("Delted", "The patient Deleteed", "Ok");
+                await App.Current.MainPage.Navigation.PushAsync(new PatientProfileFollowUpPage());
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanges([CallerMemberName] string PropertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
+        }
+
+
     }
 }

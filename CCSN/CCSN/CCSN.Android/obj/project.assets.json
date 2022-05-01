@@ -3819,20 +3819,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\IAmour\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\IAmour\\OneDrive\\Documents\\fccsn\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\New folder\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj",
       "projectName": "CCSN.Android",
-      "projectPath": "C:\\Users\\IAmour\\OneDrive\\Documents\\fccsn\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj",
-      "packagesPath": "C:\\Users\\IAmour\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\IAmour\\OneDrive\\Documents\\fccsn\\CCSN\\CCSN\\CCSN.Android\\obj\\",
+      "projectPath": "C:\\Users\\DELL\\Desktop\\New folder\\CCSN\\CCSN\\CCSN.Android\\CCSN.Android.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\Desktop\\New folder\\CCSN\\CCSN\\CCSN.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\IAmour\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3845,8 +3845,8 @@
       "frameworks": {
         "monoandroid10.0": {
           "projectReferences": {
-            "C:\\Users\\IAmour\\OneDrive\\Documents\\fccsn\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {
-              "projectPath": "C:\\Users\\IAmour\\OneDrive\\Documents\\fccsn\\CCSN\\CCSN\\CCSN\\CCSN.csproj"
+            "C:\\Users\\DELL\\Desktop\\New folder\\CCSN\\CCSN\\CCSN\\CCSN.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Desktop\\New folder\\CCSN\\CCSN\\CCSN\\CCSN.csproj"
             }
           }
         }

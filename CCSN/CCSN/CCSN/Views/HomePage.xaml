@@ -13,40 +13,60 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Style="{StaticResource navlabel}" 
-                Text="CCSN" />
+            <Label Style="{StaticResource navlabel}" Text="CCSN" />
 
             <ImageButton
                 HorizontalOptions="EndAndExpand"
                 Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
-              Style="{StaticResource navBarStyle}"  />
+                Style="{StaticResource navBarStyle}" />
 
             <ImageButton
                 HorizontalOptions="End"
                 Source="https://static.thenounproject.com/png/3134331-200.png"
-               Style="{StaticResource navBarStyle}"  />
+                Style="{StaticResource navBarStyle}" />
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Behaviors>
         <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
-        <xct:EventToCommandBehavior Command="{Binding Appearing2}" EventName="Appearing" />
     </ContentPage.Behaviors>
     <StackLayout>
 
 
 
-        <Label Text = "Today Appointments :" Style="{StaticResource AppLabelStyle}" ></Label >
-        <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments}" RowHeight="5" >
+        <Label Style="{StaticResource AppLabelStyle}" Text="Today Appointments :" />
+        <ListView
+            HasUnevenRows="True"
+            IsPullToRefreshEnabled="True"
+            IsRefreshing="{Binding IsLoading}"
+            ItemsSource="{Binding Appoitments}"
+            RefreshCommand="{Binding Appearing}"
+            RowHeight="5">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
 
                         <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Frame Style="{StaticResource FrameStyle}" Margin="30,0,20,0">
-                                <StackLayout Orientation="Horizontal"  Margin="30,0,0,0" VerticalOptions="Center">
-                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" HorizontalOptions="Start"  Style="{StaticResource labelView}"  />
-                                    <Label Grid.Row="0" Grid.Column="1" Text="       Time : " HorizontalOptions="Center"/>
-                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding AppointmentDate.TimeOfDay}" HorizontalOptions="End"  Style="{StaticResource labelView}" />
+                            <Frame Margin="30,0,20,0" Style="{StaticResource FrameStyle}">
+                                <StackLayout
+                                    Margin="30,0,0,0"
+                                    Orientation="Horizontal"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        Grid.Row="0"
+                                        HorizontalOptions="Start"
+                                        Style="{StaticResource labelView}"
+                                        Text="{Binding AppointmentPatientName}" />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        HorizontalOptions="Center"
+                                        Text="       Time : " />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="2"
+                                        HorizontalOptions="End"
+                                        Style="{StaticResource labelView}"
+                                        Text="{Binding AppointmentDate.TimeOfDay}" />
                                 </StackLayout>
                             </Frame>
                         </Grid>
@@ -55,19 +75,39 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Label Text = "Tommorrow Appointments :" Style="{StaticResource AppLabelStyle}" >
-        </Label >
-        <ListView HasUnevenRows="True" ItemsSource="{Binding Appoitments2}">
+        <Label Style="{StaticResource AppLabelStyle}" Text="Tommorrow Appointments :" />
+        <ListView
+            HasUnevenRows="True"
+            IsPullToRefreshEnabled="True"
+            IsRefreshing="{Binding IsLoading}"
+            ItemsSource="{Binding Appoitments2}"
+            RefreshCommand="{Binding Appearing}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
 
                         <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Frame Style="{StaticResource FrameStyle}" Margin="30,0,20,0">
-                                <StackLayout Orientation="Horizontal"  Margin="30,0,0,0"  VerticalOptions="Center">
-                                    <Label Grid.Row="0" Text="{Binding AppointmentPatientName}" HorizontalOptions="Start" Style="{StaticResource labelView}"  />
-                                    <Label Grid.Row="0" Grid.Column="1" Text="        Time : " HorizontalOptions="Center"/>
-                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding AppointmentDate.TimeOfDay}" HorizontalOptions="End"  Style="{StaticResource labelView}"  />
+                            <Frame Margin="30,0,20,0" Style="{StaticResource FrameStyle}">
+                                <StackLayout
+                                    Margin="30,0,0,0"
+                                    Orientation="Horizontal"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        Grid.Row="0"
+                                        HorizontalOptions="Start"
+                                        Style="{StaticResource labelView}"
+                                        Text="{Binding AppointmentPatientName}" />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        HorizontalOptions="Center"
+                                        Text="        Time : " />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="2"
+                                        HorizontalOptions="End"
+                                        Style="{StaticResource labelView}"
+                                        Text="{Binding AppointmentDate.TimeOfDay}" />
                                 </StackLayout>
                             </Frame>
                         </Grid>
@@ -77,8 +117,7 @@
             </ListView.ItemTemplate>
         </ListView>
         <!--
-        <Image Source = "https://aws1.discourse-cdn.com/business5/uploads/webflow1/original/3X/0/f/0f47cc7c2a7cfb443239076e36fde9abff32a2c2.png" HeightRequest="100" WidthRequest="100" HorizontalOptions = "Center" Margin="20,30,20,30" />
--->
+        <Image Source = "https://aws1.discourse-cdn.com/business5/uploads/webflow1/original/3X/0/f/0f47cc7c2a7cfb443239076e36fde9abff32a2c2.png" HeightRequest="100" WidthRequest="100" HorizontalOptions = "Center" Margin="20,30,20,30" />-->
     </StackLayout>
 
 </ContentPage>

@@ -1852,19 +1852,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\IAmour\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\IAmour\\OneDrive\\Documents\\fccsn\\CCSN\\CCSN\\CCSN\\CCSN.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\New folder\\CCSN\\CCSN\\CCSN\\CCSN.csproj",
       "projectName": "CCSN",
-      "projectPath": "C:\\Users\\IAmour\\OneDrive\\Documents\\fccsn\\CCSN\\CCSN\\CCSN\\CCSN.csproj",
-      "packagesPath": "C:\\Users\\IAmour\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\IAmour\\OneDrive\\Documents\\fccsn\\CCSN\\CCSN\\CCSN\\obj\\",
+      "projectPath": "C:\\Users\\DELL\\Desktop\\New folder\\CCSN\\CCSN\\CCSN\\CCSN.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\Desktop\\New folder\\CCSN\\CCSN\\CCSN\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\IAmour\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1939,7 +1939,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   },

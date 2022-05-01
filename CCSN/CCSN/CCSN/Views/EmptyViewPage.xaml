@@ -4,7 +4,7 @@
              x:Class="CCSN.Views.EmptyViewPage"
               xmlns:viewmodels="clr-namespace:CCSN.ViewModels">
     <ContentPage.Content>
-       
+
         <StackLayout Margin="20" >
             <StackLayout>
                 <Label Text="Hello Majd! "
@@ -13,7 +13,7 @@
                    VerticalOptions= "Start"
                    HorizontalOptions="Center"
                    />
-                
+
             </StackLayout>
             <StackLayout Margin="11">
                 <Image Source="https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png"
@@ -27,21 +27,21 @@
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                    Margin="20"/>
-            <Label Text="Lets ADD New One !"
+                <Label Text="Lets ADD New One !"
                     FontAttributes="Bold"
                    FontSize="Large"
                    VerticalOptions="Center" 
                    HorizontalOptions="Center"
                    Margin="11"
                 />
-          
+
                 <Button Text="Go"
                   Style="{StaticResource AddButton}"
                      />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
-   <ContentPage.BindingContext>
+    <ContentPage.BindingContext>
         <viewmodels:EmptyViewPageModelView/>
     </ContentPage.BindingContext>
 </ContentPage>

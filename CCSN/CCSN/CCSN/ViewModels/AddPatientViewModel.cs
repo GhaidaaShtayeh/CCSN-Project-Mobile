@@ -115,7 +115,7 @@ namespace CCSN.ViewModels
             }
             get { return this._PatientWeight; }
         }
-      
+
         public List<Appoitment> Appointments = new List<Appoitment>();
 
         private bool _Result;
@@ -134,12 +134,10 @@ namespace CCSN.ViewModels
 
         private async Task AddPatientCommandAsync()
         {
-
             try
             {
                 var patientServices = new PatientService();
                 Result = await patientServices.AddPatients(ID, PatientAddress, PatientBirthday, PatientGender, PatientGenticsDiseses, PatientHeight, PatientMobileNo, PatientName, PatientWeight, Appointments);
-
 
                 if (Result)
                 {
@@ -156,9 +154,5 @@ namespace CCSN.ViewModels
 
             }
         }
-
-
-
-
     }
 }
