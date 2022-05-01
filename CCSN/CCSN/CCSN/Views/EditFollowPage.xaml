@@ -1,47 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CCSN.Views.EditFollowPage">
-    <ContentPage.Content>
-        <ScrollView>
+<ContentPage
+    x:Class="CCSN.Views.EditFollowPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:CCSN.ViewModels"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    x:DataType="viewmodels:EditFollowModelView">
+    <ScrollView>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+            </Grid>
 
-            <StackLayout>
-                
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                </Grid>
-                <StackLayout Orientation="Horizontal"  Grid.Row="0" >
-                    <Label Style="{StaticResource Followlabel}" Text=" - Follow Up Date :" ></Label>
-                    <Frame  Style="{StaticResource FollowFrameStyle}">
-                        <DatePicker Format="MM/dd/yyyy" x:Name="DatePcker" >
-                        </DatePicker>
-                    </Frame>
-                </StackLayout>
-                <StackLayout Grid.Row="1">
-                    <Label  Style="{StaticResource Followlabel}" Text=" - Tools :" ></Label>
-                    <Frame  Style="{StaticResource FollowFrameStyle}">
-                        <Editor x:Name="Tools" Style="{StaticResource FollowEditor}"  />
-                    </Frame>
-                </StackLayout>
-                <StackLayout Grid.Row="2">
-                    <Label  Style="{StaticResource Followlabel}" Text=" - Goals :" ></Label>
-                    <Frame  Style="{StaticResource FollowFrameStyle}">
-                        <Editor x:Name="Goals" Style="{StaticResource FollowEditor}" />
-                    </Frame>
-                </StackLayout>
-                <StackLayout Grid.Row="3">
-                    <Label  Style="{StaticResource Followlabel}" Text=" - Add Notes :" ></Label>
-                    <Frame  Style="{StaticResource FollowFrameStyle}">
-                        <Editor  x:Name="Notes" Style="{StaticResource FollowEditor}" />
-                    </Frame>
-                </StackLayout>
-                <Label x:Name="save" HorizontalOptions="Center">Save</Label>
+            <StackLayout Grid.Row="0" Orientation="Horizontal">
+                <Label Style="{StaticResource Followlabel}" Text=" - Follow Up Date :" />
+                <Frame Style="{StaticResource FollowFrameStyle}">
+                    <DatePicker
+                        x:Name="DatePcker"
+                        Date="{Binding Appoitment.FollowUpDate, Mode=TwoWay}"
+                        Format="MM/dd/yyyy" />
+                </Frame>
             </StackLayout>
-        </ScrollView>
-    </ContentPage.Content>
+            <StackLayout Grid.Row="1">
+                <Label Style="{StaticResource Followlabel}" Text=" - Tools :" />
+                <Frame Style="{StaticResource FollowFrameStyle}">
+                    <Editor
+                        x:Name="Tools"
+                        Style="{StaticResource FollowEditor}"
+                        Text="{Binding Appoitment.FollowUpTools, Mode=TwoWay}" />
+                </Frame>
+            </StackLayout>
+            <StackLayout Grid.Row="2">
+                <Label Style="{StaticResource Followlabel}" Text=" - Goals :" />
+                <Frame Style="{StaticResource FollowFrameStyle}">
+                    <Editor
+                        x:Name="Goals"
+                        Style="{StaticResource FollowEditor}"
+                        Text="{Binding Appoitment.FollowUpGoals, Mode=TwoWay}" />
+                </Frame>
+            </StackLayout>
+            <StackLayout Grid.Row="3">
+                <Label Style="{StaticResource Followlabel}" Text=" - Add Notes :" />
+                <Frame Style="{StaticResource FollowFrameStyle}">
+                    <Editor
+                        x:Name="Notes"
+                        Style="{StaticResource FollowEditor}"
+                        Text="{Binding Appoitment.FollowUpAddNote, Mode=TwoWay}" />
+                </Frame>
+            </StackLayout>
+            <Button
+                x:Name="save"
+                HorizontalOptions="Center"
+                Style="{StaticResource AddButton}"
+                Text="Save" 
+                Command="{Binding EditFollowup} "/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
