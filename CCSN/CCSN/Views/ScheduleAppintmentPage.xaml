@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CCSN.Views.ScheduleAppintmentPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"
+    xmlns:vm="clr-namespace:CCSN.ViewModels"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    BackgroundColor="AliceBlue">
+    <ContentPage.BindingContext>
+        <vm:ScheduleAppointmentPageModelView />
+    </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
+    </ContentPage.Behaviors>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource navlabel}"
+                Text="add new Appointment" />
+
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ScrollView>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" VerticalOptions="Start">
+                <Frame
+                    Margin="5,0,5,0"
+                    Padding="10"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    HeightRequest="35"
+                    OutlineColor="#2196f3">
+                    <Picker
+                        x:Name="AppoiPatientName"
+                        Title="Patient Name"
+                        FontSize="Small"
+                        HeightRequest="25"
+                        ItemDisplayBinding="{Binding PatientName}"
+                        ItemsSource="{Binding Patients}"
+                        SelectedItem="{Binding PatienSelected}" />
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1">
+                <Frame
+                    Margin="15,18,15,0"
+                    Padding="10"
+                    BackgroundColor="White"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    HeightRequest="280"
+                    OutlineColor="#2196f3">
+                    <controls:Calendar
+                        Padding="10,0,10,0"
+                        DisabledBorderColor="#2196f3"
+                        HeightRequest="250"
+                        SelectedDate="{Binding SelectedDate, Mode=TwoWay}"
+                        ShowNumberOfWeek="false"
+                        StartDay="Monday"
+                        TitleLabelTextColor="#2196f3"
+                        TitleLeftArrowTextColor="#2196f3"
+                        TitleRightArrowTextColor="#2196f3" />
+                </Frame>
+            </StackLayout>
+            <StackLayout Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalOptions="Center"
+                        Text=" Time :"
+                        VerticalOptions="Center" />
+
+                    <TimePicker
+                        x:Name="AppointmentTime"
+                        Grid.Column="1"
+                        Margin="4"
+                        BackgroundColor="White"
+                        HorizontalOptions="Center"
+                        Time="{Binding SelectedTime, Mode=TwoWay}">
+                        <TimePicker.Format>hh:mm tt</TimePicker.Format>
+                    </TimePicker>
+
+                </Grid>
+            </StackLayout>
+
+
+            <Button
+                x:Name="AddAppointment"
+                Grid.Row="3"
+                BackgroundColor="#2196f3"
+                Command="{Binding Add}"
+                CornerRadius="20"
+                FontSize="Medium"
+                Text="Add Appointment"
+                TextColor="White"
+                WidthRequest="300" />
+        </Grid>
+    </ScrollView>
+</ContentPage>
+
+
+

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CCSN.Views.PatientProfileDetailsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controlers="clr-namespace:CCSN.Extentions"
+    xmlns:viewmodels="clr-namespace:CCSN.ViewModels"
+    x:DataType="viewmodels:PatientProfileDetailsPageModelView"
+    BackgroundColor="AliceBlue">
+    
+    <ScrollView>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+            </Grid>
+
+            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientName, Mode=TwoWay}" LabelText="Name :" />
+
+            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientGender, Mode=TwoWay}" LabelText="Gender :" />
+
+            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientMobileNO, Mode=TwoWay}" LabelText="Mobile :" />
+
+            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientAddress, Mode=TwoWay}" LabelText="Address :" />
+
+            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientBirthday, Mode=TwoWay}" LabelText="BirthDay :" />
+
+            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientHeight, Mode=TwoWay}" LabelText="Height :" />
+
+            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientWeight, Mode=TwoWay}" LabelText="Weight :" />
+
+            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientGenticesDiseses, Mode=TwoWay}" LabelText="Gentics :" />
+
+            <Frame
+                Grid.Row="8"
+                Margin="0,5,0,5"
+                BackgroundColor="#2196f3"
+                CornerRadius="45"
+                HeightRequest="19"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="300">
+                <Label
+                    x:Name="save"
+                    FontSize="Medium"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    VerticalTextAlignment="Center">
+                    SAVE
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding EditPatient}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
