@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using System.Threading.Tasks;
 using System.Linq;
 using Firebase.Database.Query;
+using CCSN.Common;
 
 namespace CCSN.Services
 {
@@ -18,7 +19,7 @@ namespace CCSN.Services
         public static async Task<IEnumerable<Patient>> GetUserPatients()
         {
             var url = await firebaseClient
-                     .Child($"Specalists/406707265/Patients").BuildUrlAsync();
+                     .Child($"Specalists/{PreferencesConfig.Id}/Patients").BuildUrlAsync();
             var result = await Helper.Get<List<Patient>>(url);
             return result;
 
@@ -27,37 +28,32 @@ namespace CCSN.Services
         public async Task EditPatient(Patient patient, string ID)
         {
             await firebaseClient
-          .Child($"Specalists/406707265/Patients/{ID}")
+          .Child($"Specalists/{PreferencesConfig.Id}/Patients/{ID}")
           .PatchAsync(patient);
         }
 
-        public async Task<bool> Delete(string id)
-        {
-            await firebaseClient.Child(nameof(Patient) + "/" + id).DeleteAsync();
-            return true;
-        }
+
 
         public async Task DeletePatient(string ID)
         {
             await firebaseClient
-           .Child($"Specalists/406707265/Patients/{ID}")
+           .Child($"Specalists/{PreferencesConfig.Id}/Patients/{ID}")
            .DeleteAsync();
         }
 
         public async Task<bool> IsPatientExists(string ID)
         {
-            var Patient = (await firebaseClient.Child("/Specalists/406707265/Patients")
+            var result = (await GetUserPatients()).ToList();
 
-                .OnceAsync<Patient>()).Where(u => u.Object.ID == ID).FirstOrDefault();
-            return (Patient != null);
+            return (result.Any(x => x.ID == ID));
         }
 
         public async Task<bool> AddPatients(string patientID, string patientAddress, string patientBirthday, string patientGender, string patientGenticsDiseses, string patientHeight, string patientMobileNo, string patientName, string patientWeight, List<Appoitment> appoitment)
         {
             if (await IsPatientExists(patientID) == false)
             {
-                await firebaseClient.Child("/Specalists/406707265/Patients")
-                  .PostAsync(new Patient()
+                await firebaseClient.Child($"/Specalists/{PreferencesConfig.Id}/Patients/{patientID}")
+                  .PutAsync(new Patient()
                   {
                       ID = patientID,
                       PatientAddress = patientAddress,
@@ -68,7 +64,7 @@ namespace CCSN.Services
                       PatientMobileNO = patientMobileNo,
                       PatientName = patientName,
                       PatientWeight = patientWeight,
-                      Appointments = appoitment
+                      //Appointments = appoitment
 
                   });
                 return true;
@@ -79,16 +75,14 @@ namespace CCSN.Services
         public async Task AddPatient(Patient patient)
         {
             var x = await firebaseClient
-                .Child($"Specalists/406707265/Patients")
+                .Child($"Specalists/{PreferencesConfig.Id}/Patients")
                 .PostAsync(new Patient(patient));
 
             /* Patient patients = new Patient(x.Object);
              patients.ID = x.Key;
              await firebaseClient
-             .Child($"Specalists/406707265/Patients/{patients.ID}")
+             .Child($"Specalists/{PreferencesConfig.Id}/Patients/{patients.ID}")
              .PatchAsync(patients);*/
-
-
         }
 
     }

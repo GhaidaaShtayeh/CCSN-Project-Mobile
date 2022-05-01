@@ -7,9 +7,6 @@ namespace CCSN.Models
 {
     public class Patient
     {
-       
-
-
         public string ID { get; set; }
         public string PatientName { get; set; }
         public string PatientGender { get; set; }
@@ -20,7 +17,7 @@ namespace CCSN.Models
         public string PatientBirthday { get; set; }
         public string PatientGenticesDiseses { get; set; }
 
-        public List<Appoitment> Appointments { get; set; }
+        public Dictionary<string, Appoitment> Appointments { get; set; }
 
 
         public Patient()
@@ -42,5 +39,5 @@ namespace CCSN.Models
 
         }
     }
-    }
+}
 

@@ -20,6 +20,12 @@ namespace CCSN.Services
             var response = await client.GetAsync(url);
             var json = await response.Content.ReadAsStringAsync();
 
+            if (json.Contains("null,"))
+                json = json.Replace("null,", "");
+            else if (json.Contains(",null"))
+                json = json.Replace(",null", "");
+
+
             //if (response.StatusCode == HttpStatusCode.OK)
             //{
             return JsonConvert.DeserializeObject<TEntity>(json);
