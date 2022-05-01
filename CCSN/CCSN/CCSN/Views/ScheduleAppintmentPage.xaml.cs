@@ -20,15 +20,8 @@ namespace CCSN.Views
 
             BindingContext = new ScheduleAppointmentPageModelView();
 
-            var picker = new Picker { Title = "Patient Name" };
-              picker.SetBinding(Picker.ItemsSourceProperty, "AllAppointment");
-               picker.SetBinding(Picker.SelectedItemProperty, "AppointmentPatientName");
-              picker.ItemDisplayBinding = new Binding("AppointmentPatientName");
+          
         }
-        public void AddAppointment_Clicked(object sender, EventArgs e)
-        {
-            DisplayAlert("Success..!", "Appointment added successfully", "Ok");
-        }
-        
+       
     }
 }

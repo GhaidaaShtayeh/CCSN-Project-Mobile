@@ -1,1 +1,1 @@
-<Devices><Device id="R58R138Q2AT"><ResultingAbi>arm64-v8a</ResultingAbi><ToolsAbi /><SdkVersion>30</SdkVersion><LongOutput>product:a51nsxx;model:SM_A515F;device:a51;transport_id:11</LongOutput></Device></Devices>
+<Devices><Device id="520098a3fa30746d"><ResultingAbi>armeabi-v7a</ResultingAbi><ToolsAbi /><SdkVersion>28</SdkVersion><LongOutput>product:j7veltedx;model:SM_J701F;device:j7velte;transport_id:3</LongOutput></Device></Devices>

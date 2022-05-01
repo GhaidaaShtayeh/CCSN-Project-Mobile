@@ -1,44 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CCSN.Views.PatientProfileFollowUpPage"
-              xmlns:viewmodels="clr-namespace:CCSN.ViewModels" xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+<ContentPage
+    x:Class="CCSN.Views.PatientProfileFollowUpPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:CCSN.ViewModels"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
     <ContentPage.BindingContext>
-        <viewmodels:PatientProfileFollowUpPageModelView/>
+        <viewmodels:PatientProfileFollowUpPageModelView />
     </ContentPage.BindingContext>
     <ContentPage.Behaviors>
         <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
-        </ContentPage.Behaviors>
-        <StackLayout>
-            <ListView
+    </ContentPage.Behaviors>
+    <StackLayout>
+        <ListView
             HasUnevenRows="True"
             ItemsSource="{Binding Appoitments}"
             SelectedItem="{Binding SelectedFollow, Mode=TwoWay}"
             SelectionMode="Single">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
                         <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Frame  Style="{StaticResource FrameStyle}" Margin="30,15,20,0">
-                                <StackLayout Orientation="Horizontal"  Margin="15,0,15,0" VerticalOptions="Center">
-                                    <Label Grid.Row="0" Text="{Binding FollowUpDate}" HorizontalOptions="Start"  Style="{StaticResource labelView}"/>
-                                    <Label Grid.Row="0" Grid.Column="2" Text="  ||  " HorizontalOptions="End" Style="{StaticResource labelView}" />
-                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding FollowUpAddNote}" HorizontalOptions="End" Style="{StaticResource labelView}"/>
-                                    <ImageButton Style="{StaticResource DeleteButton}" Clicked="ItemImageButton_Clicked" CommandParameter="{Binding .}"/>
+                            <Frame Margin="30,15,20,0" Style="{StaticResource FrameStyle}">
+                                <StackLayout
+                                    Margin="15,0,15,0"
+                                    Orientation="Horizontal"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        Grid.Row="0"
+                                        HorizontalOptions="Start"
+                                        Style="{StaticResource labelView}">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding AppointmentDate, StringFormat='{0:MMMM dd, yyyy}  '}" />
+                                                <Span Text="  " />
+                                                <Span Text="{Binding AppointmentTime, StringFormat='{0::hh\\:mm}'}" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label
+                                        Grid.Row="0"
+                                        HorizontalOptions="Start"
+                                        Style="{StaticResource labelView}"
+                                        Text="{Binding FollowUpDate}" />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="2"
+                                        HorizontalOptions="End"
+                                        Style="{StaticResource labelView}"
+                                        Text="  ||  " />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="2"
+                                        HorizontalOptions="End"
+                                        Style="{StaticResource labelView}"
+                                        Text="{Binding FollowUpAddNote}" />
+                                    <ImageButton
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:PatientProfileFollowUpPageModelView}}, Path=DeleteAppointement}"
+                                        CommandParameter="{Binding Source={RelativeSource Self}, Path=BindingContext}"
+                                        Style="{StaticResource DeleteButton}" />
                                 </StackLayout>
-                                 </Frame>
-                            
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                
-            </ListView.ItemTemplate>
+                            </Frame>
 
-            </ListView>
-        <Button Style="{StaticResource AddButton}"
-                Text="Add New Follow Up"
-                Clicked="Button_Clicked_1"
-                ></Button>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <!--<Button
+            Command="{Binding NewFollowUP}"
+            Style="{StaticResource AddButton}"
+            Text="Add New Follow Up" />-->
     </StackLayout>
 
 </ContentPage>

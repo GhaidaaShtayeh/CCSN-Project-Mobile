@@ -20,9 +20,6 @@ namespace CCSN.Views
 
             BindingContext = new AddNewFollowModelView();
         }
-        public void SaveFollowUpBtn(object sender, EventArgs e)
-        {
-            DisplayAlert("Success..!", "FollowUp added successfully", "Ok");
-        }
+
     }
 }

@@ -4,9 +4,7 @@
              x:Class="CCSN.Views.PatientsListPage" BackgroundColor="AliceBlue"
               xmlns:viewmodels="clr-namespace:CCSN.ViewModels" 
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
-    <ContentPage.BindingContext>
-        <viewmodels:PatientListPageModelView/>
-    </ContentPage.BindingContext>
+
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
             <Label Style="{StaticResource navlabel}"
@@ -57,7 +55,10 @@
                                     WidthRequest="1"
                                     Margin="5, 0, 10, 0" />
                                     <Label Grid.Row="0" Text="{Binding PatientName}"  VerticalOptions="Center" Style="{StaticResource labelView}"/>
-                                    <ImageButton Style="{StaticResource DeleteButton}" Clicked="ItemImageButton_Clicked" CommandParameter="{Binding .}"/>
+                                    <ImageButton Style="{StaticResource DeleteButton}"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:PatientListPageModelView}}, Path=DeletePatient}"
+                                            CommandParameter="{Binding Source={RelativeSource Self}, Path=BindingContext}"
+                                                />
                                 </StackLayout>
 
                             </Frame>
@@ -67,7 +68,9 @@
             </ListView.ItemTemplate>
 
         </ListView>
-        <Button Style="{StaticResource BlusButton}" Clicked="Button_Clicked_1" />
+        <Button Style="{StaticResource BlusButton}"
+                 Command="{Binding ScheduleBtnClicked}"
+                />
 
     </StackLayout>
 

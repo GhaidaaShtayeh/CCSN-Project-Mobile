@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using CCSN.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CCSN.ViewModels;
 
 namespace CCSN.Views
 {
@@ -18,41 +19,11 @@ namespace CCSN.Views
         {
             InitializeComponent();
 
-            Appoitment = appoitment;
-            DatePcker.Date = Appoitment.AppointmentDate;
-            Tools.Text = Appoitment.FollowUpTools;
-            Goals.Text = Appoitment.FollowUpGoals;
-            Notes.Text = Appoitment.FollowUpAddNote;
+            BindingContext = new EditFollowModelView(appoitment);
 
-            EditPatientClick();
 
         }
 
-        public async void EditAppointment()
-        {
-            AppintmentService AppintmentService = new AppintmentService();
-            Appoitment.AppointmentDate = DatePcker.Date;
-            Appoitment.FollowUpTools = Tools.Text;
-            Appoitment.FollowUpGoals = Goals.Text;
-            Appoitment.FollowUpAddNote = Notes.Text;
 
-
-            await AppintmentService.EditFollowup(Appoitment, Appoitment.PatientID, Appoitment.ID);
-            await DisplayAlert("Edited", "The Patient Edited", "Ok");
-            await Navigation.PushAsync(new PatientProfileFollowUpPage());
-
-        }
-
-        void EditPatientClick()
-        {
-            save.GestureRecognizers.Add(new TapGestureRecognizer()
-            {
-                Command = new Command(() =>
-                {
-                    EditAppointment();
-
-                })
-            });
-        }
     }
 }
