@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 
 namespace CCSN.Extentions
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+  /*  [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LabelEntryCostomized : ContentView
     {
         public static readonly BindableProperty LabelTextProperty = BindableProperty.Create(nameof(LabelText), typeof(string), typeof(LabelEntryCostomized));
@@ -40,5 +40,5 @@ namespace CCSN.Extentions
         {
             EntryText = e.NewTextValue;
         }
-    }
+    }*/
 }

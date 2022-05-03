@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:CCSN.ViewModels"
-             x:Class="CCSN.Views.AddPatientPage" BackgroundColor="AliceBlue" xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+             x:Class="CCSN.Views.AddPatientPage" BackgroundColor="AliceBlue" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:CCSN.Common">
     <ContentPage.BindingContext>
         <vm:AddPatientViewModel />
     </ContentPage.BindingContext>
@@ -36,7 +37,12 @@
                     <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Patient ID :" ></Label>
                     <Frame Style="{StaticResource FrameEntry}">
                         
-                        <Entry  Text="{Binding ID}"></Entry>
+                        <Entry  Text="{Binding ID}"
+                                Keyboard="Numeric" >
+                            <Entry.Behaviors>
+                                <local:NumericValidationBehavior />
+                            </Entry.Behaviors>
+                        </Entry>
                     </Frame>
                 </StackLayout>
 
@@ -50,8 +56,13 @@
                 <StackLayout Orientation="Horizontal"  Grid.Row="2" >
                     <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Mobile Number :" ></Label>
                     <Frame Style="{StaticResource FrameEntry}">
-                       
-                        <Entry Text="{Binding PatientMobileNo}"></Entry>
+
+                        <Entry Text="{Binding PatientMobileNo}"
+                               Keyboard="Numeric" >
+                            <Entry.Behaviors>
+                                <local:NumericValidationBehavior />
+                            </Entry.Behaviors>
+                        </Entry>
 
                     </Frame>
                 </StackLayout>
@@ -61,14 +72,26 @@
                     <Label HorizontalOptions="Start"  FontSize="Large" VerticalOptions="Center" Text=" Height :" ></Label>
                     <Frame  Style="{StaticResource FrameEntry}">
 
-                        <Entry Text="{Binding PatientHeight}"></Entry>
+                        <Entry Text="{Binding PatientHeight}"
+                               Keyboard="Numeric" >
+                            <Entry.Behaviors>
+                                <local:NumericValidationBehavior />
+                            </Entry.Behaviors>
+                            
+                        </Entry>
                     </Frame>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Grid.Row="4" >
                     <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Weight :" ></Label>
                     <Frame Style="{StaticResource FrameEntry}">
-                        <Entry Text="{Binding PatientWeight}"></Entry>
+                        <Entry Text="{Binding PatientWeight}"
+                               Keyboard="Numeric" >
+                            <Entry.Behaviors>
+                                <local:NumericValidationBehavior />
+                            </Entry.Behaviors>
+                            
+                        </Entry>
                     </Frame>
                 </StackLayout>
 

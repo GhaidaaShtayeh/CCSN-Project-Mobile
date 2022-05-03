@@ -3,10 +3,11 @@
     x:Class="CCSN.Views.PatientProfileDetailsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:controlers="clr-namespace:CCSN.Extentions"
     xmlns:viewmodels="clr-namespace:CCSN.ViewModels"
     x:DataType="viewmodels:PatientProfileDetailsPageModelView"
-    BackgroundColor="AliceBlue">
+    BackgroundColor="AliceBlue"
+    xmlns:local="clr-namespace:CCSN.Common"
+    NavigationPage.HasNavigationBar="False">
     
     <ScrollView>
         <StackLayout>
@@ -24,21 +25,124 @@
                 </Grid.RowDefinitions>
             </Grid>
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientName, Mode=TwoWay}" LabelText="Name :" />
+            <Label
+            x:Name="LabelName"
+            FontSize="Large"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text="Name : "/>
+            
+            <Entry
+            x:Name="NameEntry"
+            Placeholder="NameEntry"
+            Style="{StaticResource EntryStyle}" 
+            Text="{Binding Patient.PatientName}"/>
+            
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientGender, Mode=TwoWay}" LabelText="Gender :" />
+            <Label
+            x:Name="LabelPatientGender"
+            FontSize="Large"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text="Patient Gender : "/>
+            <Entry
+            x:Name="PatientGenderEntry"
+            Placeholder="Name"
+            Style="{StaticResource EntryStyle}" 
+                Text="{Binding Patient.PatientGender}"/>
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientMobileNO, Mode=TwoWay}" LabelText="Mobile :" />
+            <Label
+            x:Name="LabelPatientMobileNO"
+            FontSize="Large"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text="Mobile Number : "/>
+            
+            <Entry
+            x:Name="LabelPatientMobileNOEntry"
+            Placeholder="Name"
+            Style="{StaticResource EntryStyle}" 
+            Text="{Binding Patient.PatientMobileNO}"
+            Keyboard="Numeric" >
+                <Entry.Behaviors>
+                    <local:NumericValidationBehavior />
+                </Entry.Behaviors>
+            </Entry>
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientAddress, Mode=TwoWay}" LabelText="Address :" />
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientBirthday, Mode=TwoWay}" LabelText="BirthDay :" />
+            <Label
+            x:Name="LabelPatientAddress"
+            FontSize="Large"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text="Patient Address : "/>
+            <Entry
+            x:Name="PatientAddressEntry"
+            Placeholder="Name"
+            Style="{StaticResource EntryStyle}" 
+            Text="{Binding Patient.PatientAddress}"/>
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientHeight, Mode=TwoWay}" LabelText="Height :" />
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientWeight, Mode=TwoWay}" LabelText="Weight :" />
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientGenticesDiseses, Mode=TwoWay}" LabelText="Gentics :" />
+            <Label
+            x:Name="LabelPatientBirthday"
+            FontSize="Large"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text="Patient Birthday : "/>
+            <DatePicker Format="MM/dd/yyyy"  Date="{Binding Patient.PatientBirthday , Mode=TwoWay}" />
+
+
+            <Label
+            x:Name="LabelPatientHeight"
+            FontSize="Large"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text="Patient Height : "/>
+            <Entry
+            x:Name="PatientHeightEntry"
+            Placeholder="Name"
+            Style="{StaticResource EntryStyle}" 
+            Text="{Binding Patient.PatientHeight}"
+            Keyboard="Numeric" >
+                <Entry.Behaviors>
+                    <local:NumericValidationBehavior />
+                </Entry.Behaviors>
+            </Entry>
+
+
+
+            <Label
+            x:Name="LabelPatientWeight"
+            FontSize="Large"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text="Patient Weight : "/>
+            <Entry
+            x:Name="PatientWeightEntry"
+            Placeholder="Name"
+            Style="{StaticResource EntryStyle}" 
+            Text="{Binding Patient.PatientWeight}"
+                Keyboard="Numeric" >
+                <Entry.Behaviors>
+                    <local:NumericValidationBehavior />
+                </Entry.Behaviors>
+            </Entry>
+
+
+
+            <Label
+            x:Name="LabelPatientGenticesDiseses"
+            FontSize="Large"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text="Patient Gentices Diseses : "/>
+            <Entry
+            x:Name="PatientGenticesDisesesEntry"
+            Placeholder="Name"
+            Style="{StaticResource EntryStyle}" 
+            Text="{Binding Patient.PatientGenticesDiseses}"/> 
+            
 
             <Frame
                 Grid.Row="8"
