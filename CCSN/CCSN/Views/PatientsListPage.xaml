@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CCSN.Views.PatientsListPage" BackgroundColor="AliceBlue"
               xmlns:viewmodels="clr-namespace:CCSN.ViewModels" 
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             >
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">

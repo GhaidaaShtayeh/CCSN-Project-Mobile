@@ -47,6 +47,7 @@
         <Setter Property="HeightRequest" Value="30" />
         <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
     </Style>
+    
     <Style x:Key="navlabel" TargetType="Label">
         <Setter Property="TextColor" Value="White" />
         <Setter Property="FontSize" Value="Large" />
@@ -64,6 +65,8 @@
         <Setter Property="Margin" Value="15,0,15,0" />
         <Setter Property="HasShadow" Value="True" />
         <Setter Property="OutlineColor" Value="#2196f3" />
+        <Setter Property="BackgroundColor" Value="White" />
+
     </Style>
 
     <Style x:Key="AppFrame" TargetType="Frame">
@@ -92,6 +95,7 @@
         <Setter Property="HorizontalOptions" Value="Start" />
         <Setter Property="VerticalOptions" Value="Center" />
     </Style>
+    
     <Style x:Key="FollowEditor" TargetType="Editor">
         <Setter Property="BackgroundColor" Value="Transparent" />
         <Setter Property="HeightRequest" Value="100" />
