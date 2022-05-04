@@ -17,7 +17,8 @@ namespace CCSN.Views
         public PatientProfileDetailsPage(Patient patient)
         {
             InitializeComponent();
-            BindingContext=new PatientProfileDetailsPageModelView(patient);
+        
+            BindingContext =new PatientProfileDetailsPageModelView(patient);
 
         }
     }

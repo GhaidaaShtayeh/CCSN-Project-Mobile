@@ -35,7 +35,7 @@
                 <StackLayout Orientation="Horizontal"  Grid.Row="0" >
                     <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Patient ID :" ></Label>
                     <Frame Style="{StaticResource FrameEntry}">
-                        
+
                         <Entry  Text="{Binding ID}"></Entry>
                     </Frame>
                 </StackLayout>
@@ -50,7 +50,7 @@
                 <StackLayout Orientation="Horizontal"  Grid.Row="2" >
                     <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Mobile Number :" ></Label>
                     <Frame Style="{StaticResource FrameEntry}">
-                       
+
                         <Entry Text="{Binding PatientMobileNo}"></Entry>
 
                     </Frame>
@@ -75,7 +75,7 @@
                 <StackLayout Orientation="Horizontal"  Grid.Row="5" >
                     <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Gender :" ></Label>
                     <Frame Style="{StaticResource FrameEntry}">
-                       
+
                         <Picker SelectedItem="{Binding PatientGender}">
                             <Picker.Items>
                                 <x:String>Male</x:String>
@@ -88,7 +88,7 @@
                 <StackLayout Orientation="Horizontal"  Grid.Row="6" >
                     <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Address :" ></Label>
                     <Frame Style="{StaticResource FrameEntry}">
-                        
+
                         <Entry Text="{Binding PatientAddress}"></Entry>
                     </Frame>
                 </StackLayout>
@@ -104,7 +104,7 @@
                 <StackLayout Orientation="Horizontal"  Grid.Row="8" >
                     <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Gentics Diseses :" ></Label>
                     <Frame Style="{StaticResource FrameEntry}">
-                       
+
                         <Entry Text="{Binding PatientGenticsDiseses}"></Entry>
                     </Frame>
                 </StackLayout>

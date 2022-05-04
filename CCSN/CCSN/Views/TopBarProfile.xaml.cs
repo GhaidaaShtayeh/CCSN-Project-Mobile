@@ -16,7 +16,6 @@ namespace CCSN.Views
         public TopBarProfile(Patient patient )
         {
             InitializeComponent();
-            NavigationPage.SetHasBackButton(this, false);
 
             var navigationDetails = new NavigationPage(new PatientProfileDetailsPage(patient));
             navigationDetails.Title = "Patient Details";

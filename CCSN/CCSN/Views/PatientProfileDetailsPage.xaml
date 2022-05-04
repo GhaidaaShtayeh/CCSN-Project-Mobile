@@ -22,11 +22,30 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
             </Grid>
 
             <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientName, Mode=TwoWay}" LabelText="Name :" />
+        
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientGender, Mode=TwoWay}" LabelText="Gender :" />
+            <StackLayout Orientation="Horizontal"  Grid.Row="5" >
+                <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Gender :" ></Label>
+               
+
+                    <Picker  SelectedItem="{Binding Patient.PatientGender, Mode=TwoWay}" 
+  
+            Style="{StaticResource EntryStyle}" >
+                        <Picker.Items>
+                            <x:String>Male</x:String>
+                            <x:String>Female</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+            </StackLayout>
+
 
             <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientMobileNO, Mode=TwoWay}" LabelText="Mobile :" />
 

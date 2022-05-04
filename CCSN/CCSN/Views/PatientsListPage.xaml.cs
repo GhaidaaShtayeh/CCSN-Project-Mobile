@@ -18,6 +18,7 @@ namespace CCSN.Views
         public PatientsListPage()
         {
             InitializeComponent();
+
             BindingContext = new PatientListPageModelView(Navigation);
 
         }
