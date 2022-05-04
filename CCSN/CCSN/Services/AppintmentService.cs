@@ -17,9 +17,9 @@ namespace CCSN.Services
     {
         static FirebaseClient firebaseClient = new FirebaseClient("https://ccsn-fed2d-default-rtdb.firebaseio.com/");
 
-      
 
-        public static async Task<List<Appoitment>> GetUserAppointmentsByDate(DateTime? dateTime)
+
+        public static async Task<IEnumerable<Appoitment>> GetUserAppointmentsByDate(DateTime? dateTime)
         {
             var Patients = await PatientService.GetUserPatients();
 
@@ -37,15 +37,17 @@ namespace CCSN.Services
                 if (appointments == null)
                     return new List<Appoitment>();
                 else if (dateTime.HasValue)
-                    return (List<Appoitment>)appointments.Where(o => o.AppointmentDate.Date.Date == dateTime.Value.Date);
+                    return appointments.Where(o => o.AppointmentDate.Date.Date == dateTime.Value.Date);
                 else
                     return appointments;
             }
 
-        }
+        
+
+    }
 
 
-        public static async Task EditFollowup(Appoitment appoitment, string PatientID, string FollowID)
+    public static async Task EditFollowup(Appoitment appoitment, string PatientID, string FollowID)
         {
             await firebaseClient
           .Child($"Specalists/{PreferencesConfig.Id}/Patients/{PatientID}/Appointments/{FollowID}")
