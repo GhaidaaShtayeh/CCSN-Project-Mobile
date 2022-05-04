@@ -16,7 +16,7 @@ namespace CCSN.Services
     {
         static FirebaseClient firebaseClient = new FirebaseClient("https://ccsn-fed2d-default-rtdb.firebaseio.com/");
 
-        public static async Task<List<Patient>> GetUserPatients()
+        public static async Task<IEnumerable<Patient>> GetUserPatients()
         {
             var url = await firebaseClient
                      .Child($"Specalists/{PreferencesConfig.Id}/Patients").BuildUrlAsync();
