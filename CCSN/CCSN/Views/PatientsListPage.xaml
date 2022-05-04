@@ -37,7 +37,8 @@
                    
                 />
         </Grid>
-        <ListView
+        <Grid RowDefinitions="*">
+            <ListView
             Grid.Row="0"
             HasUnevenRows="True"
             ItemsSource="{Binding Patients}"
@@ -74,12 +75,13 @@
             </ListView.ItemTemplate>
 
         </ListView>
-        <Button HorizontalOptions="End"
+        <Button
+            HorizontalOptions="End"
                 VerticalOptions="End"
                  Style="{StaticResource BlusButton}"
                  Command="{Binding ScheduleBtnClicked}"
                 />
-
+</Grid>
     </StackLayout>
 
 

@@ -31,19 +31,13 @@
                                         Grid.Row="0"
                                         HorizontalOptions="Start"
                                         Style="{StaticResource labelView}">
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span Text="{Binding AppointmentDate, StringFormat='{0:MMMM dd, yyyy}  '}" />
-                                                <Span Text="  " />
-                                                <Span Text="{Binding AppointmentTime, StringFormat='{0::hh\\:mm}'}" />
-                                            </FormattedString>
-                                        </Label.FormattedText>
+                                     
                                     </Label>
                                     <Label
                                         Grid.Row="0"
                                         HorizontalOptions="Start"
                                         Style="{StaticResource labelView}"
-                                        Text="{Binding FollowUpDate}" />
+                                        Text="{Binding AppointmentDate, StringFormat='{0:MMMM dd, yyyy}  '}" />
                                     <Label
                                         Grid.Row="0"
                                         Grid.Column="2"
