@@ -37,21 +37,21 @@ namespace CCSN.ViewModels
             this.ScheduleBtnClicked = new Command(async () => await GotoScheduleAppointment());
             DeleteAppointement = new Command<Appoitment>(async (o) => await DeleteAppointementPerforme(o));
         }
-                
+
         private async Task LoadData()
         {
             IsLoading = true;
-            Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAppointmentsByDate(null));
+            Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAppointmentsByDate(null, "up"));
             IsLoading = false;
         }
-        
+
         public async Task GotoScheduleAppointment()
         {
             /////
             await App.Current.MainPage.Navigation.PushAsync(new ScheduleAppintmentPage());
 
         }
-        
+
         public ICommand ScheduleBtnClicked
         {
             protected set;

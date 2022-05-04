@@ -32,7 +32,7 @@ namespace CCSN.Services
           .PatchAsync(patient);
         }
 
-       
+
 
         public async Task DeletePatient(string ID)
         {
@@ -72,18 +72,7 @@ namespace CCSN.Services
             else { return false; }
         }
 
-        public async Task AddPatient(Patient patient)
-        {
-            var x = await firebaseClient
-                .Child($"Specalists/{PreferencesConfig.Id}/Patients")
-                .PostAsync(new Patient(patient));
 
-            /* Patient patients = new Patient(x.Object);
-             patients.ID = x.Key;
-             await firebaseClient
-             .Child($"Specalists/{PreferencesConfig.Id}/Patients/{patients.ID}")
-             .PatchAsync(patients);*/
-        }
 
     }
 }
