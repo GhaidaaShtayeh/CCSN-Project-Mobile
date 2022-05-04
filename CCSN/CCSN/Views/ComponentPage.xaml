@@ -6,23 +6,23 @@
 
 
     <Style x:Key="AddButton" TargetType="Button">
-        <Setter Property="BackgroundColor" Value="#2196f3" />
-        <Setter Property="WidthRequest" Value="300" />
+        <Setter Property="BackgroundColor" Value="#1EA6D6"  />
+        <Setter Property="WidthRequest" Value="250" />
         <Setter Property="CornerRadius" Value="20" />
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="TextColor" Value="White" />
+        <Setter Property="Margin" Value="0,20,0,20" />
     </Style>
 
     <Style x:Key="Addlabel" TargetType="Label">
-        <Setter Property="BackgroundColor" Value="#2196f3" />
+        <Setter Property="BackgroundColor" Value="#1EA6D6" />
         <Setter Property="WidthRequest" Value="300" />
-
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="TextColor" Value="White" />
     </Style>
 
     <Style x:Key="BlusButton" TargetType="Button">
-        <Setter Property="BackgroundColor" Value="#2196f3" />
+        <Setter Property="BackgroundColor" Value="#1EA6D6"/>
         <Setter Property="WidthRequest" Value="60" />
         <Setter Property="HeightRequest" Value="60" />
         <Setter Property="CornerRadius" Value="30" />
@@ -43,11 +43,10 @@
 
 
     <Style x:Key="navBarStyle" TargetType="ImageButton">
-        <Setter Property="BackgroundColor" Value="#00ffffff" />
+        <Setter Property="BackgroundColor" Value="#1EA6D6" />
         <Setter Property="HeightRequest" Value="30" />
         <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
     </Style>
-    
     <Style x:Key="navlabel" TargetType="Label">
         <Setter Property="TextColor" Value="White" />
         <Setter Property="FontSize" Value="Large" />
@@ -64,9 +63,7 @@
         <Setter Property="WidthRequest" Value="1000" />
         <Setter Property="Margin" Value="15,0,15,0" />
         <Setter Property="HasShadow" Value="True" />
-        <Setter Property="OutlineColor" Value="#2196f3" />
-        <Setter Property="BackgroundColor" Value="White" />
-
+        <Setter Property="OutlineColor" Value="#1EA6D6" />
     </Style>
 
     <Style x:Key="AppFrame" TargetType="Frame">
@@ -84,7 +81,7 @@
     <Style x:Key="FollowFrameStyle" TargetType="Frame">
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="Padding" Value="5" />
-        <Setter Property="OutlineColor" Value="#2196f3" />
+        <Setter Property="OutlineColor" Value="#1EA6D6"/>
         <Setter Property="HasShadow" Value="True" />
         <Setter Property="Margin" Value="5" />
     </Style>
@@ -95,7 +92,6 @@
         <Setter Property="HorizontalOptions" Value="Start" />
         <Setter Property="VerticalOptions" Value="Center" />
     </Style>
-    
     <Style x:Key="FollowEditor" TargetType="Editor">
         <Setter Property="BackgroundColor" Value="Transparent" />
         <Setter Property="HeightRequest" Value="100" />
@@ -108,7 +104,7 @@
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="WidthRequest" Value="200" />
         <Setter Property="HeightRequest" Value="50" />
-        <Setter Property="TextColor" Value="#2196f3" />
+        <Setter Property="TextColor" Value="#1EA6D6" />
         <Setter Property="Margin" Value="20" />
     </Style>
 
@@ -119,8 +115,8 @@
         <Setter Property="Source" Value="delete" />
         <Setter Property="VerticalOptions" Value="Center" />
         <Setter Property="HorizontalOptions" Value="EndAndExpand" />
-        <Setter Property="WidthRequest" Value="30" />
-        <Setter Property="HeightRequest" Value="30" />
+        <Setter Property="WidthRequest" Value="10" />
+        <Setter Property="HeightRequest" Value="10" />
         <Setter Property="BackgroundColor" Value="White" />
         <Setter Property="Grid.Row" Value="0" />
         <Setter Property="Grid.Column" Value="2" />
@@ -145,8 +141,7 @@
         <Setter Property="HasShadow" Value="True" />
         <Setter Property="HorizontalOptions" Value="EndAndExpand" />
         <Setter Property="WidthRequest" Value="200" />
-        <Setter Property="OutlineColor" Value="#2196f3" />
-
-
+        <Setter Property="HeightRequest" Value="39"/>
+        <Setter Property="OutlineColor" Value="#1EA6D6"/>
     </Style>
 </ResourceDictionary>

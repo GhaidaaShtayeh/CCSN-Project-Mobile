@@ -17,8 +17,10 @@ namespace CCSN.Views
         public ScheduleAppintmentPage()
         {
             InitializeComponent();
+
+            BarBackgroundColor = Color.FromHex("#1EA6D6");
         }
 
-        
+        public Color BarBackgroundColor { get; private set; }
     }
 }

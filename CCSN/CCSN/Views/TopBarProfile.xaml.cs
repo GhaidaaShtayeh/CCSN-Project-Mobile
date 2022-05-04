@@ -16,7 +16,10 @@ namespace CCSN.Views
         public TopBarProfile(Patient patient )
         {
             InitializeComponent();
-            NavigationPage.SetHasBackButton(this, false);
+            NavigationPage.SetHasNavigationBar(this, true);
+            NavigationPage.SetHasBackButton(this, true);
+
+            BarBackgroundColor = Color.FromHex("#1EA6D6");
 
             var navigationDetails = new NavigationPage(new PatientProfileDetailsPage(patient));
             navigationDetails.Title = "Patient Details";

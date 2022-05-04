@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CCSN.Views.PatientsListPage" BackgroundColor="AliceBlue"
               xmlns:viewmodels="clr-namespace:CCSN.ViewModels" 
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             >
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
@@ -13,12 +12,12 @@
 
             <ImageButton
                 HorizontalOptions="EndAndExpand"
-                Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
+                Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/VisualEditor_-_Icon_-_Search-big_-_white.svg/1200px-VisualEditor_-_Icon_-_Search-big_-_white.svg.png"
               Style="{StaticResource navBarStyle}"  />
 
             <ImageButton
                 HorizontalOptions="End"
-                Source="https://static.thenounproject.com/png/3134331-200.png"
+                Source="https://peopleshub.org/wp-content/uploads/2018/04/person-icon-white.png"
                Style="{StaticResource navBarStyle}"  />
         </StackLayout>
     </NavigationPage.TitleView>
@@ -57,7 +56,7 @@
                                 <StackLayout Orientation="Horizontal"  Margin="10,0,20,0" VerticalOptions="Center">
                                     <Image Source="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png" WidthRequest="70" HeightRequest="70" HorizontalOptions="Start"/>
                                     <BoxView 
-                                    Color="Maroon"
+                                    Color="#1EA6D6"
                                     WidthRequest="1"
                                     Margin="5, 0, 10, 0" />
                                     <Label Grid.Row="0" Text="{Binding PatientName}"  VerticalOptions="Center" Style="{StaticResource labelView}"/>

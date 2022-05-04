@@ -15,8 +15,10 @@ namespace CCSN.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PatientsListPage : ContentPage
     {
+
         public PatientsListPage()
         {
+            NavigationPage.SetHasBackButton(this, true);
             InitializeComponent();
             BindingContext = new PatientListPageModelView(Navigation);
 

@@ -46,9 +46,7 @@ namespace CCSN.ViewModels
                 PatientService patientService = new PatientService();
                 await patientService.DeletePatient(patient.ID);
                 await App.Current.MainPage.DisplayAlert("Delted", "The patient Deleteed", "Ok");
-                //await App.Current.MainPage.Navigation.PopAsync();
-
-                //   await App.Current.MainPage.Navigation.PushAsync(new PatientsListPage());
+                await App.Current.MainPage.Navigation.PushAsync(new PatientsListPage());
 
             }
         }

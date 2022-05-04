@@ -4,14 +4,11 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewmodels="clr-namespace:CCSN.ViewModels"
-    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-    NavigationPage.HasNavigationBar="False">
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
     <ContentPage.BindingContext>
         <viewmodels:PatientProfileFollowUpPageModelView />
     </ContentPage.BindingContext>
-    <ContentPage.Behaviors>
-        <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
-    </ContentPage.Behaviors>
+    
     <StackLayout>
         <ListView
             HasUnevenRows="True"

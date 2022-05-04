@@ -29,41 +29,31 @@
             </Grid>
             <StackLayout Grid.Row="0" Orientation="Horizontal">
                 <Label
-                    FontSize="Large"
+                    FontSize="Medium"
                     HorizontalOptions="Start"
                     Text=" - Follow Up Date :"
                     VerticalOptions="Center" />
-                <Frame
-                    Margin="4"
-                    Padding="5"
-                    CornerRadius="10"
-                    HasShadow="True"
-                    OutlineColor="#2196f3">
-                    <DatePicker Date="{Binding FollowUpDate, Mode=TwoWay}" Format="MM/dd/yyyy" />
-                </Frame>
+
+                <DatePicker Date="{Binding FollowUpDate, Mode=TwoWay}" Format="MM/dd/yyyy" Margin="5" />
             </StackLayout>
+            
             <StackLayout Grid.Row="1">
                 <Label
-                    FontSize="Large"
+                    FontSize="Medium"
                     HorizontalOptions="Start"
                     Text=" - Tools :"
                     VerticalOptions="Center" />
-                <Frame
-                    Margin="5"
-                    Padding="5"
-                    CornerRadius="10"
-                    HasShadow="True"
-                    OutlineColor="#2196f3">
+                
                     <Editor
                         BackgroundColor="Transparent"
                         HeightRequest="80"
                         Text="{Binding FollowUpTools, Mode=TwoWay}"
                         TextColor="Black" />
-                </Frame>
+               
             </StackLayout>
             <StackLayout Grid.Row="2">
                 <Label
-                    FontSize="Large"
+                    FontSize="Medium"
                     HorizontalOptions="Start"
                     Text=" - Goals :"
                     VerticalOptions="Center" />
@@ -82,7 +72,7 @@
             </StackLayout>
             <StackLayout Grid.Row="3">
                 <Label
-                    FontSize="Large"
+                    FontSize="Medium"
                     HorizontalOptions="Start"
                     Text=" - Add Notes :"
                     VerticalOptions="Center" />
@@ -99,15 +89,12 @@
                         TextColor="Black" />
                 </Frame>
             </StackLayout>
-            <Button
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Button Style="{StaticResource AddButton}"
                 x:Name="Save_Button"
-                BackgroundColor="#2196f3"
                 Command="{Binding AddFollowUpCommand}"
-                CornerRadius="20"
-                FontSize="Medium"
-                Text="Save"
-                TextColor="White"
-                WidthRequest="300" />
+                Text="Save"/>
+            </StackLayout>
         </StackLayout>
     </ScrollView>
 

@@ -57,6 +57,7 @@ namespace CCSN.ViewModels
             protected set;
             get;
         }
+        public Color BarBackgroundColor { get; internal set; }
 
         private async Task DeleteAppointementPerforme(Appoitment appoitment)
         {

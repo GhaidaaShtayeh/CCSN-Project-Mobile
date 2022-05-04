@@ -14,9 +14,12 @@ namespace CCSN.Views
     {
         public AddPatientPage()
         {
+           
             InitializeComponent();
+           
 
-            
+
         }
+
     }
 }
