@@ -3,12 +3,11 @@
     x:Class="CCSN.Views.PatientProfileDetailsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:controlers="clr-namespace:CCSN.Extentions"
     xmlns:viewmodels="clr-namespace:CCSN.ViewModels"
-   
     x:DataType="viewmodels:PatientProfileDetailsPageModelView"
-    BackgroundColor="AliceBlue">
-    
+    BackgroundColor="AliceBlue"
+    xmlns:local="clr-namespace:CCSN.Common"
+    NavigationPage.HasNavigationBar="False">
 
     <ScrollView>
         <StackLayout>
@@ -26,30 +25,149 @@
                 </Grid.RowDefinitions>
             </Grid>
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientName, Mode=TwoWay}" LabelText="Name :" />
+            <StackLayout Orientation="Horizontal"  Grid.Row="0" >
+                <Label
+            x:Name="LabelName"
+            FontSize="Medium"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text=" Name : "/>
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientGender, Mode=TwoWay}" LabelText="Gender :" />
+                <Entry
+            x:Name="NameEntry"
+            Placeholder="NameEntry"
+            Style="{StaticResource EntryStyle}" 
+            Text="{Binding Patient.PatientName}"/>
+            </StackLayout>
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientMobileNO, Mode=TwoWay}" LabelText="Mobile :" />
+            <StackLayout Orientation="Horizontal"  Grid.Row="1" >
+                <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Gender :" ></Label>
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientAddress, Mode=TwoWay}" LabelText="Address :" />
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientBirthday, Mode=TwoWay}" LabelText="BirthDay :" />
+                <Picker  SelectedItem="{Binding Patient.PatientGender, Mode=TwoWay}" 
+  
+            Style="{StaticResource EntryStyle}" >
+                    <Picker.Items>
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                    </Picker.Items>
+                </Picker>
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientHeight, Mode=TwoWay}" LabelText="Height :" />
+            </StackLayout>
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientWeight, Mode=TwoWay}" LabelText="Weight :" />
+            <StackLayout Orientation="Horizontal"  Grid.Row="2" >
+                <Label
+            x:Name="LabelPatientMobileNO"
+            FontSize="Medium"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text=" Mobile Number : "/>
 
-            <controlers:LabelEntryCostomized EntryText="{Binding Patient.PatientGenticesDiseses, Mode=TwoWay}" LabelText="Gentics :" />
+                <Entry
+            x:Name="LabelPatientMobileNOEntry"
+            Placeholder="Name"
+            Style="{StaticResource EntryStyle}" 
+            Text="{Binding Patient.PatientMobileNO}"
+            Keyboard="Numeric" >
+                    <!--
+                    <Entry.Behaviors>
+                        <local:NumericValidationBehavior />
+                    </Entry.Behaviors>-->
+                </Entry>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"  Grid.Row="3" >
+                <Label
+            x:Name="LabelPatientAddress"
+            FontSize= "Medium"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text=" Patient Address : "/>
+                <Entry
+            x:Name="PatientAddressEntry"
+            Placeholder="Name"
+            Style="{StaticResource EntryStyle}" 
+            Text="{Binding Patient.PatientAddress}"/>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal"  Grid.Row="4" >
+                <Label
+            x:Name="LabelPatientBirthday"
+            FontSize="Medium"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text=" Patient Birthday : "/>
+                <DatePicker Format="MM/dd/yyyy"  Date="{Binding Patient.PatientBirthday , Mode=TwoWay}" 
+            Style="{StaticResource EntryStyle}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"  Grid.Row="5" >
+                <Label
+            x:Name="LabelPatientHeight"
+            FontSize="Medium"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text=" Patient Height : "/>
+                <Entry
+            x:Name="PatientHeightEntry"
+            Placeholder="Name"
+            Style="{StaticResource EntryStyle}" 
+            Text="{Binding Patient.PatientHeight}"
+            Keyboard="Numeric" >
+                    <!--
+                    <Entry.Behaviors>
+                        <local:NumericValidationBehavior />
+                    </Entry.Behaviors>-->
+                </Entry>
+            </StackLayout>
+
+
+
+            <StackLayout Orientation="Horizontal"  Grid.Row="6" >
+                <Label
+            x:Name="LabelPatientWeight"
+            FontSize="Medium"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text=" Patient Weight : "/>
+                <Entry
+            x:Name="PatientWeightEntry"
+            Placeholder="Name"
+            Style="{StaticResource EntryStyle}" 
+            Text="{Binding Patient.PatientWeight}"
+                Keyboard="Numeric" >
+                    <!--
+                    <Entry.Behaviors>
+                        <local:NumericValidationBehavior />
+                    </Entry.Behaviors>-->
+                </Entry>
+            </StackLayout>
+
+
+
+            <StackLayout Orientation="Horizontal"  Grid.Row="7" >
+                <Label
+            x:Name="LabelPatientGenticesDiseses"
+            FontSize="Medium"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text=" Patient Gentices Diseses : "/>
+                <Entry
+            x:Name="PatientGenticesDisesesEntry"
+            Placeholder="Name"
+            Style="{StaticResource EntryStyle}" 
+            Text="{Binding Patient.PatientGenticesDiseses}"/>
+            </StackLayout>
 
             <Frame
-                CornerRadius="20"
-                   WidthRequest="250"
-                   BackgroundColor="#1EA6D6" 
-                   Margin="0,20,0,20"
-                   Grid.Row="8" 
-                   HorizontalOptions="CenterAndExpand"
-                   HeightRequest="19">
+                Grid.Row="8"
+                Margin="0,5,0,5"
+                BackgroundColor="#2196f3"
+                CornerRadius="45"
+                HeightRequest="19"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="300">
                 <Label
                     x:Name="save"
                     FontSize="Medium"
