@@ -62,7 +62,7 @@
                     Padding="5"
                     CornerRadius="10"
                     HasShadow="True"
-                    OutlineColor="#2196f3">
+                    OutlineColor="#1EA6D6">
                     <Editor
                         BackgroundColor="Transparent"
                         HeightRequest="80"
@@ -81,7 +81,7 @@
                     Padding="5"
                     CornerRadius="10"
                     HasShadow="True"
-                    OutlineColor="#2196f3">
+                    OutlineColor="#1EA6D6">
                     <Editor
                         BackgroundColor="Transparent"
                         HeightRequest="80"
