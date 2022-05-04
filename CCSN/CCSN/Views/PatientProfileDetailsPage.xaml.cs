@@ -16,6 +16,7 @@ namespace CCSN.Views
     {
         public PatientProfileDetailsPage(Patient patient)
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             BindingContext=new PatientProfileDetailsPageModelView(patient);
 

@@ -34,17 +34,25 @@ namespace CCSN.ViewModels
         public ScheduleAppointmentPageModelView()
         {
             Appearing = new Command(async () => await LoadData());
-            Add = new Command(async () => await AddPerforme());    
+            Add = new Command(async () => await AddPerforme());
         }
 
         private async Task AddPerforme()
         {
             var confirm = await App.Current.MainPage.DisplayAlert("confirm", "Are you sure you want to add ? ", "yes", "no");
-            if(confirm)
+            var Result = await AppintmentService.addScheduleAppointment(PatienSelected.ID, PatienSelected.PatientName, SelectedDate, SelectedTime);
+            if (confirm && Result)
             {
-                await AppintmentService.addScheduleAppointment(PatienSelected.ID,PatienSelected.PatientName,SelectedDate,SelectedTime);
                 await App.Current.MainPage.DisplayAlert("message", "Appointment Added", "ok");
                 await App.Current.MainPage.Navigation.PopAsync();
+            }
+            else if (confirm)
+            {
+                await App.Current.MainPage.DisplayAlert("message", "No Appointment Added, Please check the date ", "ok");
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("message", "No Appointment Added", "ok");
             }
         }
 

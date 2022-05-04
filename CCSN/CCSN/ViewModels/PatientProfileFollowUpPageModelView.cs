@@ -49,7 +49,7 @@ namespace CCSN.ViewModels
 
         async Task LoadData()
         {
-            Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAppointmentsByDate(null));
+            Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAppointmentsByDate(null,"all"));
 
         }
 

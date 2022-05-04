@@ -18,12 +18,12 @@
             <Label Style="{StaticResource navlabel}" Text="Appointment" />
             <ImageButton
                 HorizontalOptions="EndAndExpand"
-                Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
+                Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/VisualEditor_-_Icon_-_Search-big_-_white.svg/1200px-VisualEditor_-_Icon_-_Search-big_-_white.svg.png"
                 Style="{StaticResource navBarStyle}" />
 
             <ImageButton
                 HorizontalOptions="End"
-                Source="https://static.thenounproject.com/png/3134331-200.png"
+                Source="https://peopleshub.org/wp-content/uploads/2018/04/person-icon-white.png"
                 Style="{StaticResource navBarStyle}" />
         </StackLayout>
     </NavigationPage.TitleView>

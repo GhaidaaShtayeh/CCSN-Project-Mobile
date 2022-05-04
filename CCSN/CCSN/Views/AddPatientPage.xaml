@@ -34,102 +34,102 @@
                     </Grid.RowDefinitions>
                 </Grid>
                 <StackLayout Orientation="Horizontal"  Grid.Row="0" >
-                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Patient ID :" ></Label>
-                    <Frame Style="{StaticResource FrameEntry}">
-                        
-                        <Entry  Text="{Binding ID}"
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Patient ID :" ></Label>
+
+
+                    <Entry  Text="{Binding ID}" Margin="15,5,15,5" WidthRequest="200"
                                 Keyboard="Numeric" >
                             <Entry.Behaviors>
                                 <local:NumericValidationBehavior />
                             </Entry.Behaviors>
                         </Entry>
-                    </Frame>
+                    
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal"  Grid.Row="1" >
-                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Name :" ></Label>
-                    <Frame Style="{StaticResource FrameEntry}">
-                        <Entry Text="{Binding PatientName}" ></Entry>
-                    </Frame>
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Name :" ></Label>
+
+                    <Entry Text="{Binding PatientName}" WidthRequest="200" Margin="15,5,15,5"></Entry>
+                   
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal"  Grid.Row="2" >
-                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Mobile Number :" ></Label>
-                    <Frame Style="{StaticResource FrameEntry}">
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Mobile Number :" ></Label>
 
-                        <Entry Text="{Binding PatientMobileNo}"
+
+                    <Entry Text="{Binding PatientMobileNo}" WidthRequest="200" Margin="15,5,15,5"
                                Keyboard="Numeric" >
                             <Entry.Behaviors>
                                 <local:NumericValidationBehavior />
                             </Entry.Behaviors>
                         </Entry>
 
-                    </Frame>
+                  
                 </StackLayout>
 
 
                 <StackLayout Orientation="Horizontal" Grid.Row="3" >
-                    <Label HorizontalOptions="Start"  FontSize="Large" VerticalOptions="Center" Text=" Height :" ></Label>
-                    <Frame  Style="{StaticResource FrameEntry}">
+                    <Label HorizontalOptions="Start"  FontSize="Medium" VerticalOptions="Center" Text=" Height :" ></Label>
 
-                        <Entry Text="{Binding PatientHeight}"
+
+                    <Entry Text="{Binding PatientHeight}" WidthRequest="200" Margin="15,5,15,5"
                                Keyboard="Numeric" >
                             <Entry.Behaviors>
                                 <local:NumericValidationBehavior />
                             </Entry.Behaviors>
                             
                         </Entry>
-                    </Frame>
+                
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Grid.Row="4" >
-                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Weight :" ></Label>
-                    <Frame Style="{StaticResource FrameEntry}">
-                        <Entry Text="{Binding PatientWeight}"
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Weight :" ></Label>
+
+                    <Entry Text="{Binding PatientWeight}" WidthRequest="200" Margin="15,5,15,5"
                                Keyboard="Numeric" >
                             <Entry.Behaviors>
                                 <local:NumericValidationBehavior />
                             </Entry.Behaviors>
                             
                         </Entry>
-                    </Frame>
+                   
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal"  Grid.Row="5" >
-                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Gender :" ></Label>
-                    <Frame Style="{StaticResource FrameEntry}">
-                       
-                        <Picker SelectedItem="{Binding PatientGender}">
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Gender :" ></Label>
+
+
+                    <Picker SelectedItem="{Binding PatientGender}" WidthRequest="200" Margin="15,5,15,5">
                             <Picker.Items>
                                 <x:String>Male</x:String>
                                 <x:String>Female</x:String>
                             </Picker.Items>
                         </Picker>
-                    </Frame>
+
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal"  Grid.Row="6" >
-                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Address :" ></Label>
-                    <Frame Style="{StaticResource FrameEntry}">
-                        
-                        <Entry Text="{Binding PatientAddress}"></Entry>
-                    </Frame>
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Address :" ></Label>
+
+
+                    <Entry Text="{Binding PatientAddress}" WidthRequest="200" Margin="15,5,15,5"></Entry>
+                  
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal"  Grid.Row="7" >
-                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Birthday :" ></Label>
-                    <Frame Style="{StaticResource FrameEntry}">
-                        <DatePicker Format="MM/dd/yyyy"  Date="{Binding PatientBirthday , Mode=TwoWay}" >
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Birthday :" ></Label>
+
+                    <DatePicker Format="MM/dd/yyyy"  Date="{Binding PatientBirthday , Mode=TwoWay}" WidthRequest="200" Margin="15,5,15,5"  >
                         </DatePicker>
-                    </Frame>
+                  
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal"  Grid.Row="8" >
-                    <Label HorizontalOptions="Start" FontSize="Large" VerticalOptions="Center" Text=" Gentics Diseses :" ></Label>
-                    <Frame Style="{StaticResource FrameEntry}">
-                       
-                        <Entry Text="{Binding PatientGenticsDiseses}"></Entry>
-                    </Frame>
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Gentics Diseses :" ></Label>
+
+
+                    <Entry Text="{Binding PatientGenticsDiseses}" WidthRequest="200" Margin="15,5,15,5" ></Entry>
+                   
                 </StackLayout>
 
                 <Button Style="{StaticResource AddButton}"
