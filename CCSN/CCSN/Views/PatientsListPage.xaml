@@ -8,7 +8,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Style="{StaticResource navlabel}"
+            <Label Style="{StaticResource navlabel}"  FontAttributes="Bold" 
                 Text="Patients"/>
 
             <ImageButton

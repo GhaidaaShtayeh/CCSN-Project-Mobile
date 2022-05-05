@@ -81,10 +81,10 @@
             FontSize= "Medium"
             HorizontalOptions="Start"
             VerticalOptions="Center"
-            Text=" Patient Address : "/>
+            Text=" Address : "/>
                 <Entry
             x:Name="PatientAddressEntry"
-            Placeholder="Name"
+            Placeholder="Address"
             Style="{StaticResource EntryStyle}" 
             Text="{Binding Patient.PatientAddress}"/>
             </StackLayout>
@@ -96,7 +96,7 @@
             FontSize="Medium"
             HorizontalOptions="Start"
             VerticalOptions="Center"
-            Text=" Patient Birthday : "/>
+            Text=" Birthday : "/>
                 <DatePicker Format="MM/dd/yyyy"  Date="{Binding Patient.PatientBirthday , Mode=TwoWay}" 
             Style="{StaticResource EntryStyle}" />
             </StackLayout>
@@ -107,7 +107,7 @@
             FontSize="Medium"
             HorizontalOptions="Start"
             VerticalOptions="Center"
-            Text=" Patient Height : "/>
+            Text=" Height : "/>
                 <Entry
             x:Name="PatientHeightEntry"
             Placeholder="Name"
@@ -128,7 +128,7 @@
             FontSize="Medium"
             HorizontalOptions="Start"
             VerticalOptions="Center"
-            Text=" Patient Weight : "/>
+            Text=" Weight : "/>
                 <Entry
             x:Name="PatientWeightEntry"
             Placeholder="Name"
@@ -149,7 +149,7 @@
             FontSize="Medium"
             HorizontalOptions="Start"
             VerticalOptions="Center"
-            Text=" Patient Gentices Diseses : "/>
+            Text=" Gentices Diseses : "/>
                 <Entry
             x:Name="PatientGenticesDisesesEntry"
             Placeholder="Name"

@@ -52,11 +52,11 @@
     <Style x:Key="navlabel" TargetType="Label">
         <Setter Property="TextColor" Value="White" />
         <Setter Property="FontSize" Value="Large" />
-        <Setter Property="FontAttributes" Value="Bold" />
+        
         <Setter Property="HorizontalOptions" Value="Start" />
         <Setter Property="VerticalOptions" Value="CenterAndExpand" />
     </Style>
-
+    <!--<Setter Property="FontAttributes" Value="Bold" />-->
 
     <Style x:Key="FrameStyle" TargetType="Frame">
         <Setter Property="CornerRadius" Value="10" />

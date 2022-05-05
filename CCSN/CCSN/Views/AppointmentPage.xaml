@@ -15,7 +15,7 @@
     </ContentPage.Behaviors>
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Style="{StaticResource navlabel}" Text="Appointment" />
+            <Label Style="{StaticResource navlabel}" Text="Appointments" FontAttributes="Bold"  />
             <ImageButton
                 HorizontalOptions="EndAndExpand"
                 Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/VisualEditor_-_Icon_-_Search-big_-_white.svg/1200px-VisualEditor_-_Icon_-_Search-big_-_white.svg.png"

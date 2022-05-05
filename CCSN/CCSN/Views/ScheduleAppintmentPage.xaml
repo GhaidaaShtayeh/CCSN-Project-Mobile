@@ -18,7 +18,7 @@
             <Label
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource navlabel}"
-                Text="add new Appointment" />
+                Text="Add new Appointment" />
 
         </StackLayout>
     </NavigationPage.TitleView>
