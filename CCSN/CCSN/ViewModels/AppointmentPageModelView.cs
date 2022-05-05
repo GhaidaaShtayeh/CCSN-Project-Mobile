@@ -24,7 +24,7 @@ namespace CCSN.ViewModels
 
         private ICommand _Appearing;
         private ICommand _deleteAppointement;
-
+        private Appoitment _SelectedAppointment;
 
         public ICommand Appearing { get => _Appearing; set => SetProperty(ref _Appearing, value, nameof(Appearing)); }
         public ICommand DeleteAppointement { get => _deleteAppointement; set => SetProperty(ref _deleteAppointement, value, nameof(DeleteAppointement)); }
@@ -79,5 +79,18 @@ namespace CCSN.ViewModels
         }
 
 
+        public Appoitment SelectedAppointment
+        {
+            get => _SelectedAppointment;
+            set
+            {
+                if (value != null)
+                {
+                    App.Current.MainPage.Navigation.PushAsync(new EditAppointment(value));
+                }
+                _SelectedAppointment = value;
+                OnPropertyChanged();
+            }
+        }
     }
 }
