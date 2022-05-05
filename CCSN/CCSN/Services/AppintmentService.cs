@@ -106,6 +106,15 @@ namespace CCSN.Services
             return FollowUp;
         }
 
+        public static async Task EditApp(Appoitment appoitment, string patientId, string ID)
+        {
+
+            await firebaseClient
+            .Child($"Specalists/{PreferencesConfig.Id}/Patients/{patientId}/Appointments/{ID}")
+          .PatchAsync(appoitment);
+            Console.Write(appoitment.AppointmentDate);
+        }
+
 
     }
 }

@@ -4,7 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewmodels="clr-namespace:CCSN.ViewModels"
-    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     BackgroundColor="AliceBlue">
 
     <!--<ContentPage.BindingContext>
@@ -43,8 +43,10 @@
                 IsPullToRefreshEnabled="True"
                 IsRefreshing="{Binding IsLoading}"
                 ItemsSource="{Binding Appoitments}"
+           
                 RefreshCommand="{Binding Appearing}"
-                SelectionMode="None"
+                SelectedItem="{Binding SelectedAppointment, Mode=TwoWay}"
+                SelectionMode="Single"
                 SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -58,18 +60,24 @@
 
                                         <Label
                                             Grid.Row="0"
+                                            Grid.Column="0"
                                             HorizontalOptions="StartAndExpand"
                                             Style="{StaticResource labelView}"
                                             Text="{Binding AppointmentPatientName}"
                                             VerticalOptions="Center" />
-                                        <Label Grid.Column="1" Text="||   "  Style="{StaticResource labelView}"></Label>
+                                        <Label  Text="||   "  Style="{StaticResource labelView}"></Label>
                                         <Label
                                             Grid.Row="0"
                                           
                                             Font="Small"
                                             HorizontalOptions="CenterAndExpand"
                                             Style="{StaticResource labelView}"
-                                            Text="{Binding AppointmentDate}" />
+                                            Text="{Binding AppointmentDate, StringFormat='{0:MMMM dd, yyyy}  '}" />
+                                        <Label
+                                        Grid.Row="0"
+                                      Font="Small"
+                                        Style="{StaticResource labelView}"
+                                        Text="{Binding AppointmentTime}" />
                                         <ImageButton
                                             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:AppointmentPageModelView}}, Path=DeleteAppointement}"
                                             CommandParameter="{Binding Source={RelativeSource Self}, Path=BindingContext}"
