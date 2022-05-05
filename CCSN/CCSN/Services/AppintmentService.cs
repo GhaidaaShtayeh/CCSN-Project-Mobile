@@ -17,9 +17,9 @@ namespace CCSN.Services
     {
         static FirebaseClient firebaseClient = new FirebaseClient("https://ccsn-fed2d-default-rtdb.firebaseio.com/");
 
-      
 
-        public static async Task<IEnumerable<Appoitment>> GetUserAppointmentsByDate(DateTime? dateTime)
+
+        public static async Task<IEnumerable<Appoitment>> GetUserAppointmentsByDate(DateTime? dateTime, string str)
         {
             var Patients = await PatientService.GetUserPatients();
 
@@ -34,17 +34,24 @@ namespace CCSN.Services
                         appointments.AddRange(patient.Appointments.Values);
                 }
 
-                if (appointments == null)
+                if (appointments == null && str == "all")
                     return new List<Appoitment>();
+                else if (appointments != null && str == "up")
+                    return (appointments.Where(o => o.AppointmentDate.Date.Date > DateTime.Now.Date));
                 else if (dateTime.HasValue)
-                    return appointments.Where(o => o.AppointmentDate.Date.Date == dateTime.Value.Date);
+                    return (appointments.Where(o => o.AppointmentDate.Date.Date == dateTime.Value.Date));
                 else
                     return appointments;
             }
 
         }
 
+        public static async Task<bool> IsAppointmentExist(DateTime date, TimeSpan time)
+        {
+            var result = (await GetUserAppointmentsByDate(null, "up")).ToList();
 
+            return (result.Any(x => x.AppointmentDate == date && x.AppointmentTime == time));
+        }
         public static async Task EditFollowup(Appoitment appoitment, string PatientID, string FollowID)
         {
             await firebaseClient
@@ -63,20 +70,29 @@ namespace CCSN.Services
         // add schedule Appointment 
 
 
-        public static async Task addScheduleAppointment(string patientId, string patientname, DateTime appointmentDate, TimeSpan appointmentTime)
+        public static async Task<bool> addScheduleAppointment(string patientId, string patientname, DateTime appointmentDate, TimeSpan appointmentTime)
         {
-            Appoitment A = new Appoitment()
+            if (await IsAppointmentExist(appointmentDate, appointmentTime) == false)
             {
-                AppointmentPatientName = patientname,
-                AppointmentDate = appointmentDate,
-                AppointmentTime = appointmentTime,
-                PatientID = patientId,
-                ID = Common.Helper.GenerateKey(8)
+                Appoitment A = new Appoitment()
+                {
+                    AppointmentPatientName = patientname,
+                    AppointmentDate = appointmentDate,
+                    AppointmentTime = appointmentTime,
+                    PatientID = patientId,
+                    ID = Common.Helper.GenerateKey(8)
 
-            };
-            await firebaseClient
-                .Child($"Specalists/{PreferencesConfig.Id}/Patients/{patientId}/Appointments/{A.ID}")
-                .PutAsync(A);
+                };
+                await firebaseClient
+                    .Child($"Specalists/{PreferencesConfig.Id}/Patients/{patientId}/Appointments/{A.ID}")
+                    .PutAsync(A);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         //add follow up 

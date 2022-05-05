@@ -18,7 +18,7 @@
             <Label
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource navlabel}"
-                Text="add new Appointment" />
+                Text="Add new Appointment" />
 
         </StackLayout>
     </NavigationPage.TitleView>
@@ -31,22 +31,17 @@
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0" VerticalOptions="Start">
-                <Frame
-                    Margin="5,0,5,0"
-                    Padding="10"
-                    CornerRadius="10"
-                    HasShadow="True"
-                    HeightRequest="35"
-                    OutlineColor="#2196f3">
+               
                     <Picker
+                        Margin="5,0,5,0"
                         x:Name="AppoiPatientName"
                         Title="Patient Name"
                         FontSize="Small"
-                        HeightRequest="25"
+                        HeightRequest="40"
                         ItemDisplayBinding="{Binding PatientName}"
                         ItemsSource="{Binding Patients}"
                         SelectedItem="{Binding PatienSelected}" />
-                </Frame>
+            
             </StackLayout>
 
             <StackLayout Grid.Row="1">
@@ -79,7 +74,7 @@
                     <Label
                         Grid.Column="0"
                         FontAttributes="Bold"
-                        FontSize="Large"
+                        FontSize="Medium"
                         HorizontalOptions="Center"
                         Text=" Time :"
                         VerticalOptions="Center" />
@@ -103,11 +98,10 @@
                 Grid.Row="3"
                 BackgroundColor="#2196f3"
                 Command="{Binding Add}"
-                CornerRadius="20"
-                FontSize="Medium"
+                 Style="{StaticResource AddButton}" 
                 Text="Add Appointment"
-                TextColor="White"
-                WidthRequest="300" />
+               
+                />
         </Grid>
     </ScrollView>
 </ContentPage>

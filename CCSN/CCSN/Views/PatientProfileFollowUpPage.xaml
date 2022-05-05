@@ -4,7 +4,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewmodels="clr-namespace:CCSN.ViewModels"
-    xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    NavigationPage.HasNavigationBar="False">
     <ContentPage.BindingContext>
         <viewmodels:PatientProfileFollowUpPageModelView />
     </ContentPage.BindingContext>
@@ -30,19 +31,13 @@
                                         Grid.Row="0"
                                         HorizontalOptions="Start"
                                         Style="{StaticResource labelView}">
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span Text="{Binding AppointmentDate, StringFormat='{0:MMMM dd, yyyy}  '}" />
-                                                <Span Text="  " />
-                                                <Span Text="{Binding AppointmentTime, StringFormat='{0::hh\\:mm}'}" />
-                                            </FormattedString>
-                                        </Label.FormattedText>
+                                     
                                     </Label>
                                     <Label
                                         Grid.Row="0"
                                         HorizontalOptions="Start"
                                         Style="{StaticResource labelView}"
-                                        Text="{Binding FollowUpDate}" />
+                                        Text="{Binding AppointmentDate, StringFormat='{0:MMMM dd, yyyy}  '}" />
                                     <Label
                                         Grid.Row="0"
                                         Grid.Column="2"

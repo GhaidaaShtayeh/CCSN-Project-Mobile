@@ -42,8 +42,8 @@ namespace CCSN.ViewModels
         async Task LoadData()
         {
             IsLoading = true;
-            Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAppointmentsByDate(DateTime.Now));
-            Appoitments2 = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAppointmentsByDate(DateTime.Now.AddDays(1)));
+            Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAppointmentsByDate(DateTime.Now, ""));
+            Appoitments2 = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAppointmentsByDate(DateTime.Now.AddDays(1), ""));
             IsLoading = false;
 
         }

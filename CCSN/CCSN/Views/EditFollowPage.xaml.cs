@@ -16,6 +16,8 @@ namespace CCSN.Views
     {
         public EditFollowPage(Appoitment appoitment)
         {
+           
+            NavigationPage.SetHasBackButton(this, true);
             InitializeComponent();
             BindingContext = new EditFollowModelView(appoitment);
         }

@@ -16,6 +16,7 @@ namespace CCSN.Views
     {
         public PatientProfileFollowUpPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }

@@ -6,6 +6,11 @@
     xmlns:viewmodels="clr-namespace:CCSN.ViewModels"
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     x:DataType="viewmodels:EditFollowModelView">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Style="{StaticResource navlabel}" Text="Patient Follow-up" />
+        </StackLayout>
+    </NavigationPage.TitleView>
     <ScrollView>
         <StackLayout>
             <Grid>

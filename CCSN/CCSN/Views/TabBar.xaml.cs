@@ -18,7 +18,7 @@ namespace CCSN.Views
             NavigationPage.SetHasBackButton(this, false);
 
             var navigationPageHome = new NavigationPage(new HomePage());
-            navigationPageHome.IconImageSource = "https://freepikpsd.com/file/2019/10/black-home-icon-png-3-Transparent-Images.png";
+            navigationPageHome.IconImageSource =" https://www.iconsdb.com/icons/preview/white/home-xxl.png";
             navigationPageHome.Title = "Home";
 
             var navigationPagePatients = new NavigationPage(new PatientsListPage());

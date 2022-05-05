@@ -17,6 +17,7 @@ namespace CCSN.Views
     {
         public PatientsListPage()
         {
+            NavigationPage.SetHasBackButton(this, true);
             InitializeComponent();
             BindingContext = new PatientListPageModelView(Navigation);
 
