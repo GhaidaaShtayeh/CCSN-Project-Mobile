@@ -13,7 +13,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Style="{StaticResource navlabel}" Text="CCSN" />
+            <Label Style="{StaticResource navlabel}" Text="CCSN" FontAttributes="Bold"  />
 
             <ImageButton
                 HorizontalOptions="EndAndExpand"
