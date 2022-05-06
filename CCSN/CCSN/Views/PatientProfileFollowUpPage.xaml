@@ -10,12 +10,13 @@
     <ContentPage.Behaviors>
         <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
     </ContentPage.Behaviors>
-    <StackLayout>
+    <StackLayout BackgroundColor="#E6F0F8">
         <ListView
             HasUnevenRows="True"
             ItemsSource="{Binding Appoitments}"
             SelectedItem="{Binding SelectedFollow, Mode=TwoWay}"
-            SelectionMode="Single">
+            SelectionMode="Single"
+            BackgroundColor="#E6F0F8">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

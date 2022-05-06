@@ -47,7 +47,7 @@
                 <DataTemplate>
                     <ViewCell>
 
-                        <Grid RowDefinitions="Auto,Auto,Auto">
+                        <Grid RowDefinitions="Auto,Auto,Auto" BackgroundColor="#E6F0F8">
                             <Frame Margin="30,0,20,0" Style="{StaticResource FrameStyle}">
                                 <StackLayout
                                     Margin="30,0,0,0"
@@ -89,7 +89,7 @@
                 <DataTemplate>
                     <ViewCell>
 
-                        <Grid RowDefinitions="Auto,Auto,Auto">
+                        <Grid RowDefinitions="Auto,Auto,Auto" BackgroundColor="#E6F0F8">
                             <Frame Margin="30,0,20,0" Style="{StaticResource FrameStyle}">
                                 <StackLayout
                                     Margin="30,0,0,0"

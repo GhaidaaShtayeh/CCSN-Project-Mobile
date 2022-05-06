@@ -39,9 +39,14 @@ namespace CCSN.ViewModels
                 }
                 else
                 {
-                    await App.Current.MainPage.DisplayAlert("confirm", "Are you sure u want to edit ? ", "yes", "no");
-                    await App.Current.MainPage.Navigation.PopAsync();
-                    await App.Current.MainPage.DisplayAlert("Edited", "The Patient Edited", "Ok");
+                    var confirm = await App.Current.MainPage.DisplayAlert("confirm", "Are you sure u want to edit ? ", "yes", "no");
+                    if (confirm)
+                    {
+                        PatientService PatientService = new PatientService();
+                        await PatientService.EditPatient(Patient, Patient.ID);
+                        await App.Current.MainPage.Navigation.PopAsync();
+                        await App.Current.MainPage.DisplayAlert("Edited", "The Patient Edited", "Ok");
+                    }
                 }
             }
             catch (Exception ex)
