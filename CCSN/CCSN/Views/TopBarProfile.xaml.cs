@@ -22,7 +22,7 @@ namespace CCSN.Views
             var navigationDetails = new NavigationPage(new PatientProfileDetailsPage(patient));
             navigationDetails.Title = "Patient Details";
 
-            var navigationFollow = new NavigationPage(new PatientProfileFollowUpPage(patient));
+            var navigationFollow = new NavigationPage(new PatientProfileFollowUpPage());
             navigationFollow.Title = "Patient Follow Up";
 
 

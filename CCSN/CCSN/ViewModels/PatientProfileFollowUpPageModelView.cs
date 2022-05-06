@@ -28,9 +28,9 @@ namespace CCSN.ViewModels
         public ICommand NewFollowUP { get => _newFollowUP; set => SetProperty(ref _newFollowUP, value, nameof(NewFollowUP)); }
         public ICommand DeleteAppointement { get => _deleteAppointement; set => SetProperty(ref _deleteAppointement, value, nameof(DeleteAppointement)); }
 
-        public PatientProfileFollowUpPageModelView(Patient patient)
+        public PatientProfileFollowUpPageModelView()
         {
-            Appearing = new AsyncCommand(async () => await LoadData(patient));
+            Appearing = new AsyncCommand(async () => await LoadData());
             DeleteAppointement = new AsyncCommand<Appoitment>(async (appoitment) => await DeleteAppointementPerforme(appoitment));
             NewFollowUP = new AsyncCommand(async () => await App.Current.MainPage.Navigation.PushAsync((new AddNewFollowPage())));
         }
@@ -47,9 +47,9 @@ namespace CCSN.ViewModels
             }
         }
 
-        async Task LoadData(Patient patient)
+        async Task LoadData()
         {
-            Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetFollowUp(patient.ID));
+            Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAppointmentsByDate(null,"all"));
 
         }
 

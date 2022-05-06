@@ -67,7 +67,7 @@ namespace CCSN.ViewModels
                 await appintmentService.DeleteFollowup(appoitment.PatientID, appoitment.ID);
                 Appoitments.Remove(appoitment);
                 await App.Current.MainPage.DisplayAlert("Delted", "The patient Deleteed", "Ok");
-                await App.Current.MainPage.Navigation.PushAsync(new AppointmentPage());
+                //await App.Current.MainPage.Navigation.PushAsync(new TabBar());
             }
         }
 

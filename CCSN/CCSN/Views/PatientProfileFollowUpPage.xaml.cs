@@ -15,11 +15,11 @@ namespace CCSN.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PatientProfileFollowUpPage : ContentPage
     {
-        public PatientProfileFollowUpPage(Patient patient)
+        public PatientProfileFollowUpPage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-            BindingContext = new PatientProfileFollowUpPageModelView(patient);
+            BindingContext = new PatientProfileFollowUpPageModelView();
 
         }
     }
