@@ -29,7 +29,7 @@
     <ContentPage.Behaviors>
         <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
     </ContentPage.Behaviors>
-    <StackLayout>
+    <StackLayout BackgroundColor="#E6F0F8">
 
 
 
@@ -40,7 +40,8 @@
             IsRefreshing="{Binding IsLoading}"
             ItemsSource="{Binding Appoitments}"
             RefreshCommand="{Binding Appearing}"
-            RowHeight="5">
+            RowHeight="5"
+            BackgroundColor="#E6F0F8">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -81,7 +82,8 @@
             IsPullToRefreshEnabled="True"
             IsRefreshing="{Binding IsLoading}"
             ItemsSource="{Binding Appoitments2}"
-            RefreshCommand="{Binding Appearing}">
+            RefreshCommand="{Binding Appearing}"
+            BackgroundColor="#E6F0F8">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

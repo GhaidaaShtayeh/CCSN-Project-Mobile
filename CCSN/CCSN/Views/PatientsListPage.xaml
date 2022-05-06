@@ -46,12 +46,12 @@
             SelectionMode="Single"
             IsRefreshing="{Binding IsLoading}"
             RefreshCommand="{Binding Appearing}"
-            SeparatorVisibility="None">
+            SeparatorVisibility="None" BackgroundColor="#E6F0F8" >
 
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid RowDefinitions="Auto,Auto,Auto">
+                            <Grid RowDefinitions="Auto,Auto,Auto" BackgroundColor="#E6F0F8">
                             <Frame  Style="{StaticResource FrameStyle}"
                                         Margin="15,0,15,0"
                                         >

@@ -47,11 +47,12 @@
                 RefreshCommand="{Binding Appearing}"
                 SelectedItem="{Binding SelectedAppointment, Mode=TwoWay}"
                 SelectionMode="Single"
-                SeparatorVisibility="None">
+                SeparatorVisibility="None"
+                BackgroundColor="#E6F0F8">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid RowDefinitions="Auto,Auto,Auto">
+                            <Grid RowDefinitions="Auto,Auto,Auto" BackgroundColor="#E6F0F8">
                                 <Frame Style="{StaticResource AppFrame}">
                                     <StackLayout
                                         Margin="30,0,20,0"

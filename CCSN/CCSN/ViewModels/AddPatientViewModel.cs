@@ -137,22 +137,21 @@ namespace CCSN.ViewModels
             try
             {
                 var patientServices = new PatientService();
-                Result = await patientServices.AddPatients(ID, PatientAddress, PatientBirthday, PatientGender, PatientGenticsDiseses, PatientHeight, PatientMobileNo, PatientName, PatientWeight, Appointments);
-
-                if (Result)
+                if (PatientName == null || PatientAddress == null || PatientWeight == null || PatientHeight == null || PatientMobileNo == null || PatientGender == null)
                 {
-                    await Application.Current.MainPage.DisplayAlert("message", "Patient Added", "ok");
-                    await App.Current.MainPage.Navigation.PopAsync();
-
+                    await Application.Current.MainPage.DisplayAlert("Message ", "Patient Requierd Info Is Empty ", "ok");
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Patient Exsist", "ok");
+                    Result = await patientServices.AddPatients(ID, PatientAddress, PatientBirthday, PatientGender, PatientGenticsDiseses, PatientHeight, PatientMobileNo, PatientName, PatientWeight, Appointments);
+
+                    await Application.Current.MainPage.DisplayAlert("Message", "Patient Added", "ok");
+                    await App.Current.MainPage.Navigation.PopAsync();
                 }
             }
             catch (Exception ex)
             {
-                await Application.Current.MainPage.DisplayAlert("error", ex.Message, "ok");
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "ok");
 
             }
         }

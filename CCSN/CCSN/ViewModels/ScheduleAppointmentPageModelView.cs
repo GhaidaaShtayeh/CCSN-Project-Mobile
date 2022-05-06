@@ -39,23 +39,30 @@ namespace CCSN.ViewModels
 
         private async Task AddPerforme()
         {
-            var confirm = await App.Current.MainPage.DisplayAlert("confirm", "Are you sure you want to add ? ", "yes", "no");
-            var Result = await AppintmentService.addScheduleAppointment(PatienSelected.ID, PatienSelected.PatientName, SelectedDate, SelectedTime);
-            if (confirm && Result)
+            try
             {
-                await App.Current.MainPage.DisplayAlert("message", "Appointment Added", "ok");
-                await App.Current.MainPage.Navigation.PopAsync();
+                var confirm = await App.Current.MainPage.DisplayAlert("Confirm", "Are You Sure You Want To Add ? ", "yes", "no");
+                var Result = await AppintmentService.addScheduleAppointment(PatienSelected.ID, PatienSelected.PatientName, SelectedDate, SelectedTime);
+                if (confirm && Result)
+                {
+                    await App.Current.MainPage.DisplayAlert("Message", "Appointment Added", "ok");
+                    await App.Current.MainPage.Navigation.PopAsync();
+                }
+                else if (confirm)
+                {
+                    await App.Current.MainPage.DisplayAlert("Message", "No Appointment Added, Please check the date! ", "ok");
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Message", "No Appointment Added!", "ok");
+                }
             }
-            else if (confirm)
+            catch
             {
-                await App.Current.MainPage.DisplayAlert("message", "No Appointment Added, Please check the date ", "ok");
-            }
-            else
-            {
-                await App.Current.MainPage.DisplayAlert("message", "No Appointment Added", "ok");
+                await Application.Current.MainPage.DisplayAlert("Message", "Patient Name Is Empty!", "ok");
+
             }
         }
-
         private async Task LoadData()
         {
             Patients = new List<Patient>(await PatientService.GetUserPatients());
@@ -63,4 +70,3 @@ namespace CCSN.ViewModels
 
     }
 }
-
