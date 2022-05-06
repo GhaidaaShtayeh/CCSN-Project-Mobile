@@ -65,7 +65,7 @@
 
                 <Entry
             x:Name="LabelPatientMobileNOEntry"
-            Placeholder="Name"
+            Placeholder="Mobile Number "
             Style="{StaticResource EntryStyle}" 
             Text="{Binding Patient.PatientMobileNO}"
             Keyboard="Numeric" >
@@ -110,7 +110,7 @@
             Text=" Height : "/>
                 <Entry
             x:Name="PatientHeightEntry"
-            Placeholder="Name"
+            Placeholder="Height"
             Style="{StaticResource EntryStyle}" 
             Text="{Binding Patient.PatientHeight}"
             Keyboard="Numeric" >
@@ -131,7 +131,7 @@
             Text=" Weight : "/>
                 <Entry
             x:Name="PatientWeightEntry"
-            Placeholder="Name"
+            Placeholder="Weight"
             Style="{StaticResource EntryStyle}" 
             Text="{Binding Patient.PatientWeight}"
                 Keyboard="Numeric" >
@@ -152,7 +152,7 @@
             Text=" Gentices Diseses : "/>
                 <Entry
             x:Name="PatientGenticesDisesesEntry"
-            Placeholder="Name"
+            Placeholder="Gentic Disesses"
             Style="{StaticResource EntryStyle}" 
             Text="{Binding Patient.PatientGenticesDiseses}"/>
             </StackLayout>
