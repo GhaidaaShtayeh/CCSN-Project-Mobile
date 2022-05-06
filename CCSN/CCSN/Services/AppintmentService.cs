@@ -72,7 +72,8 @@ namespace CCSN.Services
 
         public static async Task<bool> addScheduleAppointment(string patientId, string patientname, DateTime appointmentDate, TimeSpan appointmentTime)
         {
-            if (await IsAppointmentExist(appointmentDate, appointmentTime) == false)
+           
+             if (await IsAppointmentExist(appointmentDate, appointmentTime) == false)
             {
                 Appoitment A = new Appoitment()
                 {

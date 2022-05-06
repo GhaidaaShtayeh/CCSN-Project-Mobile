@@ -27,9 +27,11 @@ namespace CCSN.Services
 
         public async Task EditPatient(Patient patient, string ID)
         {
+
             await firebaseClient
-          .Child($"Specalists/{PreferencesConfig.Id}/Patients/{ID}")
-          .PatchAsync(patient);
+    .Child($"Specalists/{PreferencesConfig.Id}/Patients/{ID}")
+    .PatchAsync(patient);
+
         }
 
 
@@ -50,7 +52,11 @@ namespace CCSN.Services
 
         public async Task<bool> AddPatients(string patientID, string patientAddress, string patientBirthday, string patientGender, string patientGenticsDiseses, string patientHeight, string patientMobileNo, string patientName, string patientWeight, List<Appoitment> appoitment)
         {
-            if (await IsPatientExists(patientID) == false)
+            if (patientID == null)
+            {
+                throw new ArgumentNullException(nameof(patientID));
+            }
+            else if (await IsPatientExists(patientID) == false)
             {
                 await firebaseClient.Child($"/Specalists/{PreferencesConfig.Id}/Patients/{patientID}")
                   .PutAsync(new Patient()
@@ -64,9 +70,9 @@ namespace CCSN.Services
                       PatientMobileNO = patientMobileNo,
                       PatientName = patientName,
                       PatientWeight = patientWeight,
-                      //Appointments = appoitment
+                  //Appointments = appoitment
 
-                  });
+              });
                 return true;
             }
             else { return false; }
