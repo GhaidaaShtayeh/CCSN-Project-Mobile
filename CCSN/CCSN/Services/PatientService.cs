@@ -21,7 +21,7 @@ namespace CCSN.Services
             var url = await firebaseClient
                      .Child($"Specalists/{PreferencesConfig.Id}/Patients").BuildUrlAsync();
             var result = await Helper.Get<List<Patient>>(url);
-            return result;
+            return result.OrderBy(x => x.PatientName).ToList();
 
         }
 

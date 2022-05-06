@@ -37,9 +37,9 @@ namespace CCSN.Services
                 if (appointments == null && str == "all")
                     return new List<Appoitment>();
                 else if (appointments != null && str == "up")
-                    return (appointments.Where(o => o.AppointmentDate.Date.Date > DateTime.Now.Date));
+                    return (appointments.Where(o => o.AppointmentDate.Date.Date > DateTime.Now.Date).OrderBy(x => x.AppointmentDate.Date.Date).ToList());
                 else if (dateTime.HasValue)
-                    return (appointments.Where(o => o.AppointmentDate.Date.Date == dateTime.Value.Date));
+                    return (appointments.Where(o => o.AppointmentDate.Date.Date == dateTime.Value.Date).OrderBy(x => x.AppointmentTime).ToList());
                 else
                     return appointments;
             }
