@@ -42,7 +42,7 @@
                 </Label.GestureRecognizers>
             </Label>-->
 
-            <Button  Command="{Binding LogoutCommand}" HeightRequest="40" WidthRequest="400"  Text="Log out"  Margin="0,8,0,0" TextColor="White" Background="#2196f3" VerticalOptions="EndAndExpand" />
+            <Button  Command="{Binding LogoutCommand}"  Style="{StaticResource AddButton}"  Text="Log out" VerticalOptions="Center" HorizontalOptions="Center" Margin="20,20,20,20"  />
 
         </StackLayout>
     </ContentPage.Content>
