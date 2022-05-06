@@ -23,7 +23,8 @@
             <ImageButton
                 HorizontalOptions="End"
                 Source="https://peopleshub.org/wp-content/uploads/2018/04/person-icon-white.png"
-                Style="{StaticResource navBarStyle}" />
+                Style="{StaticResource navBarStyle}" 
+                Command="{Binding ProfileBtnClicked}"/>
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Behaviors>

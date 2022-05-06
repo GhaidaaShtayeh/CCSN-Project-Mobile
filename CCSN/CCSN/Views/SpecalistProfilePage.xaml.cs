@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CCSN.Models;
+using CCSN.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,13 @@ namespace CCSN.Views
         public SpecalistProfilePage()
         {
             InitializeComponent();
+            BindingContext = new SpcalistProfilePageModelView(Navigation);
         }
+        public SpecalistProfilePage(Specalist specalist)
+        {
+            InitializeComponent();
+            BindingContext = new SpcalistProfilePageModelView(specalist);
+        }
+
     }
 }

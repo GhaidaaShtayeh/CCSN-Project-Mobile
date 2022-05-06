@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CCSN.Common;
 using CCSN.Models;
 using Firebase.Database;
+using Firebase.Database.Query;
 using Newtonsoft.Json;
 
 namespace CCSN.Services
@@ -49,6 +51,13 @@ namespace CCSN.Services
                 .OnceAsync<Specalist>()).Where(u => u.Object.ID == userID)
                 .Where(u => u.Object.password == userpassword).FirstOrDefault();
             return (user != null);
+        }
+
+        public async Task EditSpecalist(Specalist specalist)
+        {
+            await firebaseClient
+          .Child($"Specalists/{PreferencesConfig.Id}")
+          .PutAsync(specalist);
         }
     }
 }
