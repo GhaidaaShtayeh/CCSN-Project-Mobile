@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CCSN.Common;
 using CCSN.Models;
 using Firebase.Database;
+using Firebase.Database.Query;
 using Newtonsoft.Json;
 
 namespace CCSN.Services
@@ -50,5 +52,39 @@ namespace CCSN.Services
                 .Where(u => u.Object.password == userpassword).FirstOrDefault();
             return (user != null);
         }
+        public async Task<List<Specalist>> GetAllSpecalist()
+        {
+            return (await firebaseClient
+                .Child($"Specalists/{PreferencesConfig.Id}")
+                .OnceAsync<Specalist>()).Select(item => new Specalist
+                {
+                    Name = item.Object.Name,
+                    ID = item.Object.ID,
+                    Email = item.Object.Email
+                }).ToList();
+        }
+        public async Task<Specalist> GetSpecalist(string name)
+        {
+            var allSpecalist = await GetAll();
+            await firebaseClient
+                .Child($"Specalists/{PreferencesConfig.Id}")
+                .OnceAsync<Specalist>();
+            return allSpecalist.FirstOrDefault(a => a.Name == name);
+        }
+        public async Task<Specalist> GetSpecalistID(string Id)
+        {
+            var allPersons = await GetAll();
+            await firebaseClient
+                .Child($"Specalists/{PreferencesConfig.Id}")
+                .OnceAsync<Specalist>();
+            return allPersons.FirstOrDefault(a => a.ID == Id);
+        }
+        public async Task EditSpecalist(Specalist specalist)
+        {
+            await firebaseClient
+          .Child($"Specalists/{PreferencesConfig.Id}")
+          .PatchAsync(specalist);
+        }
+
     }
 }

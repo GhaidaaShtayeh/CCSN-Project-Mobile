@@ -25,13 +25,13 @@ namespace CCSN.Services
 
         }
 
+
         public async Task EditPatient(Patient patient, string ID)
         {
             await firebaseClient
           .Child($"Specalists/{PreferencesConfig.Id}/Patients/{ID}")
           .PatchAsync(patient);
         }
-
 
 
         public async Task DeletePatient(string ID)
