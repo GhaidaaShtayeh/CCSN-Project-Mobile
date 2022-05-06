@@ -19,7 +19,7 @@
                     <Button Style="{StaticResource AddButton}"
                     Text="Login"
                     Command="{Binding LoginCommand}" ></Button>
-                    <Label Text="Forgot Password?" TextColor="#1EA6D6" HorizontalOptions="CenterAndExpand"
+                    <Label Text="Forgot Password?" TextColor="#2196f3" HorizontalOptions="CenterAndExpand"
                        Margin="0,10,0,0"
                        FontSize="Medium" />
         </StackLayout>

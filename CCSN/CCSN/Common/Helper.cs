@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using NuGet.Configuration;
+using Plugin.Settings;
+using Plugin.Settings.Abstractions;
 
 namespace CCSN.Common
 {
@@ -20,6 +23,40 @@ namespace CCSN.Common
             }
 
             return new String(stringChars);
+        }
+        public static class UserSettings
+        {
+            static Plugin.Settings.Abstractions.ISettings AppSettings
+            {
+                get
+                {
+                    return CrossSettings.Current;
+                }
+            }
+            public static string Name
+            {
+                get => AppSettings.GetValueOrDefault(nameof(Name), string.Empty);
+                set => AppSettings.AddOrUpdateValue(nameof(Name), value);
+            }
+            public static string MobileNumber
+            {
+                get => AppSettings.GetValueOrDefault(nameof(MobileNumber), string.Empty);
+                set => AppSettings.AddOrUpdateValue(nameof(MobileNumber), value);
+            }
+            public static string Email
+            {
+                get => AppSettings.GetValueOrDefault(nameof(Email), string.Empty);
+                set => AppSettings.AddOrUpdateValue(nameof(Email), value);
+            }
+            public static string ID
+            {
+                get => AppSettings.GetValueOrDefault(nameof(ID), string.Empty);
+                set => AppSettings.AddOrUpdateValue(nameof(ID), value);
+            }
+            public static void ClearAllData()
+            {
+                AppSettings.Clear();
+            }
         }
     }
 }

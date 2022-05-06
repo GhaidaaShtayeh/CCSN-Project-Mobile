@@ -13,9 +13,11 @@
   <ItemGroup>
     <PackageReference Include="FirebaseDatabase.net" Version="4.0.7" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NuGet.Configuration" Version="6.1.0" />
     <PackageReference Include="Plugin.XCalendar" Version="2.1.0" />
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
     <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="XamForms.Controls.Calendar" Version="1.1.1" />

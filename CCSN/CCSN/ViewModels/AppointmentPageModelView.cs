@@ -25,16 +25,18 @@ namespace CCSN.ViewModels
         private ICommand _Appearing;
         private ICommand _deleteAppointement;
         private Appoitment _SelectedAppointment;
+        
 
         public ICommand Appearing { get => _Appearing; set => SetProperty(ref _Appearing, value, nameof(Appearing)); }
         public ICommand DeleteAppointement { get => _deleteAppointement; set => SetProperty(ref _deleteAppointement, value, nameof(DeleteAppointement)); }
-
+        public ICommand ProfileBtnClicked { get; }
         public AppointmentPageModelView(INavigation navigation)
         {
 
             Appearing = new AsyncCommand(async () => await LoadData());
             this.Navigation = navigation;
             this.ScheduleBtnClicked = new Command(async () => await GotoScheduleAppointment());
+            this.ProfileBtnClicked = new Command(async () => await GotoSpecalistProfile());
             DeleteAppointement = new Command<Appoitment>(async (o) => await DeleteAppointementPerforme(o));
         }
 
@@ -49,6 +51,12 @@ namespace CCSN.ViewModels
         {
             /////
             await App.Current.MainPage.Navigation.PushAsync(new ScheduleAppintmentPage());
+
+        }
+        public async Task GotoSpecalistProfile()
+        {
+            /////
+            await App.Current.MainPage.Navigation.PushAsync(new SpecalistProfilePage());
 
         }
 

@@ -29,6 +29,8 @@ namespace CCSN.ViewModels
 
         public ICommand Appearing { get => _Appearing; set => SetProperty(ref _Appearing, value, nameof(Appearing)); }
 
+        public ICommand ProfileBtnClicked { get; }
+        public INavigation Navigation { get; set; }
 
         public HomePageModelView()
         {
@@ -45,6 +47,19 @@ namespace CCSN.ViewModels
             Appoitments = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAppointmentsByDate(DateTime.Now, ""));
             Appoitments2 = new ObservableCollection<Appoitment>(await AppintmentService.GetUserAppointmentsByDate(DateTime.Now.AddDays(1), ""));
             IsLoading = false;
+
+        }
+        public HomePageModelView(INavigation navigation)
+        {
+            Appearing = new AsyncCommand(async () => await LoadData());
+            this.Navigation = navigation;
+            this.ProfileBtnClicked = new Command(async () => await GotoSpecalistProfile());
+
+        }
+        public async Task GotoSpecalistProfile()
+        {
+            /////
+            await App.Current.MainPage.Navigation.PushAsync(new SpecalistProfilePage());
 
         }
     }

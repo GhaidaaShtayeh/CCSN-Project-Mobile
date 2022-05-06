@@ -25,6 +25,7 @@ namespace CCSN.Services
 
         }
 
+
         public async Task EditPatient(Patient patient, string ID)
         {
 
@@ -33,7 +34,6 @@ namespace CCSN.Services
     .PatchAsync(patient);
 
         }
-
 
 
         public async Task DeletePatient(string ID)

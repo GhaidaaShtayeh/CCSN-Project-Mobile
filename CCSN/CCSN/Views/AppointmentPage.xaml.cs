@@ -19,6 +19,7 @@ namespace CCSN.Views
         {
             InitializeComponent();
             BindingContext = new AppointmentPageModelView(Navigation);
+            
         }
     }
 }
