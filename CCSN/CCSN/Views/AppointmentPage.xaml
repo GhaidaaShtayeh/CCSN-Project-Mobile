@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CCSN.Views.AppointmentPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:CCSN.ViewModels"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    BackgroundColor="AliceBlue">
+
+    <!--<ContentPage.BindingContext>
+        <viewmodels:AppointmentPageModelView />
+    </ContentPage.BindingContext>-->
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
+    </ContentPage.Behaviors>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Style="{StaticResource navlabel}" Text="Appointments" FontAttributes="Bold"  />
+            <ImageButton
+                HorizontalOptions="EndAndExpand"
+                Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/VisualEditor_-_Icon_-_Search-big_-_white.svg/1200px-VisualEditor_-_Icon_-_Search-big_-_white.svg.png"
+                Style="{StaticResource navBarStyle}" />
+
+            <ImageButton
+                HorizontalOptions="End"
+                Source="https://peopleshub.org/wp-content/uploads/2018/04/person-icon-white.png"
+                Style="{StaticResource navBarStyle}" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <StackLayout>
+        <Image
+            Margin="15,0,15,0"
+            Aspect="AspectFill"
+            HeightRequest="200"
+            HorizontalOptions="Center"
+            Scale="1.0"
+            Source="https://thumbs.dreamstime.com/b/scheduling-your-appointment-today-monthly-calendar-pen-scheduling-your-appointment-today-monthly-calendar-143613840.jpg"
+            WidthRequest="1000" />
+        <Grid RowDefinitions="*">
+            <ListView
+                Grid.Row="0"
+                HasUnevenRows="true"
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="{Binding IsLoading}"
+                ItemsSource="{Binding Appoitments}"
+           
+                RefreshCommand="{Binding Appearing}"
+                SelectedItem="{Binding SelectedAppointment, Mode=TwoWay}"
+                SelectionMode="Single"
+                SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid RowDefinitions="Auto,Auto,Auto">
+                                <Frame Style="{StaticResource AppFrame}">
+                                    <StackLayout
+                                        Margin="30,0,20,0"
+                                        Orientation="Horizontal"
+                                        VerticalOptions="Center">
+
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            HorizontalOptions="StartAndExpand"
+                                            Style="{StaticResource labelView}"
+                                            Text="{Binding AppointmentPatientName}"
+                                            VerticalOptions="Center" />
+                                        <Label  Text="||   "  Style="{StaticResource labelView}"></Label>
+                                        <Label
+                                            Grid.Row="0"
+                                          
+                                            Font="Small"
+                                            HorizontalOptions="CenterAndExpand"
+                                            Style="{StaticResource labelView}"
+                                            Text="{Binding AppointmentDate, StringFormat='{0:MMMM dd, yyyy}  '}" />
+                                        <Label
+                                        Grid.Row="0"
+                                      Font="Small"
+                                        Style="{StaticResource labelView}"
+                                        Text="{Binding AppointmentTime}" />
+                                        <ImageButton
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:AppointmentPageModelView}}, Path=DeleteAppointement}"
+                                            CommandParameter="{Binding Source={RelativeSource Self}, Path=BindingContext}"
+                                            Style="{StaticResource DeleteButton}" />
+
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+            <Button
+                Grid.Row="0"
+                Command="{Binding ScheduleBtnClicked}"
+                HorizontalOptions="End"
+                Style="{StaticResource BlusButton}"
+                VerticalOptions="End" />
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
