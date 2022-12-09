@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:CCSN.ViewModels"
+             x:Class="CCSN.Views.AddPatientPage" BackgroundColor="AliceBlue" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:CCSN.Common">
+    <ContentPage.BindingContext>
+        <vm:AddPatientViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
+    </ContentPage.Behaviors>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label  Style="{StaticResource navlabel}"
+                Text="Add New Patient"/>
+
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ScrollView>
+        <StackLayout>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                </Grid>
+                <StackLayout Orientation="Horizontal"  Grid.Row="0" >
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Patient ID :"></Label>
+
+
+                    <Entry  Text="{Binding ID}" Margin="15,5,15,5" WidthRequest="200"    Style="{StaticResource EntryStyle}" 
+                                Keyboard="Numeric" >
+                        <Entry.Behaviors    >
+                                <local:NumericValidationBehavior />
+                            </Entry.Behaviors>
+                        </Entry>
+                    
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"  Grid.Row="1" >
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Name :" ></Label>
+
+                    <Entry Text="{Binding PatientName}" WidthRequest="200" Margin="15,5,15,5"    Style="{StaticResource EntryStyle}"></Entry>
+                   
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"  Grid.Row="2" >
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Mobile Number :" ></Label>
+
+
+                    <Entry Text="{Binding PatientMobileNo}" WidthRequest="200" Margin="15,5,15,5"
+                               Keyboard="Numeric"     Style="{StaticResource EntryStyle}">
+                            <Entry.Behaviors>
+                                <local:NumericValidationBehavior />
+                            </Entry.Behaviors>
+                        </Entry>
+
+                  
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal" Grid.Row="3" >
+                    <Label HorizontalOptions="Start"  FontSize="Medium" VerticalOptions="Center" Text=" Height :" ></Label>
+
+
+                    <Entry Text="{Binding PatientHeight}" WidthRequest="200" Margin="15,5,15,5"    Style="{StaticResource EntryStyle}"
+                               Keyboard="Numeric" >
+                            <Entry.Behaviors>
+                                <local:NumericValidationBehavior />
+                            </Entry.Behaviors>
+                            
+                        </Entry>
+                
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Grid.Row="4" >
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Weight :" ></Label>
+
+                    <Entry Text="{Binding PatientWeight}" WidthRequest="200" Margin="15,5,15,5"    Style="{StaticResource EntryStyle}"
+                               Keyboard="Numeric" >
+                            <Entry.Behaviors>
+                                <local:NumericValidationBehavior />
+                            </Entry.Behaviors>
+                            
+                        </Entry>
+                   
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"  Grid.Row="5" >
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Gender :" ></Label>
+
+
+                    <Picker SelectedItem="{Binding PatientGender}" WidthRequest="200" Margin="15,5,15,5"     Style="{StaticResource EntryStyle}">
+                            <Picker.Items>
+                                <x:String>Male</x:String>
+                                <x:String>Female</x:String>
+                            </Picker.Items>
+                        </Picker>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"  Grid.Row="6" >
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Address :" ></Label>
+
+
+                    <Entry Text="{Binding PatientAddress}" WidthRequest="200" Margin="15,5,15,5"     Style="{StaticResource EntryStyle}"></Entry>
+                  
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"  Grid.Row="7" >
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Birthday :" ></Label>
+
+                    <DatePicker Format="MM/dd/yyyy"  Date="{Binding PatientBirthday , Mode=TwoWay}" WidthRequest="200" Margin="15,5,15,5"      Style="{StaticResource EntryStyle}">
+                        </DatePicker>
+                  
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"  Grid.Row="8" >
+                    <Label HorizontalOptions="Start" FontSize="Medium" VerticalOptions="Center" Text=" Gentics Diseses :" ></Label>
+
+
+                    <Entry Text="{Binding PatientGenticsDiseses}" WidthRequest="200" Margin="15,5,15,5"    Style="{StaticResource EntryStyle}" ></Entry>
+                   
+                </StackLayout>
+
+                <Button Style="{StaticResource AddButton}"
+                    Text="Add Patient"
+                    Command="{Binding AddCommand }" ></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

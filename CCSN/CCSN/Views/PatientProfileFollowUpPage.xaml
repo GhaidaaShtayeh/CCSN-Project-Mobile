@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CCSN.Views.PatientProfileFollowUpPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:CCSN.ViewModels"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior Command="{Binding Appearing}" EventName="Appearing" />
+    </ContentPage.Behaviors>
+    <StackLayout BackgroundColor="#E6F0F8">
+        <ListView
+            HasUnevenRows="True"
+            ItemsSource="{Binding Appoitments}"
+            SelectedItem="{Binding SelectedFollow, Mode=TwoWay}"
+            SelectionMode="Single"
+            BackgroundColor="#E6F0F8">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid RowDefinitions="Auto,Auto,Auto">
+                            <Frame Margin="30,15,20,0" Style="{StaticResource FrameStyle}">
+                                <StackLayout
+                                    Margin="15,0,15,0"
+                                    Orientation="Horizontal"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        Grid.Row="0"
+                                        HorizontalOptions="Start"
+                                        Style="{StaticResource labelView}">
+                                     
+                                    </Label>
+                                    <Label
+                                        Grid.Row="0"
+                                        HorizontalOptions="Start"
+                                        Style="{StaticResource labelView}"
+                                        Text="{Binding AppointmentDate, StringFormat='{0:MMMM dd, yyyy}  '}" />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="2"
+                                        HorizontalOptions="End"
+                                        Style="{StaticResource labelView}"
+                                        Text="  ||  " />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="2"
+                                        HorizontalOptions="End"
+                                        Style="{StaticResource labelView}"
+                                        Text="{Binding FollowUpAddNote}" />
+                                    <ImageButton
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:PatientProfileFollowUpPageModelView}}, Path=DeleteAppointement}"
+                                        CommandParameter="{Binding Source={RelativeSource Self}, Path=BindingContext}"
+                                        Style="{StaticResource DeleteButton}" />
+                                </StackLayout>
+                            </Frame>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <!--<Button
+            Command="{Binding NewFollowUP}"
+            Style="{StaticResource AddButton}"
+            Text="Add New Follow Up" />-->
+    </StackLayout>
+
+</ContentPage>
