@@ -25,3 +25,16 @@ One of the answers is building a mobile app that will care for your patients and
 4- Parents’ messed up their children's sessions or they don't meet on time.
 
 5- Parents wasting the follow-up card - child's case card 
+
+
+## Features for specialists 
+
+- Must have the ability to set goals for the child’s follow-up plan for each session (so that the goals that have been implemented are deleted and the goals to be implemented are added ).
+- Must have the ability to take side notes about each session that explain the child’s behavior and how they responded to the treatment that was used.
+- Must have the ability to schedule patients for follow-up appointments.
+- Must have the ability to notify parents through messages/ chat about their kids' needs.
+- Must have the ability to view the patient's medical details.
+- Should have the ability to edit / update appointments for patients.
+- Could have a personal profile.
+- Nice to have the ability to add public educational purposes posts for all patients.
+- Nice to have the ability to add psychological support and training programs for specific patients. 
